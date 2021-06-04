@@ -6,3 +6,6 @@ The Icecream Shop es una página web dedicada a la venta en línea de botes de h
 3. Häagen-Dazs
 4. Blue Bell
 5. Thrifty
+
+Población objetivo: 
+Personas de 15 años en adelante que tengan acceso a navegación web.
