@@ -1,4 +1,4 @@
-# Grupo 3 - The Icecream Shop
+# Grupo 3 - The Ice Cream Shop
 
 The Icecream Shop es una página web dedicada a la venta y distribución en línea de botes de helados de las marcas: 
 1. Holanda
