@@ -1,1 +1,3 @@
-# grupo_3_theicecreamshop
+# Grupo 3 - The Icecream Shop
+
+The Icecream Shop es una ...
