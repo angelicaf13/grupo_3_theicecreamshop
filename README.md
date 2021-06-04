@@ -14,3 +14,7 @@ Páginas en las que nos inspiramos:
 1. https://www.haagendazs.com.mx/
 2. https://www.benandjerrys.com.mx/
 3. https://www.bluebell.com/
+4. https://www.itcosmetics.com/
+5. https://www.mercadolibre.com.mx/
+6. https://www.lintendance.co/
+7. https://www.amazon.com.mx/
