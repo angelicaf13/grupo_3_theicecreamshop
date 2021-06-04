@@ -9,3 +9,8 @@ The Icecream Shop es una página web dedicada a la venta en línea de botes de h
 
 Población objetivo: 
 Personas de 15 años en adelante que tengan acceso a navegación web.
+
+Páginas en las que nos inspiramos:
+1. https://www.haagendazs.com.mx/
+2. https://www.benandjerrys.com.mx/
+3. https://www.bluebell.com/
