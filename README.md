@@ -26,3 +26,7 @@ Páginas en las que nos inspiramos:
 * Angelica Figueroa :zap:
 
   Soy recien egresada de la carrera de Ingeniería en Computación. Tengo 23 años y actualmente vivo en Mexicali, BC. Me gusta la programación y aprender cosas nuevas. Entre mis hobbies estan la fotografía, el diseño y la lectura.
+  
+ * Ana Victoria Fierro
+ 
+    Soy Ing. en Biotecnología, tengo 23 años y vivo en Guadalajara, Jal. Me gusta conocer lugares nuevos, el bubble tea, y ver series. 
