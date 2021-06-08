@@ -30,3 +30,7 @@ Páginas en las que nos inspiramos:
  * Ana Victoria Fierro
  
     Soy Ing. en Biotecnología, tengo 23 años y vivo en Guadalajara, Jal. Me gusta conocer lugares nuevos, el bubble tea, y ver series. 
+
+* Ana Bertha Hernández González
+    
+    Soy estudiante de Ingeniería en Informática, tengo 22 años y vivo en Ciudad de México. Me gusta trabajar en equipo, aprender cosas nuevas, disfruto jugar basquetbol y salir a caminar.
