@@ -1,6 +1,7 @@
 # Retrospectiva
 
 __1. Comenzar a hacer__
+
 Compartir retroalimentación y comentarios de manera más frecuente. 
 
 __2. Hacer más__
