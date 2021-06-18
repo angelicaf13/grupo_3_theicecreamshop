@@ -1,9 +1,11 @@
-1. Comenzar a hacer
+# Retrospectiva
 
-2. Hacer más
+__1. Comenzar a hacer__
 
-3. Continuar haciendo
+__2. Hacer más__
 
-4. Hacer menos
+__3. Continuar haciendo__
 
-5. Dejar de hacer
+__4. Hacer menos__
+
+__5. Dejar de hacer__
