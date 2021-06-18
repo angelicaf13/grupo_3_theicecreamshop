@@ -34,3 +34,6 @@ Páginas en las que nos inspiramos:
 * Ana Bertha Hernández González
     
     Soy estudiante de Ingeniería en Informática, tengo 22 años y vivo en Ciudad de México. Me gusta trabajar en equipo, aprender cosas nuevas, disfruto jugar basquetbol y salir a caminar.
+
+---->> Enlace al Tablero de Trello <<----
+https://trello.com/invite/b/FT08391N/9d93b5d6b3069c2c65acf78e5e564f13/equipo-3
