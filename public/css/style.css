@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fenix', serif;
+}
+header{
+    background-color: #B392AC;
+    width: 100vw;
+}
+header >div{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    width: 100vw;
+}
+.links i{
+    display: block;
+    padding: 5px 10px;
+    font-size: 8px;
+}
+header div img{
+    width: 50px;
+    margin-left: 40%;
+}
+main{
+    background-color: #D1B3C4;
+    padding: 40px;
+    width: 100vw;
+}
+.product-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7D1CD;
+}
+.product-img img{
+    width: 70%;
+    background-color: #F7D1CD;
+}
+.descripcion {
+    border: solid  #F7D1CD 5px;
+    padding: 3%;
+}
+.descripcion p{
+    text-align: justify;
+    font-size: 10px;
+}
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+h3{
+    font-family: 'Cardo', serif;
+    font-size: 10px;
+}
+.inputs, h1{
+    text-align: center;
+    font-size: 12px;
+}
+h1{
+    background-color: #F7D1CD;
+    font-family: 'Cardo', serif;
+    font-size: 12px;
+}
+.precios p{
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+.button{
+    display: flex;
+    align-self: center;
+    background-color: #735D78;
+    border: white 2px;
+    color: white;
+    font-size: 10px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+footer{
+    height: 30%;
+    background-color: #B392AC; 
+    padding:20px; 
+    font-size: 12px;
+    width: 100vw;
+}
+@media (min-width: 480px){
+    .links i{
+        font-size: 12px;
+        }
+    header div img{
+        width: 100px;
+        }
+    .descripcion p{
+        font-size: 16px;
+        }
+    h3{
+        font-size: 18px;
+        }
+    .inputs, h1{
+        font-size: 22px;
+        }
+    h1{
+        padding: 2%;
+        font-size: 20px;
+    }
+    .precios p{
+        font-size: 30px;
+    }
+    .button{
+        font-size: 20px;
+    }
+}
+@media (min-width: 768px){
+    .links i{
+        padding: 5px 20px;
+        font-size: 14px;
+        }
+    header div img{
+        width: 120px;
+        margin-left: 45%;
+            }
+    .product-img img{
+        width: 100%;
+        height: 73vh;
+        }
+    main section{
+        flex-direction: row-reverse;
+        }
+    footer{
+        font-size: 16px;
+        }
+    }
+@media (min-width: 1279px){
+    .links i{
+        font-size: 18px;
+        }
+    header div img{
+        width: 150px;
+        }
+    .product-img img{
+        width: 79%;
+        height: 79%;
+        }
+    .descripcion p{
+        font-size: 18px;
+        }
+    h3{
+        font-size: 20px;
+        }
+    h1{
+        font-size: 24px;
+        }
+    .precios p{
+        font-size: 40px;
+        }
+    .button{
+        font-size: 22px;
+        }
+    footer{
+        font-size: 18px;
+    }
+}
