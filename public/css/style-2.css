@@ -1,10 +1,11 @@
 :root {
-  pale-pink: #f7d1cd;
-  queen-pink: #e8c2ca;
-  thistle: #d1b3c4;
-  glossy-grape: #b392ac;
-  old-lavender: #735d78;
-  logo-back: #e4d4dd;
+  --pale-pink: #f7d1cd;
+  --queen-pink: #e8c2ca;
+  --thistle: #d1b3c4;
+  --glossy-grape: #b392ac;
+  --old-lavender: #735d78;
+  --logo-back: #e4d4dd;
+  --dark-lavender: #65526a;
 }
 
 @font-face {
@@ -72,7 +73,7 @@ header nav {
 nav a,
 footer a {
   text-decoration: none;
-  color: #65526a;
+  color: var(--dark-lavender);
 }
 
 footer {
