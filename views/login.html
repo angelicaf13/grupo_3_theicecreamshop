@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Ice Cream Shop</title>
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/style-2.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style-2.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <a href="/productList">Comprar</a>
-            <a href="#">Marcas</a>
-            <img class= "logo" src="/img/logotipo-sin.png" alt="Logotipo empresa" title="logotipo">
-            <a href="#">Historia</a>
-            <a href="#">Contacto</a>
-        </nav>
+      <nav>
+        <a href="/productList">Comprar</a>
+        <a href="#">Marcas</a>
+        <img
+          class="logo"
+          src="/img/logotipo-sin.png"
+          alt="Logotipo empresa"
+          title="logotipo"
+        />
+        <a href="#">Historia</a>
+        <a href="#">Contacto</a>
+      </nav>
     </header>
     <main>
-        <section class="login-background">
-            <div class="login-form-container">
-                <form action="" class="login-form"></form>
+      <section class="login-background">
+        <div class="login-form-container">
+          <h3>Acceder</h3>
+          <p>¿Aún no tienes cuenta?<a href=""> Registrate aqui</a></p>
+          <form action="" class="login-form">
+            <div class="form-control">
+              <label for="correo">email</label>
+              <input type="email" name="correo" id="correo" />
             </div>
-        </section>
+            <div class="form-control">
+              <label for="pass">constraseña</label>
+              <input type="password" name="pass" id="pass" />
+            </div>
+            <button type="submit" class="login-button">Ingresar</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
-        <div>
-            <a href="/productList">Comprar</a>
-            <a href="#">Acerca de nosotros</a>
-            <a href="#">Marcas</a>
-            <a href="#">Contacto</a>
-        </div>
+      <div>
+        <a href="/productList">Comprar</a>
+        <a href="#">Acerca de nosotros</a>
+        <a href="#">Marcas</a>
+        <a href="#">Contacto</a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
