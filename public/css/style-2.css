@@ -1,9 +1,11 @@
 :root {
-  pale-pink: #f7d1cd;
-  quee-pink: #e8c2ca;
-  thistle: #d1b3c4;
-  glossy-grape: #b392ac;
-  old-lavender: #735d78;
+  --pale-pink: #f7d1cd;
+  --queen-pink: #e8c2ca;
+  --thistle: #d1b3c4;
+  --glossy-grape: #b392ac;
+  --old-lavender: #735d78;
+  --logo-back: #e4d4dd;
+  --dark-lavender: #65526a;
 }
 
 @font-face {
@@ -26,6 +28,26 @@
     src: url(CervoNeue-LightNeue.otf);
 }
 
+@font-face {
+    font-family: Museo-Sans-Thin;
+    src: url(MuseoSans-100.otf);
+}
+
+@font-face {
+    font-family: Museo-Sans-Light;
+    src: url(MuseoSans-300.otf);
+}
+
+@font-face {
+    font-family: Museo-Sans-Medium;
+    src: url(MuseoSans-500.otf);
+}
+
+@font-face {
+    font-family: Museo-Sans-Bold;
+    src: url(MuseoSans-700.otf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +56,7 @@
 }
 
 header {
-  background-color: #b392ac;
+  background-color: #e4d4dd;
   width: 100%;
   padding: 15px;
   font-size: 14px;
@@ -51,10 +73,11 @@ header nav {
 nav a,
 footer a {
   text-decoration: none;
+  color: var(--dark-lavender);
 }
 
 footer {
-  background-color: #b392ac;
+  background-color: #e4d4dd;
   width: 100%;
 }
 
@@ -67,7 +90,7 @@ footer div {
 }
 
 main {
-  background-color: #e8c2ca;
+  background-color: #d1b3c4;
 }
 
 h5 {
@@ -287,19 +310,39 @@ h5 {
     flex-direction: column;
     align-items: center;
     margin: 40px 0;
-    background-color: #f7d1cd;
+    background-color: #b392ac;
     width: 300px;
     height: 400px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .login-form-container h3{
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 10px;
+    color: white;
+    font-size: 24px;
 }
+
 .login-form-container p{
     margin-bottom: 20px;
+    font-family: 'Museo-Sans-Medium', sans-serif;
+    color: #65526a;
+    font-size: 14px;
+}
+
+.login-form-container p a{
+    margin-bottom: 20px;
+    font-family: 'Museo-Sans-Medium', sans-serif;
+    font-size: 14px;
+}
+
+.login-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-control{
@@ -312,17 +355,32 @@ h5 {
 .form-control label{
     display: block;
     align-self: flex-start;
+    color: white;
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 8px;
 }
 
 .form-control input{
     align-self: flex-start;
+    width: 100%;
+    height: 28px;
+    font-family: 'Museo-Sans-Medium', sans-serif;
+    font-size: 14px;
+    color: #65526a;
+    border: none;
+    border-radius: 8px;
+    padding-left: 4px;
 }
 
 .login-button{
     margin-top: 50px;
     border-radius: 12px;
-    padding: 2px 20px;
+    padding: 6px 28px;
     border: none;
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+    font-size: 18px;
     background-color: #735d78;
     color: white;
 }
