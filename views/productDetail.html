@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fenix&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Detalle del Producto</title>
 </head>
 <body>
     <header>
         <div>
-            <img src="/public/img/logotipo-sin.png" alt="Logotipo empresa" title="logotipo">
+            <img src="/img/logotipo-sin.png" alt="Logotipo empresa" title="logotipo">
             <nav class="links">
                 <a href="/views/productCar.html"><i class="fas fa-shopping-cart">Carrito de Compras</i></a>
                 <a href="/views/login.html"><i class="fas fa-sign-in-alt">Iniciar Sesión</i></a>
@@ -25,24 +25,30 @@
     <main>
         <section>
             <article class="product-img">
-                <img src="/public/img/holanda-chocolate.webp" alt="imagen-producto" title="helado-holanda-chocolate">
+                <img src="/img/holanda-chocolate.webp" alt="imagen-producto" title="helado-holanda-chocolate">
             </article>
+        <div>
             <article class="descripcion">
                 <h1>Holanda: Sabor Chocolate</h1>
                 <h3>Descripción:</h3>
                 <p>Conformado por leche descremada rehidratada (31%), agua, azúcares, grasa vegetal (6.9%), sólidos de leche (leche descremada en polvo y suero de leche en polvo), cocoa en polvo, emulsificantes (mono, di y triglicéridos), alginato de sodio y saborizante idéntico al natural.</p>
+        <form action="">
                 <h3>Presentación:</h3>
             <div class="inputs">
-                <input type="checkbox" name="medioLt" id="medioLt"> 1/2 Litro
-                <input type="checkbox" name="unLt" id="unLt"> 1 Litro
-                <input type="checkbox" name="un-ocho" id="un-ocho"> 1.89 Litros
+                <input type="radio" name="tamano" id="medio"> 1/2 Litro
+                <input type="radio" name="tamano" id="litro"> 1 Litro
+                <input type="radio" name="tamano" id="litromas"> 1.89 Litros
             </div>
             <div class="precios">
                 <h3>Precio:</h3>
                 <p>$49.99</p>
             </div>
-            <input class="button" type="button" value="AGREGAR AL CARRITO DE COMPRA">
+            <label for="cantidadCompra">Cantidad:</label>
+            <input type="number" name="cantidad" id="cantidadCompra" step="1" min="1" max="100" maxlength="3" value="1">
+            <button type="submit">AGREGAR AL CARRITO DE COMPRA</button>
+        </form>
             </article>
+        </div>
         </section>
     </main>
     <footer>
