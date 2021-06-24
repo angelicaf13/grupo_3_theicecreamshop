@@ -7,7 +7,7 @@
 
 header{
     background-color: #B392AC;
-    width: 100vw;
+    width: 100%;
     padding: 15px;
     font-size: 14px;
 }
@@ -20,9 +20,14 @@ header nav {
     font-size: 12px;
 }
 
+nav a,
+footer a {
+    text-decoration: none;
+}
+
 footer {
     background-color: #B392AC;
-    width: 100vw;
+    width: 100%;
 }
 
 footer div {
@@ -35,6 +40,12 @@ footer div {
 
 main {
     background-color: #E8C2CA;
+}
+
+h5 {
+    padding-bottom: 20px;
+    color: #735D78;
+    font-weight: bold;
 }
 
 .logo {
@@ -148,6 +159,92 @@ main {
     color: #735D78;
 }
 
+.seguir-comprando {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seguir-comprando a {
+    text-decoration: none;
+}
+
+.seguir-comprando button {
+    background-color: #735D78;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 5px;
+}
+
+.main-2 {
+    background-color: #fff;
+}
+
+.shopping-cart {
+    width: 100%;
+    border: 2px solid #735D78;
+}
+
+.title {
+    color: #735D78;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 15px 10px;
+    font-size: 12px;
+}
+
+.image {
+    width: 25%;
+}
+
+.item {
+    display: flex;
+}
+
+.description {
+    font-size: 10px;
+    padding: 10px;
+    width: 30%;
+}
+
+.quantity {
+    width: 30%;
+    text-align: center;
+}
+
+.total-price {
+    width: 15%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.ticket {
+    width: 100%;
+    border: 2px solid #f7d1cd;
+    padding: 10px;
+}
+
+.ticket button {
+    background-color: #735D78;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 5px;
+}
+
+.ticket-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ticket-column-1 p,
+.ticket-column-2 p {
+    font-size: 12px;
+    padding: 5px;
+}
+
 @media (min-width: 480px) {
     header nav,
     .historia,
@@ -211,6 +308,18 @@ main {
         grid-column-end: 10;
         grid-row-start: 4;
         grid-row-end: 7;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .container-product-cart {
+        display: flex;
     }
 
     footer div {
