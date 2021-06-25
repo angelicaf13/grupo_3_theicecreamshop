@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Ice Cream Shop</title>
+    <link rel="stylesheet" href="/public/css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fenix&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/public/css/style-2.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/productList">Comprar</a>
+        <a href="#">Marcas</a>
+        <img
+          class="logo"
+          src="/public/img/logotipo-sin.png"
+          alt="Logotipo empresa"
+          title="logotipo"
+        />
+        <a href="#">Historia</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+    <main class="fondo">
+      <section class="registro">
+        <div class="tabla-registro">
+          <h3>Registrarse</h3>
+          <form action="" class="register-form">
+        <div>
+            <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="p. ej. Daniela" required>
+            </div>
+            <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="p. ej. Campos" required>
+            </div>
+        </div>
+        <div>
+            <div>
+            <label for="correo">Correo electrónico</label>
+            <input type="email" name="correo" id="correo" placeholder="p. ej. danielacampos@hotmail.com" required>
+            </div>
+            <div>
+            <label for="contra">Contraseña</label>
+            <input type="password" name="contra" id="contra" required>
+            </div>
+        </div>
+        <div>
+            <div>
+            <label for="contra2">Confirmar contraseña</label>
+            <input type="password" name="contra2" id="contra2" required>
+            </div>
+        </div>
+        <p>Al crear la cuenta acepto las Condiciones de uso y el Aviso de privacidad de The Ice Cream Shop</p>
+        <button type="submit" class="button-register">CREAR CUENTA</button>
+          </form>
+        <h2>¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a></h2>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a href="/productList">Comprar</a>
+        <a href="#">Acerca de nosotros</a>
+        <a href="#">Marcas</a>
+        <a href="#">Contacto</a>
+      </div>
+    </footer>
+  </body>
+</html>

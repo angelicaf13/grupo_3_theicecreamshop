@@ -384,7 +384,85 @@ h5 {
     background-color: #735d78;
     color: white;
 }
-
+/* Registro */
+.registro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/public/img/fondo.jpg");
+  background-size:50%;
+}
+.tabla-registro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 15px;
+  background-color: #b392ac;
+  text-align: center;
+  border-radius: 10px;
+  width: 75%;
+}
+.tabla-registro h3{
+  font-family: 'Cardo', serif;
+  margin: 20px;
+  color: white;
+  font-size: 26px;
+}
+.tabla-registro p{
+  margin: 0px 5px 10px;
+  font-family: 'Museo-Sans-Medium', sans-serif;
+  color: #65526a;
+  font-size: 10px;
+  text-align: center;
+}
+.tabla-registro h2{
+  margin-bottom: 20px;
+  font-family: 'Museo-Sans-Medium', sans-serif;
+  font-size: 14px;
+  text-align: justify;
+}
+.register-form div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  text-align:center;
+  font-weight: none;
+  padding: 5px;
+}
+.register-form div div{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;
+  padding: 5px;
+}
+.register-form div div input{
+  border:none;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 2px;
+  font-family: 'Fenix', serif;
+  font-size: 16px;
+  width: 300px;
+}
+.register-form div div label{
+  align-self: flex-start;
+  margin: 5px;
+}
+.button-register {
+  margin: 15px;
+  border-radius: 12px;
+  padding: 6px 28px;
+  border: none;
+  font-family: 'Cervo-Neue-Regular', sans-serif;
+  font-size: 18px;
+  background-color: #735d78;
+  color: white;
+}
 @media (min-width: 480px) {
   header nav,
   .historia,
@@ -464,5 +542,40 @@ h5 {
 
   footer div {
     font-size: 18px;
+  }
+}
+@media (min-width: 768px){
+  .registro{
+    background-size:50%;
+  }
+  .tabla-registro{
+    width: 50%;
+  }
+}
+@media (min-width: 1279px){
+  .registro{
+    background-size:33%;
+  }
+  .tabla-registro{
+    width: 60%;
+  }
+  .tabla-registro h3{
+    font-size: 2em;
+  }
+  .tabla-registro p{
+    font-size: 1em;
+  }
+  .tabla-registro h2{
+    font-size: 1em;
+  }
+  .register-form div{
+    flex-direction: row;
+    font-size: 1em;
+  }
+  .register-form div div label{
+    font-size: 1.2em;
+  }
+  .button-register {
+    font-size: 1.5em;
   }
 }
