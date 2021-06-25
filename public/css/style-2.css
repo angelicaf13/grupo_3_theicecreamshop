@@ -429,6 +429,51 @@ input:focus-visible {
     background-color: #83c5be;
 }
 
+/* Product List */
+.ordenar{
+margin: 0px 20px;
+padding-top: 10px;
+display: flex;
+justify-content: flex-end;
+}
+
+.container-main-product-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-filter, .product-grid{
+    margin: 30px 50px;
+}
+
+.container-filter{
+    width: 20vw;
+    background-color: white;
+}
+
+.container-filter .category{
+    background-color: #b392ac;
+    margin: 10px 15px;
+}
+
+.container-filter .category h3{
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+    margin: 10px;
+}
+
+.product-grid{
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product-container{
+    width: 100px;
+    background-color: var(--logo-back);
+    margin: 15px;
+}
+
 
 /* Registro */
 .registro {
