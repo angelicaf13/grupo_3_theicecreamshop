@@ -93,10 +93,25 @@ main {
   background-color: #d1b3c4;
 }
 
+h2 {
+    color: #65526a;;
+}
+
 h5 {
   padding-bottom: 20px;
   color: #735d78;
   font-weight: bold;
+}
+
+.links {
+    width: 0.5%;
+}
+
+.links i{
+    display: block;
+    padding: 5px 10px;
+    font-size: 8px;
+    justify-content: left;
 }
 
 .logo {
@@ -191,7 +206,8 @@ h5 {
 }
 
 .historia {
-  background-color: #e8c2ca;
+  background-color: #e4d4dd;
+  color: #65526a;
   text-align: center;
   padding: 20px;
   font-size: 12px;
@@ -199,8 +215,8 @@ h5 {
 
 .contacto {
   text-align: center;
+  color: #65526a;
   padding: 15px;
-  background-color: #e8c2ca;
   font-size: 12px;
 }
 
