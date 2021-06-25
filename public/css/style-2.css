@@ -409,7 +409,7 @@ input:focus-visible{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/public/img/fondo.jpg");
+  background-image: url("/img/fondo.jpg");
   background-size:50%;
 }
 .tabla-registro{
