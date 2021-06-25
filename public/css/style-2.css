@@ -9,50 +9,50 @@
 }
 
 @font-face {
-    font-family: Cervo-Neue-Black;
-    src: url(CervoNeue-BlackNeue.otf);
+  font-family: Cervo-Neue-Black;
+  src: url(CervoNeue-BlackNeue.otf);
 }
 
 @font-face {
-    font-family: Cervo-Neue-Bold;
-    src: url(CervoNeue-BoldNeue.otf);
+  font-family: Cervo-Neue-Bold;
+  src: url(CervoNeue-BoldNeue.otf);
 }
 
 @font-face {
-    font-family: Cervo-Neue-Regular;
-    src: url(CervoNeue-RegularNeue.otf);
+  font-family: Cervo-Neue-Regular;
+  src: url(CervoNeue-RegularNeue.otf);
 }
 
 @font-face {
-    font-family: Cervo-Neue-Light;
-    src: url(CervoNeue-LightNeue.otf);
+  font-family: Cervo-Neue-Light;
+  src: url(CervoNeue-LightNeue.otf);
 }
 
 @font-face {
-    font-family: Museo-Sans-Thin;
-    src: url(MuseoSans-100.otf);
+  font-family: Museo-Sans-Thin;
+  src: url(MuseoSans-100.otf);
 }
 
 @font-face {
-    font-family: Museo-Sans-Light;
-    src: url(MuseoSans-300.otf);
+  font-family: Museo-Sans-Light;
+  src: url(MuseoSans-300.otf);
 }
 
 @font-face {
-    font-family: Museo-Sans-Medium;
-    src: url(MuseoSans-500.otf);
+  font-family: Museo-Sans-Medium;
+  src: url(MuseoSans-500.otf);
 }
 
 @font-face {
-    font-family: Museo-Sans-Bold;
-    src: url(MuseoSans-700.otf);
+  font-family: Museo-Sans-Bold;
+  src: url(MuseoSans-700.otf);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Cervo-Neue-Bold', sans-serif;
+  font-family: "Cervo-Neue-Bold", sans-serif;
 }
 
 header {
@@ -94,7 +94,7 @@ main {
 }
 
 h2 {
-    color: #65526a;;
+  color: #65526a;
 }
 
 h5 {
@@ -104,14 +104,14 @@ h5 {
 }
 
 .links {
-    width: 0.5%;
+  width: 0.5%;
 }
 
-.links i{
-    display: block;
-    padding: 5px 10px;
-    font-size: 8px;
-    justify-content: left;
+.links i {
+  display: block;
+  padding: 5px 10px;
+  font-size: 8px;
+  justify-content: left;
 }
 
 .logo {
@@ -314,121 +314,131 @@ h5 {
 
 /* Login */
 
-.main-login{
-    background: linear-gradient(to right top, #b392ac, #e8c2ca);
+.main-login {
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
 }
 
-.login-background{
-    width: 100%;
-    height: 75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.login-background {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 0;
-    background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
-    backdrop-filter: blur(2rem);
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(2rem);
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.login-form-container h3{
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    color: #65526a;
-    font-size: 24px;
+.login-form-container h3 {
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #65526a;
+  font-size: 24px;
 }
 
-.login-form-container p{
-    margin-bottom: 20px;
-    font-family: 'Museo-Sans-Medium', sans-serif;
-    color: #65526a;
-    font-size: 14px;
+.login-form-container p {
+  margin-bottom: 20px;
+  font-family: "Museo-Sans-Medium", sans-serif;
+  color: #65526a;
+  font-size: 14px;
 }
 
-.login-form-container p a{
-    margin-bottom: 20px;
-    font-family: 'Museo-Sans-Medium', sans-serif;
-    font-size: 14px;
-    text-decoration: none;
+.login-form-container p a {
+  margin-bottom: 20px;
+  font-family: "Museo-Sans-Medium", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-.login-form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form-control{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.form-control {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.form-control label{
-    display: block;
-    align-self: flex-start;
-    color: #65526a;
-    font-family: 'Cervo-Neue-Bold', sans-serif;
-    font-size: 18px;
-    margin-bottom: 5px;
-    margin-top: 8px;
+.form-control label {
+  display: block;
+  align-self: flex-start;
+  color: #65526a;
+  font-family: "Cervo-Neue-Bold", sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 8px;
 }
 
-.form-control input{
-    align-self: flex-start;
-    width: 100%;
-    height: 28px;
-    font-family: 'Museo-Sans-Light', sans-serif;
-    font-size: 14px;
-    color: #65526a;
-    border: none;
-    border-radius: 5px;
-    padding-left: 4px;
+.form-control input {
+  align-self: flex-start;
+  width: 100%;
+  height: 28px;
+  font-family: "Museo-Sans-Light", sans-serif;
+  font-size: 14px;
+  color: #65526a;
+  border: none;
+  border-radius: 5px;
+  padding-left: 4px;
 }
 
-input:focus-visible{
-    border: solid 2px #65526a;
-    outline: none;
+input:focus-visible {
+  border: solid 2px #65526a;
+  outline: none;
 }
 
-.form-control a{
-    font-family: 'Museo-Sans-Medium', sans-serif;
-    margin-top: 16px;
-    text-align: right;
-    font-size: 14px;
-    text-decoration: none;
+.form-control a {
+  font-family: "Museo-Sans-Medium", sans-serif;
+  margin-top: 16px;
+  text-align: right;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-.login-button{
-    margin-top: 50px;
-    border-radius: 6px;
-    padding: 6px 28px;
-    border: none;
-    font-family: 'Cervo-Neue-Regular', sans-serif;
-    font-size: 18px;
-    background-color: #735d78;
-    color: white;
+.login-button {
+  margin-top: 50px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 18px;
+  background-color: #735d78;
+  color: white;
+  transition: all 0.5s;
 }
+
+.login-button:hover{
+    background-color: #83c5be;
+}
+
+
 /* Registro */
-.registro{
+.registro {
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("/img/fondo.jpg");
-  background-size:50%;
+  background-size: 50%;
 }
-.tabla-registro{
+.tabla-registro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -440,52 +450,52 @@ input:focus-visible{
   border-radius: 10px;
   width: 75%;
 }
-.tabla-registro h3{
-  font-family: 'Cardo', serif;
+.tabla-registro h3 {
+  font-family: "Cardo", serif;
   margin: 20px;
   color: white;
   font-size: 26px;
 }
-.tabla-registro p{
+.tabla-registro p {
   margin: 0px 5px 10px;
-  font-family: 'Museo-Sans-Medium', sans-serif;
+  font-family: "Museo-Sans-Medium", sans-serif;
   color: #65526a;
   font-size: 10px;
   text-align: center;
 }
-.tabla-registro h2{
+.tabla-registro h2 {
   margin-bottom: 20px;
-  font-family: 'Museo-Sans-Medium', sans-serif;
+  font-family: "Museo-Sans-Medium", sans-serif;
   font-size: 14px;
   text-align: justify;
 }
-.register-form div{
+.register-form div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
-  text-align:center;
+  text-align: center;
   font-weight: none;
   padding: 5px;
 }
-.register-form div div{
+.register-form div div {
   display: flex;
   flex-direction: column;
   margin: 5px;
   align-items: center;
   padding: 5px;
 }
-.register-form div div input{
-  border:none;
+.register-form div div input {
+  border: none;
   border-radius: 8px;
   padding: 4px;
   margin: 2px;
-  font-family: 'Fenix', serif;
+  font-family: "Fenix", serif;
   font-size: 16px;
   width: 300px;
 }
-.register-form div div label{
+.register-form div div label {
   align-self: flex-start;
   margin: 5px;
 }
@@ -494,7 +504,7 @@ input:focus-visible{
   border-radius: 12px;
   padding: 6px 28px;
   border: none;
-  font-family: 'Cervo-Neue-Regular', sans-serif;
+  font-family: "Cervo-Neue-Regular", sans-serif;
   font-size: 18px;
   background-color: #735d78;
   color: white;
@@ -580,35 +590,35 @@ input:focus-visible{
     font-size: 18px;
   }
 }
-@media (min-width: 768px){
-  .registro{
-    background-size:50%;
+@media (min-width: 768px) {
+  .registro {
+    background-size: 50%;
   }
-  .tabla-registro{
+  .tabla-registro {
     width: 50%;
   }
 }
-@media (min-width: 1279px){
-  .registro{
-    background-size:33%;
+@media (min-width: 1279px) {
+  .registro {
+    background-size: 33%;
   }
-  .tabla-registro{
+  .tabla-registro {
     width: 60%;
   }
-  .tabla-registro h3{
+  .tabla-registro h3 {
     font-size: 2em;
   }
-  .tabla-registro p{
+  .tabla-registro p {
     font-size: 1em;
   }
-  .tabla-registro h2{
+  .tabla-registro h2 {
     font-size: 1em;
   }
-  .register-form div{
+  .register-form div {
     flex-direction: row;
     font-size: 1em;
   }
-  .register-form div div label{
+  .register-form div div label {
     font-size: 1.2em;
   }
   .button-register {
