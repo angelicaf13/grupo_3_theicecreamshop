@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/style-2.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -28,8 +31,8 @@
       </nav>
     </header>
     <main class="main-login">
-      <section class="login-background">
-        <div class="login-form-container">
+      <div class="glass-container">
+        <section class="glass-login">
           <h3>Acceder</h3>
           <p>¿Aún no tienes cuenta?<a href="/register"> Regístrate aquí</a></p>
           <form action="" class="login-form">
@@ -42,13 +45,19 @@
               <input type="password" name="pass" id="pass" />
             </div>
             <div class="form-control">
-                <a href="">¿Olvidaste tu constraseña?</a>
+              <a href="">¿Olvidaste tu constraseña?</a>
+            </div>
+            <div class="form-control">
+              <label>Recordarme <input type="checkbox" /></label>
             </div>
             <button type="submit" class="login-button">INGRESAR</button>
           </form>
-        </div>
-      </section>
+        </section>
+        <img src="/img/ice-cream-cone.svg" class="ice-cream-cone-img-1" />
+        <img src="/img/ice-cream-cone.svg" class="ice-cream-cone-img-2" />
+      </div>
     </main>
+
     <footer>
       <div>
         <a href="/productList">Comprar</a>

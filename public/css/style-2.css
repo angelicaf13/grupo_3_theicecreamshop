@@ -316,6 +316,37 @@ h5 {
 
 .main-login {
   background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-container{
+    min-height: 68vh;
+    width: 85%;
+    max-width: 360px;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.glass-login{
+    background: white;
+    min-height: 68vh;
+    width: 100%;
+    max-width: 360px;
+    background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+    border-radius: 1rem;
+    z-index: 2;
+    position: absolute;
+    backdrop-filter: blur(1.2rem);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .login-background {
@@ -330,38 +361,39 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0;
+  margin: 40px 25px;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.1)
   );
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(1.2rem);
   width: 400px;
   height: 400px;
   text-align: center;
   border-radius: 5px;
+  z-index: 1;
 }
 
-.login-form-container h3 {
+.glass-login h3 {
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 10px;
   color: #65526a;
-  font-size: 24px;
+  font-size: 20px;
 }
 
-.login-form-container p {
+.glass-login p {
   margin-bottom: 20px;
   font-family: "Museo-Sans-Medium", sans-serif;
   color: #65526a;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-.login-form-container p a {
+.glass-login p a {
   margin-bottom: 20px;
   font-family: "Museo-Sans-Medium", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -384,17 +416,17 @@ h5 {
   align-self: flex-start;
   color: #65526a;
   font-family: "Cervo-Neue-Bold", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 5px;
   margin-top: 8px;
 }
 
-.form-control input {
+.form-control input[type=email], .form-control input[type=password] {
   align-self: flex-start;
   width: 100%;
   height: 28px;
   font-family: "Museo-Sans-Light", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   color: #65526a;
   border: none;
   border-radius: 5px;
@@ -410,7 +442,7 @@ input:focus-visible {
   font-family: "Museo-Sans-Medium", sans-serif;
   margin-top: 16px;
   text-align: right;
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -419,7 +451,7 @@ input:focus-visible {
   padding: 6px 28px;
   border: none;
   font-family: "Cervo-Neue-Regular", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #735d78;
   color: white;
   transition: all 0.5s;
@@ -428,6 +460,40 @@ input:focus-visible {
 .login-button:hover{
     background-color: #83c5be;
 }
+
+.ice-cream-cone-img-1, .ice-cream-cone-img-2{
+    display: none;
+}
+
+@keyframes iceCream1 {
+    0% {
+        display: block;
+    }
+
+    100%{
+            width: 15rem;
+            top: 11%;
+            left: -43%;
+            transform: rotate(-13deg);
+    }
+    
+}
+@keyframes iceCream2 {
+    0%{
+        display: block;
+    }
+
+    100%{
+        width: 15rem;
+        top: 45%;
+        left: 76%;
+        -webkit-transform: scaleX(-1);
+        transform: rotate(13deg) scaleX(-1);
+    }
+    
+}
+
+
 
 /* Product List */
 .ordenar{
@@ -554,6 +620,7 @@ justify-content: flex-end;
   background-color: #735d78;
   color: white;
 }
+
 @media (min-width: 480px) {
   header nav,
   .historia,
@@ -634,7 +701,32 @@ justify-content: flex-end;
   footer div {
     font-size: 18px;
   }
+
+  .ice-cream-cone-img-1, .ice-cream-cone-img-2{
+    width: 9rem;
+    display: block;
 }
+
+.ice-cream-cone-img-1{
+    z-index: 0;
+    position: absolute;
+    order: 1;
+    top: 9%;
+    left: -23%;
+}
+
+.ice-cream-cone-img-2{
+    z-index: 0;
+    position: absolute;
+    top: 62%;
+    left: 77%;
+    -webkit-transform: scaleX(-1);
+    transform: rotate(180deg) scaleX(-1);
+}
+
+
+}
+
 @media (min-width: 768px) {
   .registro {
     background-size: 50%;
@@ -642,7 +734,32 @@ justify-content: flex-end;
   .tabla-registro {
     width: 50%;
   }
+  .ice-cream-cone-img-1{
+      animation: iceCream1 3s 1 forwards;
+  }
+  .ice-cream-cone-img-2{
+      animation: iceCream2 3s 1 forwards;
+  }
+
+  /* .ice-cream-cone-img-1, .ice-cream-cone-img-2{
+    width: 15rem;
+    display: block;
 }
+.ice-cream-cone-img-1{
+    top: 11%;
+    left: -43%;
+    transform: rotate(-13deg);
+}
+
+.ice-cream-cone-img-2{
+    top: 45%;
+    left: 76%;
+    -webkit-transform: scaleX(-1);
+    transform: rotate(13deg) scaleX(-1);
+} */
+  
+}
+
 @media (min-width: 1279px) {
   .registro {
     background-size: 33%;
