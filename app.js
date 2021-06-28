@@ -8,7 +8,7 @@ console.log(publicPath);
 
 app.use(express.static(publicPath));
 app.get('/',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./views/productDetail.html'));
+    res.sendFile(path.resolve(__dirname,'./views/index.html'));
 });
 app.get('/index',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/index.html'));
