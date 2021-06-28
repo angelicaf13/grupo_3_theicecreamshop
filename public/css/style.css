@@ -5,7 +5,7 @@
     font-family: 'Fenix', serif;
 }
 header{
-    background-color: #B392AC;
+    background-color:  #e4d4dd;
     width: 100vw;
 }
 header >div{
@@ -90,7 +90,7 @@ button{
 }
 footer{
     height: 30%;
-    background-color: #B392AC; 
+    background-color:  #e4d4dd; 
     padding:20px; 
     font-size: 12px;
     width: 100vw;
