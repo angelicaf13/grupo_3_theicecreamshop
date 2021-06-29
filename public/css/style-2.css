@@ -493,15 +493,45 @@ input:focus-visible {
     
 }
 
-
-
 /* Product List */
-.ordenar{
-margin: 0px 20px;
-padding-top: 10px;
-display: flex;
-justify-content: flex-end;
+
+.main-product-list{
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 90vh;
 }
+
+.ordenar-filtar-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ordenar-filtrar-button{
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 14px;
+  background-color: #735d78;
+  padding: 6px 10px;
+  margin: 8px;
+  color: white;
+  border: none;
+  transition: all 0.5s;
+}
+
+.ordenar-filtrar-button:hover{
+  background-color: #83c5be;
+}
+
+.ordenar-checkbox-container{
+  display: none;
+  margin: 0px 20px;
+padding-top: 10px;
+
+}
+
+.filtros{
+  display: none;
+}
+
+
 
 .container-main-product-list{
     display: flex;
@@ -709,6 +739,7 @@ article.perfil form button{
 .pagoFinal h1, .pagoFinal p{
   font-size: 26px;
 }
+
 @media (min-width: 480px) {
   header nav,
   .historia,
@@ -828,23 +859,69 @@ article.perfil form button{
   .ice-cream-cone-img-2{
       animation: iceCream2 3s 1 forwards;
   }
+  .ordenar-filtrar-button{
+    display: none;
+  }
+  
+  .ordenar-checkbox-container{
+    display: flex;
+    justify-content: space-around
+  }
 
-  /* .ice-cream-cone-img-1, .ice-cream-cone-img-2{
-    width: 15rem;
-    display: block;
-}
-.ice-cream-cone-img-1{
-    top: 11%;
-    left: -43%;
-    transform: rotate(-13deg);
-}
+  .ordenar-checkbox-container label{
+    color: #65526a;
+  }
 
-.ice-cream-cone-img-2{
-    top: 45%;
-    left: 76%;
-    -webkit-transform: scaleX(-1);
-    transform: rotate(13deg) scaleX(-1);
-} */
+  #ordenar{
+    margin-left: 5px;
+    border: none;
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+  }
+
+  #ordenar option{
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+  }
+
+  .filtros{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    max-width: 155px;
+    margin: 20px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(1.2rem);
+    border-radius: 0.2rem;
+  }
+
+  .filtros h3 {
+    margin: 5px;
+  }
+
+  .filter-form{
+    margin: 10px;
+  }
+
+  .filter-form > h3{
+    font-family: 'Cervo-Neue-Bold', sans-serif;
+    color: #65526a;
+  }
+
+  .category h3{
+    margin: 5px;
+    font-size: 16px;
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+  }
+
+  .filter-group-checkboxes{
+    display: flex;
+    flex-direction: column;
+    border: cadetblue solid 2px;
+    margin: 5px;
+  }
+
+  .filter-group-checkboxes div label{
+    font-family: 'Cervo-Neue-Light';
+  }
   
 }
 

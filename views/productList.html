@@ -31,8 +31,9 @@
       </nav>
     </header>
     <main class="main-product-list">
-      <section class="product-list-background">
-        <div class="ordenar">
+        <div class="ordenar-filtar-container">
+          <button class="ordenar-filtrar-button">Ordenar & Filtrar</button>
+          <div class="ordenar-checkbox-container">
           <label for="ordenar">Ordenar por: </label>
           <select name="ordenar" id="ordenar">
             <option value="populares">Mas populares</option>
@@ -41,62 +42,61 @@
             <option value="precio-des">Precio: descendente</option>
           </select>
         </div>
-        <div class="container-main-product-list">
-          <div class="container-filter">
-              <form action="GET" class="filter-form">
+        </div>
+        <div class="filtros">
+          <form action="GET" class="filter-form">
             <h3>Filtros</h3>
             <div class="category">
               <h3>Marcas</h3>
-              <div class="marcas-checkboxes">
-                  <label for="holanda">Holanda</label>
-                  <input type="checkbox" name="holanda">
-
-                  <label for="b&j">Ben & Jerry's</label>
-                  <input type="checkbox" name="b&j">
-
-                  <label for="hageen">Häagen-Dazs</label>
-                  <input type="checkbox" name="hageen">
+              <div class="filter-group-checkboxes">
+                <div>
+                  <label><input type="checkbox" name="holanda"> Holanda</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="b&j"> Ben & Jerry's</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="hageen"> Häagen-Dazs</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="blue"> Blue Bell</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="thrifty"> Thrifty</label>
+                </div>
               </div>
             </div>
             <div class="category">
               <h3>Precio</h3>
+              <div class="filter-group-checkboxes">
+                <div>
+                  <label><input type="checkbox" name="ceroAVeinte"> 0 - $25</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="veinticinco"> $25 - $50</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="cincuenta"> $50 - $75</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="setentaCien"> $75 - $100</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="cien"> $100 - $125</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="cienCincuenta"> $125 - $150</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="cienCincuentaDos"> $150 - $200</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="doscientosMas"> $200+</label>
+                </div>
+              </div>
             </div>
         </form>
-          </div>
-          <div class="product-grid">
-            <article class="product-container">
-                <img src="" alt="">
-                <h4>Nombre producto</h4>
-                <p>Precio</p>
-            </article>
-            <article class="product-container">
-                <img src="" alt="">
-                <h4>Nombre producto</h4>
-                <p>Precio</p>
-            </article>
-            <article class="product-container">
-                <img src="" alt="">
-                <h4>Nombre producto</h4>
-                <p>Precio</p>
-            </article>
-            <article class="product-container">
-                <img src="" alt="">
-                <h4>Nombre producto</h4>
-                <p>Precio</p>
-            </article>
-            <article class="product-container">
-                <img src="" alt="">
-                <h4>Nombre producto</h4>
-                <p>Precio</p>
-            </article>
-            <article class="product-container">
-                <img src="" alt="">
-                <h4>Nombre producto</h4>
-                <p>Precio</p>
-            </article>
-          </div>
         </div>
-      </section>
     </main>
     <footer>
       <div>
