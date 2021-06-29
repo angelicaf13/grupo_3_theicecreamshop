@@ -621,6 +621,94 @@ justify-content: flex-end;
   color: white;
 }
 
+/* Perfil */
+.mainPerfil{
+  padding: 15px;
+  background-color:  #b392ac; 
+}
+article.perfil, .historial{
+  border: none;
+  border-radius: 5px;
+  background-color:  #e8c2ca;
+  margin: 0px 10px;
+}
+article.perfil form{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: flex-end;
+  line-height: 35px;
+}
+article.perfil form input{
+  width: 230px;
+  padding: 3px;
+  margin-right: 2px;
+  border: none;
+  border-radius: 5px;
+}
+#fotoPerfil{
+  display: flex;
+  align-self: center;
+  padding: 3px;
+}
+article.perfil form button{
+  margin: 15px;
+  border-radius: 12px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 18px;
+  background-color: #735d78;
+  color: white;
+  display: flex;
+  align-self: center;
+}
+.titulos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.titulos h1{
+  font-family: "Cardo", serif;
+  font-size: 16px;
+}
+.enh3 h3{
+  padding-top: 10px;
+  font-family: "Cardo", serif;
+  font-size: 26px;
+  text-align: center;
+}
+.historial div img{
+  width: 100px;
+}
+.historial div{
+  display: flex;
+  flex-direction: row;
+  font-weight: none;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+}
+.fec{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+#fechas{
+  border-radius: 6px;
+  margin: 0px 10px;
+}
+.historial .pagoFinal{
+  margin:0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: left;
+}
+.pagoFinal h1, .pagoFinal p{
+  font-size: 26px;
+}
 @media (min-width: 480px) {
   header nav,
   .historia,

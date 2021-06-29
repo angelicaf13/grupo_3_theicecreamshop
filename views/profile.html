@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fenix&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style-2.css" />
   </head>
   <body>
@@ -28,23 +29,61 @@
         <a href="#">Contacto</a>
       </nav>
     </header>
-    <main>
-      <section>
+    <main class="mainPerfil">
+      <section class="enh3">
+        <article class="perfil">
           <h3>Perfil</h3>
           <form action="" class="">
             <input type="file" name="fotoPerfil" id="fotoPerfil">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="p. ej. Daniela" minlength="6" required>
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido" placeholder="p. ej. Campos" minlength="6" required>
-            <label for="correo">Correo electrónico</label>
-            <input type="email" name="correo" id="correo" placeholder="p. ej. danielacampos@hotmail.com" required>
-            <label for="contra">Contraseña</label>
-            <input type="password" name="contra" id="contra" minlength="8" required>
-            <label for="contra2">Confirmar contraseña</label>
-            <input type="password" name="contra2" id="contra2" minlength="8" required>
+            <label for="nombre">Nombre
+            <input type="text" name="nombre" id="nombre" placeholder="p. ej. Daniela" minlength="6" required></label>
+            <label for="apellido">Apellido
+            <input type="text" name="apellido" id="apellido" placeholder="p. ej. Campos" minlength="6" required></label>
+            <label for="correo">Correo electrónico
+            <input type="email" name="correo" id="correo" placeholder="p. ej. danielacampos@hotmail.com" required></label>
+            <label for="contra">Contraseña
+            <input type="password" name="contra" id="contra" minlength="8" required></label>
+            <label for="contra2">Confirmar contraseña
+            <input type="password" name="contra2" id="contra2" minlength="8" required></label>
             <button type="submit" class="">GUARDAR CAMBIOS</button>
           </form>
+        </article>
+        <article class="historial">
+            <h3>Historial de compras</h3>
+            <form action="">
+              <label class="fec">Fecha: 
+              <select name="fechas" id="fechas">
+                <option value="junio">15 Enero 2021</option>
+                <option value="junio">21 Marzo 2021</option>
+                <option value="junio">06 Abril 2021</option>
+                <option value="junio">26 Mayo 2021</option>
+                <option value="junio">27 Mayo 2021</option>
+                <option value="junio">01 Junio 2021</option>
+              </select>
+            </label>
+            <div class="titulos">
+              <h1>Productos</h1>
+              <h1>Cantidad</h1>
+              <h1>Totales</h1>
+            </div>
+          <div>
+            <img src="/img/holanda-chocolate.webp" alt="producto">
+            <p>Holanda Chocolate</p>
+            <p>1</p>
+            <p>$49.99</p>
+          </div>
+          <div>
+            <img src="/img/holanda-vainilla.webp" alt="producto">
+            <p>Holanda Vainilla</p>
+            <p>1</p>
+            <p>$48.00</p>
+          </div>
+            <div class="pagoFinal">
+              <h1>Total pagado:</h1>
+              <p>$97.99</p>
+            </div>
+            </form>
+        </article>
       </section>
     </main>
     <footer>
