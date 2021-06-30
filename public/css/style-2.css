@@ -458,7 +458,7 @@ input:focus-visible {
 }
 
 .login-button:hover{
-    background-color: #83c5be;
+    background-color: #b45ecc;
 }
 
 .ice-cream-cone-img-1, .ice-cream-cone-img-2{
@@ -503,6 +503,7 @@ input:focus-visible {
 .ordenar-filtar-container{
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 10px;
 }
 
 .ordenar-filtrar-button{
@@ -517,7 +518,7 @@ input:focus-visible {
 }
 
 .ordenar-filtrar-button:hover{
-  background-color: #83c5be;
+  background-color: #b45ecc;;
 }
 
 .ordenar-checkbox-container{
@@ -527,49 +528,108 @@ padding-top: 10px;
 
 }
 
+.filters-products {
+  display: flex;
+  justify-content: space-around;
+}
+
 .filtros{
   display: none;
 }
-
-
 
 .container-main-product-list{
     display: flex;
     justify-content: space-between;
 }
 
-.container-filter, .product-grid{
-    margin: 30px 50px;
-}
-
-.container-filter{
-    width: 20vw;
-    background-color: white;
-}
-
-.container-filter .category{
-    background-color: #b392ac;
-    margin: 10px 15px;
-}
-
-.container-filter .category h3{
+.category h3{
     font-family: 'Cervo-Neue-Regular', sans-serif;
     margin: 10px;
 }
 
-.product-grid{
-    width: 60vw;
+.apply-button{
+  display: block;
+ margin-top: 30px;
+ margin-left: 70px;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 14px;
+  background-color: #735d78;
+  padding: 6px 14px;
+  color: white;
+  border: none;
+  transition: all 0.5s;
+  align-self: center;
+}
+
+.apply-button:hover{
+  background-color: #b45ecc;
+}
+
+.productos{
+    width: 100vw;
+    max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
 }
 
 .product-container{
-    width: 100px;
-    background-color: var(--logo-back);
-    margin: 15px;
+    width: 100%;
+    max-width: 180px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(1.2rem);
+    border-radius: 0.2rem;
+    margin: 10px;
+    min-height: 247px;
 }
 
+@keyframes hoverProduct {
+  0% {
+  }
+  100%{
+    color: #b45ecc;
+  }
+}
+
+.product-container:hover{
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.product-container div {
+  min-height: 170px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.product-container img{
+  width: 60%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+.product-container h4{
+  text-align: center;
+  color: #65526a;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.product-container p{
+  text-align: center;
+  color: grey;
+  margin-bottom: 10px;
+  font-size: var(--dark-lavender);
+}
+
+.product-container:hover > h4{
+  animation: hoverProduct 0.4s forwards;
+}
 
 /* Registro */
 .registro {
@@ -915,12 +975,15 @@ article.perfil form button{
   .filter-group-checkboxes{
     display: flex;
     flex-direction: column;
-    border: cadetblue solid 2px;
     margin: 5px;
   }
 
   .filter-group-checkboxes div label{
     font-family: 'Cervo-Neue-Light';
+  }
+
+  .productos{
+    justify-content: flex-start;
   }
   
 }
