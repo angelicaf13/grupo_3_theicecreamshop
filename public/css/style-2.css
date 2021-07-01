@@ -1018,6 +1018,19 @@ article.perfil form button{
     text-align: right;
   }
   
+  article.perfil{
+    width: 50vw;
+    justify-content: center;
+  }
+  article.historial{
+    width: 40vw;
+    justify-content: center;
+  }
+  section.enh3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @media (min-width: 1279px) {
@@ -1053,6 +1066,12 @@ article.perfil form button{
 
   header nav {
     font-size: 25px;
+  }
+  article.perfil{
+    width: 30vw;
+  }
+  article.historial{
+    width: 60vw;
   }
 }
 
