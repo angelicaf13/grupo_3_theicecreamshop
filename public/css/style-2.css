@@ -103,6 +103,16 @@ h5 {
   font-weight: bold;
 }
 
+textarea {
+  font-weight: bold;
+  font-size: 12px;
+  color: #65526a;
+  background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+  border-radius: 1rem;
+  backdrop-filter: blur(1.2rem);
+  border-style: none;
+}
+
 .links {
   width: 0.5%;
 }
@@ -233,10 +243,18 @@ h5 {
 
 .comentario {
   text-align: center;
+  
 }
 
-.botones-comentario {
-  text-align: center;
+.comments-button {
+  margin-top: 10px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 12px;
+  background-color: #735d78;
+  color: white;
+  transition: all 0.5s;
 }
 
 .seguir-comprando {
@@ -1031,7 +1049,14 @@ article.perfil form button{
     justify-content: space-between;
     align-items: center;
   }
+
+  textarea {
+    width: 35vw;
+    font-size: 16px;
+  }
+
 }
+
 
 @media (min-width: 1279px) {
   .registro {
