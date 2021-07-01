@@ -90,7 +90,7 @@ footer div {
 }
 
 main {
-  background-color: #d1b3c4;
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
 }
 
 h2 {
@@ -279,9 +279,13 @@ textarea {
   background-color: #fff;
 }
 
+
 .shopping-cart {
   width: 100%;
-  border: 2px solid #735d78;
+  border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
 }
 
 .title {
@@ -320,8 +324,10 @@ textarea {
 
 .ticket {
   width: 100%;
-  border: 2px solid #f7d1cd;
+  border-radius: 5px;
   padding: 10px;
+  margin: 5px;
+  background: linear-gradient( to left , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
 }
 
 .ticket button {
@@ -341,6 +347,10 @@ textarea {
 .ticket-column-2 p {
   font-size: 12px;
   padding: 5px;
+}
+
+.container-product-cart{
+margin: 0px 15px;
 }
 
 /* Login */
