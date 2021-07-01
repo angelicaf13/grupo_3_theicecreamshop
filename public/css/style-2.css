@@ -226,6 +226,19 @@ h5 {
   color: #735d78;
 }
 
+.contacto-box {
+  width: 100%;
+  padding: 20px;
+}
+
+.comentario {
+  text-align: center;
+}
+
+.botones-comentario {
+  text-align: center;
+}
+
 .seguir-comprando {
   padding: 15px;
   display: flex;
@@ -903,6 +916,9 @@ article.perfil form button{
     transform: rotate(180deg) scaleX(-1);
 }
 
+.links i {
+  font-size: 10px;
+}
 
 }
 
@@ -985,6 +1001,22 @@ article.perfil form button{
   .productos{
     justify-content: flex-start;
   }
+
+  .links i {
+    font-size: 12px;
+  }
+
+  .contacto-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .botones-comentario {
+    text-align: right;
+  }
   
 }
 
@@ -1014,4 +1046,13 @@ article.perfil form button{
   .button-register {
     font-size: 1.5em;
   }
+
+  .links i {
+    font-size: 14px;
+  }
+
+  header nav {
+    font-size: 25px;
+  }
 }
+
