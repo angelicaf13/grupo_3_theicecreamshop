@@ -966,7 +966,7 @@ article.perfil form button{
 
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
   .tabla-registro {
     width: 50%;
   }
