@@ -732,6 +732,7 @@ padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%
 }
 .register-form div div input {
   border: none;
@@ -741,7 +742,7 @@ padding-top: 10px;
   font-family: "Museo-Sans-Light", sans-serif;
   font-size: 13px;
   color: #65526a;
-  width: 300px;
+  width: 100%;
   height: 28px;
 }
 .register-form div div label {
@@ -1097,6 +1098,7 @@ article.perfil form button{
   .register-form div {
     flex-direction: row;
     font-size: 1em;
+    margin: 5px;
   }
   .register-form div div label {
     font-size: 1.2em;
