@@ -1,6 +1,6 @@
 # Retrospectiva
 
-Sprint 1
+## Sprint 1
 
 __1. Comenzar a hacer__
 
@@ -23,7 +23,7 @@ __5. Dejar de hacer__
 Por ahorita no hemos tenid ningún inconveniente.
 
 
-Sprint 2
+## Sprint 2
 
 __1. Comenzar a hacer__
 
