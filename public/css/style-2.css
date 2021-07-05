@@ -246,21 +246,31 @@ textarea {
   
 }
 
-.comments-button {
-  margin-top: 10px;
-  padding: 6px 28px;
+.comments-button-left {
+  margin: 15px 5px 15px 0px;
+  border-radius: 12px;
+  padding: 6px 15px 6px 15px;
   border: none;
   font-family: "Cervo-Neue-Regular", sans-serif;
-  font-size: 12px;
   background-color: #735d78;
   color: white;
-  transition: all 0.5s;
+}
+
+.comments-button-right {
+  margin: 15px 15px 15px 0px;
+  border-radius: 12px;
+  padding: 6px 15px 6px 15px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  background-color: #735d78;
+  color: white;
 }
 
 .seguir-comprando {
   padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .seguir-comprando a {
@@ -268,11 +278,13 @@ textarea {
 }
 
 .seguir-comprando button {
+  margin: 15px;
+  border-radius: 12px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
   background-color: #735d78;
-  color: #fff;
-  text-shadow: none;
-  box-shadow: none;
-  padding: 5px;
+  color: white;
 }
 
 .main-2 {
@@ -331,11 +343,13 @@ textarea {
 }
 
 .ticket button {
+  margin: 15px;
+  border-radius: 12px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
   background-color: #735d78;
-  color: #fff;
-  text-shadow: none;
-  box-shadow: none;
-  padding: 5px;
+  color: white;
 }
 
 .ticket-info {
@@ -775,10 +789,11 @@ padding-top: 10px;
   background-color:  #b392ac; 
 }
 article.perfil, .historial{
-  border: none;
+  width: 100%;
   border-radius: 5px;
-  background-color:  #e8c2ca;
-  margin: 0px 10px;
+  padding: 10px;
+  margin: 5px;
+  background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
 }
 article.perfil form{
   display: flex;
@@ -786,6 +801,7 @@ article.perfil form{
   margin: 5px;
   align-items: flex-end;
   line-height: 35px;
+  font-size: 10px;
 }
 article.perfil form input{
   width: 230px;
@@ -817,13 +833,12 @@ article.perfil form button{
   justify-content: space-evenly;
 }
 .titulos h1{
-  font-family: "Cardo", serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 .enh3 h3{
-  padding-top: 10px;
-  font-family: "Cardo", serif;
-  font-size: 26px;
+  padding-bottom: 20px;
+  color: #735d78;
+  font-weight: bold;
   text-align: center;
 }
 .historial div img{
@@ -855,8 +870,12 @@ article.perfil form button{
   text-align: left;
 }
 .pagoFinal h1, .pagoFinal p{
-  font-size: 26px;
-}
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 18px;
+  background-color: #735d78;
+  color: white;
+  padding: 6px;
+} 
 
 @media (min-width: 480px) {
   header nav,
@@ -927,12 +946,14 @@ article.perfil form button{
     font-size: 14px;
   }
 
-  .description {
+  .description,
+  article.perfil form {
     font-size: 12px;
   }
 
   .container-product-cart {
     display: flex;
+    justify-content: space-around;
   }
 
   footer div {
@@ -1059,6 +1080,10 @@ article.perfil form button{
   .botones-comentario {
     text-align: right;
   }
+
+  .container-product-cart {
+    padding: 0px 25px;
+  }
   
   article.perfil{
     width: 50vw;
@@ -1109,6 +1134,10 @@ article.perfil form button{
 
   .links i {
     font-size: 14px;
+  }
+
+  .container-product-cart {
+    padding: 0px 40px;
   }
 
   header nav {
