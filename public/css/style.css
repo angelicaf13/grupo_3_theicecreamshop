@@ -120,7 +120,7 @@ textarea {
 .links i {
   display: block;
   padding: 5px 10px;
-  font-size: 8px;
+  font-size: 12px;
   justify-content: left;
 }
 
@@ -254,6 +254,11 @@ textarea {
   font-family: "Cervo-Neue-Regular", sans-serif;
   background-color: #735d78;
   color: white;
+  transition: background-color 0.5s;
+}
+
+.comments-button-left:hover{
+    background-color: #b45ecc;
 }
 
 .comments-button-right {
@@ -264,6 +269,11 @@ textarea {
   font-family: "Cervo-Neue-Regular", sans-serif;
   background-color: #735d78;
   color: white;
+  transition: background-color 0.5s;
+}
+
+.comments-button-right:hover{
+    background-color: #b45ecc;
 }
 
 .seguir-comprando {
@@ -285,6 +295,11 @@ textarea {
   font-family: "Cervo-Neue-Regular", sans-serif;
   background-color: #735d78;
   color: white;
+  transition: background-color 0.5s;
+}
+
+.seguir-comprando button:hover{
+    background-color: #b45ecc;
 }
 
 .main-2 {
@@ -350,6 +365,11 @@ textarea {
   font-family: "Cervo-Neue-Regular", sans-serif;
   background-color: #735d78;
   color: white;
+  transition: background-color 0.5s;
+}
+
+.ticket button:hover{
+    background-color: #b45ecc;
 }
 
 .ticket-info {
@@ -505,6 +525,7 @@ input:focus-visible {
   margin-top: 50px;
   padding: 6px 28px;
   border: none;
+  border-radius: 5px;
   font-family: "Cervo-Neue-Regular", sans-serif;
   font-size: 16px;
   background-color: #735d78;
@@ -826,6 +847,10 @@ article.perfil form button{
   color: white;
   display: flex;
   align-self: center;
+  transition: background-color 0.5s ;
+}
+article.perfil form button:hover{
+  background-color: #b45ecc;
 }
 .titulos{
   display: flex;
@@ -840,6 +865,7 @@ article.perfil form button{
   color: #735d78;
   font-weight: bold;
   text-align: center;
+  font-size: 26px;
 }
 .historial div img{
   width: 100px;
@@ -854,6 +880,7 @@ article.perfil form button{
 }
 .description, article.perfil form {
   font-size: 16px;
+  color: #65526a;
   padding:2px;
 }
 .fec{
@@ -886,12 +913,10 @@ article.perfil form button{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F7D1CD;
   width: 100%;
 }
 .product-img img{
   width: 70%;
-  background-color: #F7D1CD;
 }
 .descripcion {
   padding: 10%;
@@ -908,8 +933,9 @@ article.perfil form button{
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  background-color: #F7D1CD;
-  border: solid  #b392ac 5px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  border: none;
+  border-radius: 5px;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -923,8 +949,7 @@ article.perfil form button{
   font-weight: bold;
 }
 .detail h1{
-  background-color: #F7D1CD;
-  font-family: 'Cardo', serif;
+  color: #65526a;
   font-size: 18px;
   font-weight: bold;
 }
@@ -952,6 +977,11 @@ article.perfil form button{
   padding: 5px;
   text-align: center;
   justify-content: center;
+  transition: background-color 0.5s ;
+}
+
+.detail button:hover{
+  background-color: #b45ecc;
 }
 
 /*Agregar producto*/
@@ -1074,7 +1104,7 @@ article.perfil form button{
 }
 
 .links i {
-  font-size: 10px;
+  font-size: 14px;
 }
 .descripcion p{
   font-size: 1em;
@@ -1171,7 +1201,7 @@ article.perfil form button{
   }
 
   .links i {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .contacto-box {
@@ -1276,7 +1306,7 @@ article.perfil form button{
   }
 
   .links i {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .container-product-cart {
@@ -1301,6 +1331,12 @@ article.perfil form button{
 }
   article.historial{
     width: 60vw;
+  }
+  .historial div{
+    font-size: 1em;
+  }
+  .titulos h1{
+    font-size: 1em;
   }
   .descripcion p{
     font-size: 1em;
