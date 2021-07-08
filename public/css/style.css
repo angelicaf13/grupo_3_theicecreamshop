@@ -703,7 +703,7 @@ padding-top: 10px;
   align-items: center;
   flex-wrap: wrap;
   margin: 5%;
-  padding: 15px;
+  padding: 1px;
   background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
   border-radius: 1rem;
   backdrop-filter: blur(1.2rem);
@@ -944,6 +944,25 @@ article.perfil form button{
   margin: 10px;
   padding: 5px;
   text-align: center;
+}
+
+/*Agregar producto*/
+.descrip textarea{
+  width: 100%;
+  padding: 3px;
+}
+.register-form .pres-cant{
+  display: flex;
+  flex-direction: row;
+}
+.register-form .pres-cant input{
+  width: 100%;
+}
+.register-form div.ag{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 480px) {
@@ -1290,6 +1309,23 @@ article.perfil form button{
   }
   #fotoPerfil{
     font-size: 1.2em;
+  }
+  .register-button{
+    font-size: 1.5em;
+  }
+  .register-form div.ag{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .button-register{
+    align-items: center;
+  }
+  div.parte2-ag{
+    padding: 0;
+  }
+  .register-form .pres-cant input{
+    width: 90px;
   }
 }
 

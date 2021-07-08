@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fenix&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style-2.css" />
+<link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header>
@@ -33,7 +33,9 @@
         <div class="tabla-registro">
           <h3>Agregar producto</h3>
           <form action="" class="register-form">
-        <div>
+      <div class="ag">
+            <div>
+        <div class="parte1-ag">
             <div>
             <label for="imagen">Imagen</label>
             <input type="file" name="imagen" id="imagen">
@@ -46,30 +48,37 @@
             </div>
         </div>
         <div>
-            <div>
+            <div class="descrip">
             <label for="des">Descripción</label>
-            <textarea name="des" id="des" cols="50" rows="5"></textarea>
+            <textarea name="des" id="des" placeholder="Compuesto con ..."></textarea>
             </div>
-            <div>
-            </div>
+          </div>
         </div>
         <div>
-        <div>
-            <label for="pres">Presentación y precio</label>
+        <div class="parte2-ag">
+            <label for="pres">Presentación</label>
+            <div class="pres-cant">
+              <div>
             <input type="checkbox" name="pres" id="pres"> 1/2 litro
-            <label>Precio<input type="number" name="cant" id="cant" placeholder="p. ej. $40.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas" id="piezas" placeholder="p. ej. 200" step="1" min="1"></label>
+            <label>Precio<input type="number" name="cant1" id="cant1" placeholder="p. ej. $40.00" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="piezas1" id="piezas1" placeholder="p. ej. 200" step="1" min="1"></label>
+              </div>
+              <div>
             <input type="checkbox" name="pres" id="pres"> 1 litro
-            <label>Precio<input type="number" name="cant" id="cant" placeholder="p. ej. $50.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas" id="piezas" placeholder="p. ej. 200" step="1" min="1"></label>
+            <label>Precio<input type="number" name="cant2" id="cant2" placeholder="p. ej. $50.00" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="piezas2" id="piezas2" placeholder="p. ej. 200" step="1" min="1"></label>
+              </div>
+              <div>
             <input type="checkbox" name="pres" id="pres"> 1.89 litro
-            <label>Precio<input type="number" name="cant" id="cant" placeholder="p. ej. $60.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas" id="piezas" placeholder="p. ej. 200" step="1" min="1"></label>
-            </div>
+            <label>Precio<input type="number" name="cant3" id="cant2" placeholder="p. ej. $60.00" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="piezas3" id="piezas2" placeholder="p. ej. 200" step="1" min="1"></label>
+              </div>
+          </div>
+          </div>
         </div>
         <button type="submit" class="register-button">AGREGAR</button>
-          </form>
         </div>
+          </form>
       </section>
     </main>
     <footer>
