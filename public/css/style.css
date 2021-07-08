@@ -852,6 +852,10 @@ article.perfil form button{
   align-items: center;
   font-size: 16px;
 }
+.description, article.perfil form {
+  font-size: 16px;
+  padding:2px;
+}
 .fec{
   display: flex;
   justify-content: flex-end;
@@ -1038,11 +1042,6 @@ article.perfil form button{
     font-size: 14px;
   }
 
-  .description,
-  article.perfil form {
-    font-size: 12px;
-  }
-
   .container-product-cart {
     display: flex;
     justify-content: space-around;
@@ -1192,24 +1191,23 @@ article.perfil form button{
   }
   
   article.perfil{
-    width: 50vw;
+    margin-left: 20%;
+    width: 60vw;
     justify-content: center;
-  }
-  article.historial{
-    width: 40vw;
-    justify-content: center;
-  }
-  section.enh3{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
   }
-
+  article.historial{
+    width: 95vw;
+    justify-content: center;
+  }
+  .description, article.perfil form {
+    font-size: 16px;
+    padding:2px;
+}
   textarea {
     width: 35vw;
     font-size: 16px;
   }
-
   .product-img img{
     width: 40vw;
     height: 50vh;
@@ -1289,8 +1287,18 @@ article.perfil form button{
     font-size: 25px;
   }
   article.perfil{
-    width: 30vw;
+    width: 40vw;
+    margin-left: 2%;
   }
+  section.enh3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .description, article.perfil form {
+    font-size: 16px;
+    padding:2px;
+}
   article.historial{
     width: 60vw;
   }
