@@ -965,7 +965,7 @@ article.perfil form button:hover{
   text-align: center;
   display: inline;
 }
-.detail button{
+.detail button, .bt{
   display: flex;
   align-self: center;
   background-color: #735D78;
@@ -981,6 +981,9 @@ article.perfil form button:hover{
 }
 
 .detail button:hover{
+  background-color: #b45ecc;
+}
+.bt:hover{
   background-color: #b45ecc;
 }
 
