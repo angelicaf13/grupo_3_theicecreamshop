@@ -8,6 +8,9 @@ const productsControlador = {
     },
     add: (req,res)=>{
         res.sendFile(path.resolve(__dirname,'../views/products/addProduct.html'));
+    },
+    update: (req,res)=>{
+        res.sendFile(path.resolve(__dirname,'../views/products/updateProduct.html'));
     }
 }
 module.exports = productsControlador;

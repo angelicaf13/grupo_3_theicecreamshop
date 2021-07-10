@@ -1003,6 +1003,11 @@ article.perfil form button:hover{
   padding: 0;
 }
 
+/*Editar producto */
+  .img-editar{
+    width: 60%;
+  }
+  
 @media (min-width: 480px) {
   header nav,
   .historia,
