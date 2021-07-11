@@ -6,7 +6,7 @@ const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
 const PORT = process.env.PORT || 3000
 
-app.set('view engine', ' ejs');
+app.set('view engine', 'ejs');
 
 const publicPath= path.resolve(__dirname, './public');
 console.log(publicPath);
