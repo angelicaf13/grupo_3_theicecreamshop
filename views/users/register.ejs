@@ -3,44 +3,49 @@
     <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main class="fondo">
-      <section class="registro">
-        <div class="tabla-registro">
-          <h3>Registrarse</h3>
-          <form action="" class="register-form">
-        <div>
-            <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="p. ej. Daniela" minlength="6" required>
+    <main class="main-register">
+        <div class="glass-container-register">
+          <section class="glass-register">
+            <h3>Registro</h3>
+            <p>¿Aún no tienes cuenta?<a href="/register"> Regístrate aquí</a></p>
+            <form action="" class="register-form">
+                <div>
+                    <div>
+                    <label for="nombre">nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="p. ej. Daniela" minlength="6" required>
+                    </div>
+                    <div>
+                    <label for="apellido">apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="p. ej. Campos" minlength="6" required>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                    <label for="correo">e-mail</label>
+                    <input type="email" name="correo" id="correo" placeholder="p. ej. danielacampos@hotmail.com" required>
+                    </div>
+                    <div>
+                    <label for="contra">contraseña</label>
+                    <input type="password" name="contra" id="contra" minlength="8" required>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                    <label for="contra2">confirmar contraseña</label>
+                    <input type="password" name="contra2" id="contra2" minlength="8" required>
+                    </div>
+                </div>
+                <div class="condiciones-div">
+                <label class="condiciones-register"><input type="checkbox"> Acepto los Términos de Uso y la Política de Privacidad.</label>
             </div>
-            <div>
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido" placeholder="p. ej. Campos" minlength="6" required>
-            </div>
+                <button type="submit" class="register-button">CREAR CUENTA</button>
+                  </form>
+                  <h2>¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a></h2>
+          </section>
+          <img src="/img/ice-cream-cone.svg" class="ice-cream-reg-img-1" />
+          <img src="/img/ice-cream-cone.svg" class="ice-cream-reg-img-2" />
         </div>
-        <div>
-            <div>
-            <label for="correo">Correo electrónico</label>
-            <input type="email" name="correo" id="correo" placeholder="p. ej. danielacampos@hotmail.com" required>
-            </div>
-            <div>
-            <label for="contra">Contraseña</label>
-            <input type="password" name="contra" id="contra" minlength="8" required>
-            </div>
-        </div>
-        <div>
-            <div>
-            <label for="contra2">Confirmar contraseña</label>
-            <input type="password" name="contra2" id="contra2" minlength="8" required>
-            </div>
-        </div>
-        <p>Al crear la cuenta acepto las Condiciones de uso y el Aviso de privacidad de The Ice Cream Shop</p>
-        <button type="submit" class="register-button">CREAR CUENTA</button>
-          </form>
-        <h2>¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a></h2>
-        </div>
-      </section>
-    </main>
+      </main>
     <%- include('../partials/footer') %>
   </body>
 </html>
