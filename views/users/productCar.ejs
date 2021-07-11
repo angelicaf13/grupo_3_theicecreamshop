@@ -1,32 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fenix&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/433c4ae66d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Product Car</title>
-</head>
+    <%- include('../partials/head') %>
 <body>
-    <header>
-        <nav>
-            <a href="/productList">Comprar</a>
-            <a href="/index#contactanos-link">Contáctanos</a>
-            <img class= "logo" src="/img/logotipo-sin.png" alt="Logotipo empresa" title="logotipo">
-            <a href="/index#historia-link">Historia</a>
-            <a href="/index#marcas-link">Marcas</a>
-            <div class="links">
-                <a href="/productCar"><i class="fas fa-shopping-cart"></i></a>
-                <a href="/login"><i class="fas fa-sign-in-alt"></i></a>
-                <a href="/register"><i class="fas fa-user-plus"></i></a>
-                <a href="/profile"><i class="far fa-user"></i></a>
-            </div>
-        </nav>
-    </header>
+    <%- include('../partials/header') %>
     <main class="main-2">
         <div class="seguir-comprando" style="width: 100%;">
             <a href="/productList"> < Seguir comprando</a>
@@ -127,13 +103,6 @@
             <button type="submit" class="boton-formulario">SECURE CHECKOUT</button>
         </div>  
     </main>
-    <footer>
-        <div>
-            <a href="/productList">Comprar</a>
-            <a href="/index#historia-link">Acerca de nosotros</a>
-            <a href="/index#marcas-link">Marcas</a>
-            <a href="/index#contactanos-link">Contactáctanos</a>
-        </div>
-    </footer>
+    <%- include('../partials/footer') %>
 </body>
 </html>

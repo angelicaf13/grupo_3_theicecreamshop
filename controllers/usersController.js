@@ -1,4 +1,5 @@
 const path = require('path');
+
 const usersControlador = {
     car: (req,res)=>{
         res.render(path.resolve(__dirname,'../views/users/productCar'));
