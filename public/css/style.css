@@ -685,7 +685,6 @@ padding-top: 10px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
-    position: relative;
 }
 
 .productos > a {
@@ -700,6 +699,26 @@ padding-top: 10px;
     border-radius: 0.2rem;
     margin: 10px;
     min-height: 247px;
+    position: relative;
+}
+
+.edit-button{
+  background:transparent;
+  color: var(--old-lavender);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  border-radius: 2px;
+  width: 28px;
+  height: 28px;
+  font-size: 15px;
+  transition: all 0.4s;
+}
+
+.edit-button:hover{
+  color: var(--logo-back);
+  background-color: var(--old-lavender);
 }
 
 @keyframes hoverProduct {

@@ -73,78 +73,18 @@
         </form>
         </div>
         <div class="productos">
+            <% for(let producto of listaProductos) {%>
           <a href="/productDetail">
           <article class="product-container">
             <div>
-            <img src="/img/ben-jerry-mint-chocolate.webp" alt="">
+                <img src=<%= producto.url %> alt="">
           </div>
-            <h4>Ben & Jerry's Mint Chocolate Cookie Ice Cream</h4>
-            <p>Precio</p>
+            <h4><%= producto.name %></h4>
+            <p><%= producto.price %></p>
+            <button class="edit-button"><i class="fas fa-pencil-alt"></i></button>
         </article>
       </a>
-      <a href="/productDetail">
-        <article class="product-container">
-          <div>
-            <img src="/img/ben-jerry-strawberry-cheesecake.webp" alt="">
-          </div>
-            <h4>Ben & Jerry's Strawberry Cheesecake Ice Cream</h4>
-            <p>Precio</p>
-        </article>
-      </a>
-      <a href="/productDetail">
-        <article class="product-container">
-          <div>
-            <img src="/img/ben-jerry-netflix-chilld.png" alt="">
-          </div>
-            <h4>Ben & Jerry's Netflix & Chill'd Ice Cream</h4>
-            <p>Precio</p>
-        </article>
-      </a>
-      <a href="/productDetail">
-        <article class="product-container">
-          <div>
-            <img src="/img/Pina-Colada-Pint.png" alt="">
-          </div>
-            <h4>Hägeen Dazs Piña Colada Ice Cream</h4>
-            <p>Precio</p>
-        </article>
-      </a>
-      <a href="/productDetail">
-        <article class="product-container">
-          <div>
-            <img src="/img/Lime-Mojito-Pint.png" alt="">
-          </div>
-            <h4>Hägeen Dazs Lime Mojito Sorbet Ice Cream</h4>
-            <p>Precio</p>
-        </article>
-      </a>
-      <a href="/productDetail">
-        <article class="product-container">
-          <div>
-            <img src="/img/vanilla-haagen.png" alt="">
-          </div>
-            <h4>Hägeen Dazs Vanilla Ice Cream</h4>
-            <p>Precio</p>
-        </article>
-      </a>
-      <a href="/productDetail">
-        <article class="product-container">
-          <div>
-          <img src="img/BlueBell_ChocChip.png" alt="">
-        </div>
-          <h4>Blue Bell Chocolate Chip Cookie Dough Ice Cream</h4>
-          <p>Precio</p>
-      </article>
-    </a>
-    <a href="/productDetail">
-      <article class="product-container">
-        <div>
-        <img src="/img/holanda-vainilla.webp" alt="">
-      </div>
-        <h4>Holanda Vanilla Ice Cream</h4>
-        <p>Precio</p>
-    </article>
-  </a>
+      <% } %>
         </div>
       </div>
     </main>

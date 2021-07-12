@@ -1,0 +1,34 @@
+[{
+    "name": "Ben & Jerry's Mint Chocolate Cookie Ice Cream",
+    "price": "$ 50.00",
+    "url": "/img/ben-jerry-mint-chocolate.webp"
+}, {
+    "name": "Ben & Jerry's Strawberry Cheesecake Ice Cream",
+    "price": "$ 60.00",
+    "url": "/img/ben-jerry-strawberry-cheesecake.webp"
+},{
+    "name": "Ben & Jerry's Netflix & Chill'd Ice Cream",
+    "price": "$ 50.00",
+    "url": "/img/ben-jerry-netflix-chilld.png"
+},{
+    "name": "Hägeen Dazs Piña Colada Ice Cream",
+    "price": "$ 90.00",
+    "url": "/img/Pina-Colada-Pint.png"
+},{
+    "name": "Hägeen Dazs Lime Mojito Sorbet Ice Cream",
+    "price": "$ 105.00",
+    "url": "/img/Lime-Mojito-Pint.png"
+},{
+    "name": "Hägeen Dazs Vanilla Ice Cream",
+    "price": "$ 95.00",
+    "url": "/img/vanilla-haagen.png"
+},{
+    "name": "Blue Bell Chocolate Chip Cookie Dough Ice Cream",
+    "price": "$ 70.00",
+    "url": "img/BlueBell_ChocChip.png"
+},{
+    "name": "Holanda Vanilla Ice Cream",
+    "price": "$ 50.00",
+    "url": "/img/holanda-vainilla.webp"
+}
+]
