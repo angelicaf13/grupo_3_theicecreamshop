@@ -64,10 +64,34 @@ header {
 
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   font-size: 12px;
+}
+
+.option-button{
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 20px;
+  background-color: var(--old-lavender);
+  width: 30px;
+  height: 30px;
+}
+
+#desktop-op{
+  display: none;
+}
+
+.nav-option{
+  width: 10%;
+  text-align: center;
+}
+
+.nav-option-mobile h2{
+  font-size: 18px;
+  color: var(--old-lavender);
 }
 
 nav a,
@@ -113,8 +137,20 @@ textarea {
   border-style: none;
 }
 
+.links-invisible {
+  width: 50px;
+}
+
+.links-invisible i{
+  display: block;
+  padding: 5px 10px;
+  font-size: 12px;
+  justify-content: left;
+}
+
 .links {
-  width: 0.5%;
+  width: 50px;
+  text-align: center;
 }
 
 .links i {
@@ -749,7 +785,7 @@ padding-top: 10px;
 }
 .glass-register h3 {
   font-family: "Cervo-Neue-Bold", sans-serif;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 3px;
   color: #65526a;
   font-size: 20px;
@@ -1043,6 +1079,9 @@ article.perfil form button:hover{
   }
   
 @media (min-width: 480px) {
+
+  
+
   header nav,
   .historia,
   .contacto {
@@ -1167,6 +1206,9 @@ article.perfil form button:hover{
 .links i {
   font-size: 14px;
 }
+.links-invisible i{
+  font-size: 14px;
+}
 .descripcion p{
   font-size: 1em;
 }
@@ -1220,6 +1262,13 @@ article.perfil form button:hover{
 }
 
 @media (min-width: 768px) {
+  .nav-option-mobile{
+    display: none;
+  }
+
+  #desktop-op{
+    display: block;
+  }
   .tabla-registro {
     width: 50%;
   }
@@ -1232,6 +1281,9 @@ article.perfil form button:hover{
    .glass-container-register{
     max-width: 550px;
     height: 550px;
+  }
+  .glass-register{
+    padding: 20px;
   }
   .ice-cream-reg-img-1{
     animation: iceCreamReg1 3s 1 forwards;
@@ -1307,6 +1359,9 @@ article.perfil form button:hover{
   }
 
   .links i {
+    font-size: 16px;
+  }
+  .links-invisible i{
     font-size: 16px;
   }
 
@@ -1451,6 +1506,9 @@ article.perfil form button:hover{
   }
 
   .links i {
+    font-size: 18px;
+  }
+  .links-invisible i{
     font-size: 18px;
   }
 
