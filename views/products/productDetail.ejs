@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <section class="detail">
+            <article class="product-img">
+                <img src="/img/holanda-chocolate.webp" alt="imagen-producto" title="helado-holanda-chocolate">
+            </article>
+        <div>
+            <article class="descripcion">
+                <h1>Holanda: Sabor Chocolate</h1>
+                <h3>Descripción:</h3>
+                <p>Conformado por leche descremada rehidratada (31%), agua, azúcares, grasa vegetal (6.9%), sólidos de leche (leche descremada en polvo y suero de leche en polvo), cocoa en polvo, emulsificantes (mono, di y triglicéridos), alginato de sodio y saborizante idéntico al natural.</p>
+        <form action="">
+                <h3>Presentación:</h3>
+            <div class="inputs">
+                <input type="radio" name="tamano" id="medio"> 1/2 Litro
+                <input type="radio" name="tamano" id="litro"> 1 Litro
+                <input type="radio" name="tamano" id="litromas"> 1.89 Litros
+            </div>
+            <div class="precios">
+                <h3>Precio:</h3>
+                <p>$49.99</p>
+            </div>
+            <label for="cantidadCompra">Cantidad:</label>
+            <input type="number" name="cantidad" id="cantidadCompra" step="1" min="1" max="100" maxlength="3" value="1">
+            <button type="submit">AGREGAR AL CARRITO DE COMPRA</button>
+        </form>
+            </article>
+        </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
