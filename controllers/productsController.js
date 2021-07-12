@@ -7,7 +7,7 @@ const productsControlador = {
         res.sendFile(path.resolve(__dirname,'../views/products/productList.html'));
     },
     add: (req,res)=>{
-        res.sendFile(path.resolve(__dirname,'../views/products/addProduct.html'));
+        res.render(path.resolve(__dirname,'../views/products/addProduct'));
     },
     update: (req,res)=>{
         res.sendFile(path.resolve(__dirname,'../views/products/updateProduct.html'));
