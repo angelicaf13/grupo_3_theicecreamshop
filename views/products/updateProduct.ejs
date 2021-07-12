@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>
+
+    <main class="fondo">
+      <section class="registro">
+        <div class="tabla-registro">
+          <h3>Modificar producto</h3>
+          <form action="" class="register-form">
+      <div class="ag">
+            <div>
+        <div class="parte1-ag">
+            <div>
+            <label for="imagen">Imagen</label>
+            <img src="/img/holanda-chocolate.webp" alt="Ejemplo imagen" class="img-editar">
+            <input type="file" name="imagen" id="imagen"> 
+            </div>
+            <div>
+            <label for="marca">Marca</label>
+            <input type="text" name="marca" id="marca" minlength="5" placeholder="Holanda" required> 
+            <label for="sabor">Sabor</label>
+            <input type="text" name="sabor" id="sabor" minlength="5" placeholder="Chocolate" required> 
+            </div>
+        </div>
+        <div>
+            <div class="descrip">
+            <label for="des">Descripción</label>
+            <textarea name="des" id="des" placeholder="Compuesto con ..."></textarea>
+            </div>
+          </div>
+        </div>
+        <div>
+        <div class="parte2-ag">
+            <label for="pres">Presentación</label>
+            <div class="pres-cant">
+              <div>
+            <input type="checkbox" name="pres" id="pres" checked> 1/2 litro
+            <label>Precio<input type="number" name="cant1" id="cant1" placeholder="$40.00" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="piezas1" id="piezas1" placeholder="200" step="1" min="1"></label>
+              </div>
+              <div>
+            <input type="checkbox" name="pres" id="pres" checked> 1 litro
+            <label>Precio<input type="number" name="cant2" id="cant2" placeholder="$50.00" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="piezas2" id="piezas2" placeholder="200" step="1" min="1"></label>
+              </div>
+              <div>
+            <input type="checkbox" name="pres" id="pres" checked> 1.89 litro
+            <label>Precio<input type="number" name="cant3" id="cant2" placeholder="$60.00" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="piezas3" id="piezas2" placeholder="200"  step="1" min="1"></label>
+              </div>
+          </div>
+          </div>
+        </div>
+        <button type="submit" class="register-button">MODIFICAR DATOS</button>
+        </div>
+          </form>
+      </section>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
