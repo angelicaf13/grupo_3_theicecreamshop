@@ -7,16 +7,16 @@ const products = JSON.parse(jsonString);
 
 const productsControlador = {
     detail: (req,res)=>{
-        res.render(path.resolve(__dirname,'../views/products/productDetail'));
+        res.render('./products/productDetail');
     },
     list: (req,res)=>{
-        res.render(path.resolve(__dirname,'../views/products/productList'), {listaProductos: products});
+        res.render('./products/productList', {listaProductos: products});
     },
     add: (req,res)=>{
-        res.render(path.resolve(__dirname,'../views/products/addProduct'));
+        res.render('./products/addProduct');
     },
     update: (req,res)=>{
-        res.render(path.resolve(__dirname,'../views/products/updateProduct'));
+        res.render('./products/updateProduct');
     }
 }
 

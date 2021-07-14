@@ -2,16 +2,16 @@ const path = require('path');
 
 const usersControlador = {
     car: (req,res)=>{
-        res.render(path.resolve(__dirname,'../views/users/productCar'));
+        res.render('./users/productCar');
     },
     login: (req,res)=>{
-        res.render(path.resolve(__dirname,'../views/users/login'));
+        res.render('./users/login');
     },
     register: (req,res)=>{
-        res.render(path.resolve(__dirname,'../views/users/register'));
+        res.render('./users/register');
     },
     profile: (req,res)=>{
-        res.render(path.resolve(__dirname,'../views/users/profile'));
+        res.render('./users/profile');
     }
 }
 module.exports = usersControlador;
