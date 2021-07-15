@@ -1123,6 +1123,36 @@ article.perfil form button:hover{
     grid-gap: 15px;
   }
 
+  .gallery > figure {
+    position: relative;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .gallery > figure > .text-brand {
+    position: absolute;
+    color: white;
+    opacity: 0;
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+
+  .text-brand h2{
+    padding-bottom: 8px;
+    color: var(--thistle);
+  }
+
+  .text-brand p{
+    display: none;
+  }
+
+  figure:hover .text-brand{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
   .gallery-item-1 {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -1281,6 +1311,7 @@ article.perfil form button:hover{
 }
 
 @media (min-width: 768px) {
+
   .nav-option-mobile{
     display: none;
   }
@@ -1492,6 +1523,11 @@ article.perfil form button:hover{
 
 
 @media (min-width: 1279px) {
+
+  .text-brand p{
+    display: block;
+    font-size: 16px;
+  }  
 
 .glass-container-register{
  max-width: 960px;
