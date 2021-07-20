@@ -1124,6 +1124,44 @@ article.perfil form button:hover{
     width: 60%;
   }
   
+/*Error */
+.ex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px 0px;
+}
+.ex2{
+  padding: 0px 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.ex2 a{
+  color:#735D78;
+  font-size: 22px;
+  font-style: oblique;
+  font-weight:bolder;
+}
+.ex3{
+  padding: 10px 70px 0px;
+}
+.err{
+  font-size: 18px;
+  font-style: oblique;
+  font-weight:bolder;
+  font-family: Cardo;
+  text-align: justify;
+  text-align: center;
+}
+.err1{
+  width: 100%;
+  opacity: 80%;
+}
+
 @media (min-width: 480px) {
 
   header nav,
@@ -1273,6 +1311,15 @@ article.perfil form button:hover{
   }
   .glass-container-register{
   max-width: 400px;
+  }
+  .err1{
+    width: 70%;
+  }
+  .ex2 a{
+    font-size: 1em;
+  }
+  .err{
+    font-size: 1.5em;
   }
 
 }
@@ -1487,6 +1534,16 @@ article.perfil form button:hover{
     #fotoPerfil{
       font-size: 1.1em;
       }
+    
+      .err1{
+        width: 40%;
+      }
+      .ex2 a{
+        font-size: 1.2em;
+      }
+      .err{
+        font-size: 2em;
+      }
 }
 
 @keyframes iceCreamReg1ver2 {
@@ -1643,6 +1700,12 @@ article.perfil form button:hover{
   }
   .register-form .pres-cant input{
     width: 90px;
+  }
+  .err1{
+    width: 25%;
+  }
+  .err{
+    font-size: 2.5em;
   }
 }
 
