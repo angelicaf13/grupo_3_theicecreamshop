@@ -7,7 +7,8 @@ const products = JSON.parse(jsonString);
 
 const productsControlador = {
     detail: (req,res)=>{
-        res.render('./products/productDetail');
+        let idProducto = req.params.id;
+        res.render('./products/productDetail', {idProducto, listaProductos: products});
     },
     list: (req,res)=>{
         res.render('./products/productList', {listaProductos: products});

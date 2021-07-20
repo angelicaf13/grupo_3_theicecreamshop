@@ -74,7 +74,7 @@
         </div>
         <div class="productos">
             <% for(let producto of listaProductos) {%>
-          <a href="/productDetail">
+          <a href="/productDetail/<%= producto.id %>">
           <article class="product-container">
             <div>
                 <img src=<%= producto.url %> alt="">
