@@ -1,3 +1,10 @@
 [{
-    
+        "id": 1,
+        "foto": " ",
+        "firstName": "Daniela",
+        "lastName": "Torres",
+        "email": "danielatorres24@gmail.com",
+        "password": "1234456",
+        "passwordConfirm": "1234456",
+        "categoryUser": "cliente"
 }]
