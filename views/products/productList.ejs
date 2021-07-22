@@ -74,14 +74,14 @@
         </div>
         <div class="productos">
             <% for(let producto of listaProductos) {%>
-          <a href="/productDetail/<%= producto.id %>">
+          <a href="/products/productDetail/<%= producto.id %>">
           <article class="product-container">
             <div>
-                <img src=<%= producto.url %> alt="">
+                <img src="/img/<%= producto.image %>" alt="">
           </div>
             <h4><%= producto.name %></h4>
-            <p><%= producto.price %></p>
-            <a href="/updateProduct">
+            <p>$<%= producto.price %></p>
+            <a href="/products/updateProduct">
             <button class="edit-button"><i class="fas fa-pencil-alt"></i></button>
         </a>
         </article>

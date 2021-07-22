@@ -1,90 +1,98 @@
-[{
+[
+  {
     "id": 1,
     "name": "Ben & Jerry's Mint Chocolate Cookie Ice Cream",
-    "price": "$ 50.00",
-    "price1": "$ 80.00",
-    "price2": "$ 100.00",
-    "url": "/img/ben-jerry-mint-chocolate.webp",
+    "price": 50,
+    "price1": 80,
+    "price2": 100,
+    "image": "ben-jerry-mint-chocolate.webp",
     "description": "Informacion",
-    "present1":"",
-    "present2":"",
-    "present3":""
-}, {
+    "present1": "",
+    "present2": "",
+    "present3": ""
+  },
+  {
     "id": 2,
     "name": "Ben & Jerry's Strawberry Cheesecake Ice Cream",
-    "price": "$ 60.00",
-    "price1": "$ 80.00",
-    "price2": "$ 100.00",
-    "url": "/img/ben-jerry-strawberry-cheesecake.webp",
+    "price": 60,
+    "price1": 80,
+    "price2": 100,
+    "image": "ben-jerry-strawberry-cheesecake.webp",
     "description": "Informacion",
-    "present1":"",
-    "present2":"",
-    "present3":""
-},{
+    "present1": "",
+    "present2": "",
+    "present3": ""
+  },
+  {
     "id": 3,
     "name": "Ben & Jerry's Netflix & Chill'd Ice Cream",
-    "price": "$ 50.00",
-    "price1": "$ 80.00",
-    "price2": "$ 100.00",
-    "url": "/img/ben-jerry-netflix-chilld.png",
+    "price": 50,
+    "price1": 80,
+    "price2": 100,
+    "image": "ben-jerry-netflix-chilld.png",
     "description": "Informacion",
-    "present1":"",
-    "present2":"",
-    "present3":""
-},{
+    "present1": "",
+    "present2": "",
+    "present3": ""
+  },
+  {
     "id": 4,
     "name": "Hägeen Dazs Piña Colada Ice Cream",
-    "price": "$ 90.00",
-    "price1": "$ 80.00",
-    "price2": "$ 100.00",
-    "url": "/img/Pina-Colada-Pint.png",
+    "price": 90,
+    "price1": 80,
+    "price2": 100,
+    "image": "Pina-Colada-Pint.png",
     "description": "Informacion",
-    "present1":"",
-    "present2":"",
-    "present3":""
-},{
+    "present1": "",
+    "present2": "",
+    "present3": ""
+  },
+  {
     "id": 5,
     "name": "Hägeen Dazs Lime Mojito Sorbet Ice Cream",
-    "price": "$ 105.00",
-    "price1": "$ 80.00",
-    "price2": "$ 100.00",
-    "url": "/img/Lime-Mojito-Pint.png",
+    "price": 105,
+    "price1": 80,
+    "price2": 100,
+    "image": "Lime-Mojito-Pint.png",
     "description": "Informacion",
-    "present1":"",
-    "present2":"",
-    "present3":""
-},{
+    "present1": "",
+    "present2": "",
+    "present3": ""
+  },
+  {
     "id": 6,
     "name": "Hägeen Dazs Vanilla Ice Cream",
-    "price": "$ 95.00",
-    "price1": "$ 80.00",
-    "price2": "$ 100.00",
-    "url": "/img/vanilla-haagen.png",
+    "price": 95,
+    "price1": 80,
+    "price2": 100,
+    "image": "vanilla-haagen.png",
     "description": "Informacion",
-    "present1":"",
-    "present2":"",
-    "present3":""
-},{
+    "present1": "",
+    "present2": "",
+    "present3": ""
+  },
+  {
     "id": 7,
     "name": "Blue Bell Chocolate Chip Cookie Dough Ice Cream",
-    "price": "$ 70.00",
-    "price1": "$ 80.00",
-    "price2": "$ 100.00",
-    "url": "/img/BlueBell_ChocChip.png",
+    "price": 70,
+    "price1": 80,
+    "price2": 100,
+    "image": "BlueBell_ChocChip.png",
     "description": "Informacion",
-    "present1":"",
-    "present2":"",
-    "present3":""
-},{
+    "present1": "",
+    "present2": "",
+    "present3": ""
+  },
+  {
     "id": 8,
     "name": "Holanda Vanilla Ice Cream",
-    "price": "$ 50.00",
-    "price1": "$ 80.00",
-    "price2": "$ 100.00",
-    "url": "/img/holanda-vainilla.webp",
+    "price": 50,
+    "price1": 80,
+    "price2": 100,
+    "image": "holanda-vainilla.webp",
     "description": "Informacion",
-    "present1":"",
-    "present2":"",
-    "present3":""
-}
+    "present1": "",
+    "present2": "",
+    "present3": ""
+  }
 ]

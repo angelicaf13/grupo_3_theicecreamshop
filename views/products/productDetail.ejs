@@ -8,7 +8,7 @@
             <% listaProductos.forEach(producto => {%>
                 <% if (producto.id == idProducto) {%>
             <article class="product-img">
-                <img src=<%= producto.url %> alt="imagen-producto">
+                <img src="/img/<%= producto.image %>" alt="imagen-producto">
             </article>
         <div>
             <article class="descripcion">

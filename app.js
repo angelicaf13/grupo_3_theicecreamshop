@@ -11,10 +11,12 @@ app.set('view engine', 'ejs');
 const publicPath= path.resolve(__dirname, './public');
 console.log(publicPath);
 
-app.use(express.static(publicPath));
+app.use(express.static(publicPath));app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 
 app.use(mainRouter);
-app.use(productsRouter);
+app.use('/products', productsRouter);
 app.use(usersRouter);
 
 app.use((req, res, next) => {
