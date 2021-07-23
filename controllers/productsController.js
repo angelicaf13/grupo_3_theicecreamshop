@@ -18,7 +18,8 @@ const productsControlador = {
     store: (req, res) => {
 		const product = {
 			id: Date.now(),
-			name: req.body.brand + " " + req.body.flavor,
+			brand: req.body.brand,
+            flavor: req.body.flavor,
 			price: parseInt(req.body.price),
             price1: parseInt(req.body.price1),
             price2: parseInt(req.body.price2),
@@ -41,8 +42,50 @@ const productsControlador = {
 
 		res.redirect('/products/productList');
     },
-    update: (req,res)=>{
-        res.render('./products/updateProduct');
+    edit: (req,res)=>{
+        const id = parseInt(req.params.id);
+		const productToEdit = products.find(product => product.id === id);
+
+        res.render('./products/updateProduct', {productToEdit : productToEdit});
+    },
+    update: (req, res) => {
+
+		const id = parseInt(req.params.id);
+		const productToEdit = products.find(product => product.id === id);
+		
+			productToEdit.brand = req.body.brand;
+            productToEdit.flavor = req.body.flavor;
+			productToEdit.price = parseInt(req.body.price);
+            productToEdit.price1 = parseInt(req.body.price1);
+            productToEdit.price2 = parseInt(req.body.price2);
+			productToEdit.description = req.body.des;
+            productToEdit.present1 = req.body.present1;
+            productToEdit.present2 = req.body.present2;
+            productToEdit.present3 = req.body.present3;
+			
+			if (req.file === undefined) {
+				productToEdit.image = 'default-image.png';
+			  } else {
+				productToEdit.image = req.file.filename;
+			  }
+		
+		productsJSON = JSON.stringify(products, null, 2);
+
+		fs.writeFileSync(productsFilePath, productsJSON);
+
+		res.redirect('/products/productList')
+	},
+    destroy: (req,res)=>{
+        const id = parseInt(req.params.id);
+		const productToDelete = products.find(product => product.id === id);
+		
+		products.splice(products.indexOf(productToDelete), 1);
+		
+		productsJSON = JSON.stringify(products, null, 2);
+
+		fs.writeFileSync(productsFilePath, productsJSON);
+
+		res.redirect('/products/productList');
     }
 }
 

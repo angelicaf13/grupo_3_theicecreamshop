@@ -9,26 +9,26 @@
       <section class="registro">
         <div class="tabla-registro">
           <h3>Modificar producto</h3>
-          <form action="" class="register-form">
+          <form action="/products/updateProduct/<%= productToEdit.id %>?_method=PUT" method="POST" class="register-form">
       <div class="ag">
             <div>
         <div class="parte1-ag">
             <div>
-            <label for="imagen">Imagen</label>
-            <img src="/img/holanda-chocolate.webp" alt="Ejemplo imagen" class="img-editar">
-            <input type="file" name="imagen" id="imagen"> 
+            <label for="image">Imagen</label>
+            <img src="/img/<%= productToEdit.image %>" alt="Ejemplo imagen" class="img-editar">
+            <input type="file" name="image" id="image"> 
             </div>
             <div>
-            <label for="marca">Marca</label>
-            <input type="text" name="marca" id="marca" minlength="5" placeholder="Holanda" required> 
-            <label for="sabor">Sabor</label>
-            <input type="text" name="sabor" id="sabor" minlength="5" placeholder="Chocolate" required> 
+            <label for="brand">Marca</label>
+            <input type="text" name="brand" id="brand" minlength="5" value="<%= productToEdit.brand %>" required> 
+            <label for="flavor">Sabor</label>
+            <input type="text" name="flavor" id="flavor" minlength="5" value="<%= productToEdit.flavor %>" required> 
             </div>
         </div>
         <div>
             <div class="descrip">
             <label for="des">Descripción</label>
-            <textarea name="des" id="des" placeholder="Compuesto con ..."></textarea>
+            <textarea name="des" id="des"><%= productToEdit.description %></textarea>
             </div>
           </div>
         </div>
@@ -38,23 +38,28 @@
             <div class="pres-cant">
               <div>
             <input type="checkbox" name="pres" id="pres" checked> 1/2 litro
-            <label>Precio<input type="number" name="cant1" id="cant1" placeholder="$40.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas1" id="piezas1" placeholder="200" step="1" min="1"></label>
+            <label>Precio<input type="number" name="price" id="price" value="<%= productToEdit.price %>" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="present1" id="present1" value="<%= productToEdit.present1 %>" step="1" min="1"></label>
               </div>
               <div>
             <input type="checkbox" name="pres" id="pres" checked> 1 litro
-            <label>Precio<input type="number" name="cant2" id="cant2" placeholder="$50.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas2" id="piezas2" placeholder="200" step="1" min="1"></label>
+            <label>Precio<input type="number" name="price1" id="price1" value="<%= productToEdit.price1 %>" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="present2" id="present2" value="<%= productToEdit.present2 %>" step="1" min="1"></label>
               </div>
               <div>
             <input type="checkbox" name="pres" id="pres" checked> 1.89 litro
-            <label>Precio<input type="number" name="cant3" id="cant2" placeholder="$60.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas3" id="piezas2" placeholder="200"  step="1" min="1"></label>
+            <label>Precio<input type="number" name="price2" id="price2" value="<%= productToEdit.price2 %>" step="1" min="1"></label>
+            <label>Piezas<input type="number" name="present3" id="present3" value="<%= productToEdit.present3 %>"  step="1" min="1"></label>
               </div>
           </div>
           </div>
         </div>
-        <button type="submit" class="register-button">MODIFICAR DATOS</button>
+        <div>
+          <button type="submit" class="register-button">MODIFICAR DATOS</button>
+          <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="register-button">ELIMINAR PRODUCTO</button>
+          </form>
+        </div>
         </div>
           </form>
       </section>

@@ -30,9 +30,11 @@ let upload = multer ({ storage : storage });
 router.post('/addProduct', upload.single('image'), productsController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/updateProduct', productsController.update);
+router.get('/updateProduct/:id', productsController.edit);
+router.put('/updateProduct/:id', upload.single('image'), productsController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
+router.delete('/delete/:id', productsController.destroy); 
 
 
 module.exports = router;

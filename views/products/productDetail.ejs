@@ -12,7 +12,7 @@
             </article>
         <div>
             <article class="descripcion">
-                <h1> <%= producto.name %></h1>
+                <h1><%= producto.brand + " " + producto.flavor %></h1>
                 <h3>Descripción:</h3>
                 <p><%= producto.description %></p>
         <form action="">
@@ -24,7 +24,7 @@
             </div>
             <div class="precios">
                 <h3>Precio:</h3>
-                <p>$49.99</p>
+                <p>$<%= producto.price %></p>
             </div>
             <% }}) %>
             <label for="cantidadCompra">Cantidad:</label>
