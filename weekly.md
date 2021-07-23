@@ -23,7 +23,7 @@ Durante el desarrollo de este sprint no se presentaron impedimentos, sin embargo
 
 La planeación de tareas a realizar para esta siguiente semana son aquellas identificadas en el documento del Sprint 3 y las cuales han sido agregadas al [tablero de Trello](https://trello.com/invite/b/FT08391N/8bc0086cf580c94f71dada66c6cf43e0/equipo-3) del equipo.
 
-## Sprint 3
+## Sprint 3 - Semana 1
 
 En esta reunión se analizaron las tareas realizadas a lo largo de la semana, se incluyeron las vistas siguientes:
 * [addProduct.ejs](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/views/products/addProduct.ejs)
@@ -37,3 +37,9 @@ Se muestran las pantallas por medio de la renderización.
 Todas las vistas tienen extención ejs.
 
 Por el momento no encontramos impedimentos para continuar trabajando en este sprint.
+
+## Sprint 3 - Semana 2
+
+En este periodo se realizaron mejoras en las vistas ejs, modificando los estilos CSS y agregando animaciones en los formularios faltantes. También se inició con la configuración para la carga de información de manera dinámica, para lo cual se creó el archivo [products.json](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/data/products.json) donde se almacena la información de los productos y del cual se obtiene la información para [productList.ejs](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/views/products/productList.ejs).
+
+## Sprint 4 - Semana 1
