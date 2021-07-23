@@ -32,8 +32,6 @@ const productsControlador = {
             product.image = req.file.filename;
           }
 
-        console.log(req.body)
-
 		products.push(product); 
 
 		productsJSON = JSON.stringify(products, null, 2);
@@ -78,6 +76,8 @@ const productsControlador = {
     destroy: (req,res)=>{
         const id = parseInt(req.params.id);
 		const productToDelete = products.find(product => product.id === id);
+
+        console.log(productToDelete);
 		
 		products.splice(products.indexOf(productToDelete), 1);
 		

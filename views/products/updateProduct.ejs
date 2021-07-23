@@ -9,7 +9,7 @@
       <section class="registro">
         <div class="tabla-registro">
           <h3>Modificar producto</h3>
-          <form action="/products/updateProduct/<%= productToEdit.id %>?_method=PUT" method="POST" class="register-form">
+          <form action="/products/updateProduct/<%= productToEdit.id %>?_method=PUT" method="POST" class="register-form" enctype="multipart/form-data">
       <div class="ag">
             <div>
         <div class="parte1-ag">
@@ -56,11 +56,11 @@
         </div>
         <div>
           <button type="submit" class="register-button">MODIFICAR DATOS</button>
+        </div>
+        </div>
+          </form>
           <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
             <button type="submit" class="register-button">ELIMINAR PRODUCTO</button>
-          </form>
-        </div>
-        </div>
           </form>
       </section>
     </main>
