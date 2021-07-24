@@ -1101,22 +1101,78 @@ article.perfil form button:hover{
 }
 
 /*Agregar producto*/
-.descrip textarea{
-  width: 100%;
-  padding: 3px;
-}
-.register-form .pres-cant{
+.main-add{
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 90vh;
   display: flex;
-  flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-.register-form .pres-cant input{
+.glass-add{
   width: 100%;
+  background: white;
+      width: 100%;
+      background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.1)
+    );
+    border-radius: 1rem;
+      z-index: 2;
+      backdrop-filter: blur(1.2rem);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 2%;
+      padding: 10px;
 }
-.register-form div.ag{
+.glass-container-add{
+  width: 85%;
+}
+
+.glass-add h3 {
+  font-family: "Cervo-Neue-Bold", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 3px;
+  color: #65526a;
+  font-size: 20px;
+}
+.add-form div {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  font-weight: none;
+  padding: 2px;
+}
+.add-form div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%
+}
+.add-form div input {
+  border: none;
+  border-radius: 8px;
+  padding-left: 4px;
+  font-family: "Museo-Sans-Light", sans-serif;
+  font-size: 13px;
+  color: #65526a;
+  width: 100%;
+  height: 28px;
+}
+.add-form div label, .add-form label{
+  align-self: center;
+  margin: 5px;
+  color: #65526a;
+  font-family: "Cervo-Neue-Bold", sans-serif;
+  font-size: 16px;
+}
+.descrip {
+  width: 90%;
+  padding: 3px;
 }
 
 /*Editar producto */
@@ -1544,6 +1600,12 @@ article.perfil form button:hover{
       .err{
         font-size: 2em;
       }
+      .add-form div {
+        flex-direction: row;
+      }
+      .main-add{
+        min-height: 0px;
+      }
 }
 
 @keyframes iceCreamReg1ver2 {
@@ -1694,12 +1756,6 @@ article.perfil form button:hover{
   }
   .button-register{
     align-items: center;
-  }
-  div.parte2-ag{
-    padding: 0;
-  }
-  .register-form .pres-cant input{
-    width: 90px;
   }
   .err1{
     width: 25%;
