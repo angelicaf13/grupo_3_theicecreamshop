@@ -23,7 +23,7 @@ Durante el desarrollo de este sprint no se presentaron impedimentos, sin embargo
 
 La planeación de tareas a realizar para esta siguiente semana son aquellas identificadas en el documento del Sprint 3 y las cuales han sido agregadas al [tablero de Trello](https://trello.com/invite/b/FT08391N/8bc0086cf580c94f71dada66c6cf43e0/equipo-3) del equipo.
 
-## Sprint 3
+## Sprint 3 - Semana 1
 
 En esta reunión se analizaron las tareas realizadas a lo largo de la semana, se incluyeron las vistas siguientes:
 * [addProduct.ejs](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/views/products/addProduct.ejs)
@@ -37,3 +37,11 @@ Se muestran las pantallas por medio de la renderización.
 Todas las vistas tienen extención ejs.
 
 Por el momento no encontramos impedimentos para continuar trabajando en este sprint.
+
+## Sprint 3 - Semana 2
+
+En este periodo se realizaron mejoras en las vistas ejs, modificando los estilos CSS y agregando animaciones en los formularios faltantes. También se inició con la configuración para la carga de información de manera dinámica, para lo cual se creó el archivo [products.json](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/data/products.json) donde se almacena la información de los productos y del cual se obtiene la información para [productList.ejs](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/views/products/productList.ejs).
+
+## Sprint 4 - Semana 1
+
+Se desarrollaron las funcionalidades para la edición y eliminación de productos y de igual forma se habilitó la funcionalidad para registrar un producto nuevo, para ello se utilizaron los métodos/verbos HTTP previamente estudiados, estos son GET, POST, PUT y DELETE. Además, se realizó la instalación y configuración de Multer en el proyecto, para lograr el almacenamiento de imágenes. También, se agregaron nuevos campos de información en el archivo [products.json](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/data/products.json) y se creó una versión inicial del archivo [users.json](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/data/users.json), con el objetivo de mantener la información de los usuarios del sitio. Un aspecto importante fue la detección de ciertos errores en los enlaces de redireccionamiento del sitio y con lo cual se decidió realizar un periodo de pruebas al estado actual del proyecto, para detectar errores y ahorrar tiempo en un futuro. 
