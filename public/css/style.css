@@ -1177,9 +1177,9 @@ article.perfil form button:hover{
 
 /*Editar producto */
   .img-editar{
-    width: 60%;
+    width: 40%;
   }
-  
+
 /*Error */
 .ex{
   display: flex;
@@ -1606,6 +1606,16 @@ article.perfil form button:hover{
       .main-add{
         min-height: 0px;
       }
+      .add-form div.uplinea{
+        display: flex;
+        flex-direction: column;
+        padding-right: 10%;
+      }
+      .add-form div.ordenup{
+        display: flex;
+        flex-direction: row;
+        padding: 2%;
+      }
 }
 
 @keyframes iceCreamReg1ver2 {
@@ -1762,6 +1772,10 @@ article.perfil form button:hover{
   }
   .err{
     font-size: 2.5em;
+  }
+  .glass-add{
+  width: 70%;
+  margin-left: 15%;
   }
 }
 
