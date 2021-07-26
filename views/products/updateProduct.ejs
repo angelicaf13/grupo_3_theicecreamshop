@@ -5,64 +5,57 @@
   <body>
     <%- include('../partials/header') %>
 
-    <main class="fondo">
-      <section class="registro">
-        <div class="tabla-registro">
-          <h3>Modificar producto</h3>
-          <form action="/products/updateProduct/<%= productToEdit.id %>?_method=PUT" method="POST" class="register-form" enctype="multipart/form-data">
-      <div class="ag">
-            <div>
-        <div class="parte1-ag">
-            <div>
+    <main class="main-add">
+      <div class="glass-container-add">
+        <section class="glass-add">
+          <form action="/products/updateProduct/<%= productToEdit.id %>?_method=PUT" method="POST" class="add-form" enctype="multipart/form-data">
+      <h3>Modificar producto</h3>
+              <div class="ordenup">
+          <div>
             <label for="image">Imagen</label>
             <img src="/img/<%= productToEdit.image %>" alt="Ejemplo imagen" class="img-editar">
             <input type="file" name="image" id="image"> 
-            </div>
-            <div>
+          </div>
+                  <div class="uplinea">
+          <div>
             <label for="brand">Marca</label>
             <input type="text" name="brand" id="brand" minlength="5" value="<%= productToEdit.brand %>" required> 
+          </div> 
+          <div>
             <label for="flavor">Sabor</label>
             <input type="text" name="flavor" id="flavor" minlength="5" value="<%= productToEdit.flavor %>" required> 
-            </div>
-        </div>
-        <div>
-            <div class="descrip">
+          </div>     
             <label for="des">Descripción</label>
-            <textarea name="des" id="des"><%= productToEdit.description %></textarea>
-            </div>
+          <div>
+            <textarea name="des" id="des" class="descrip"><%= productToEdit.description %></textarea>
           </div>
-        </div>
-        <div>
-        <div class="parte2-ag">
+                  </div>
+                </div>
             <label for="pres">Presentación</label>
-            <div class="pres-cant">
-              <div>
+                  <div>
+          <div>
             <input type="checkbox" name="pres" id="pres" checked> 1/2 litro
             <label>Precio<input type="number" name="price" id="price" value="<%= productToEdit.price %>" step="1" min="1"></label>
             <label>Piezas<input type="number" name="present1" id="present1" value="<%= productToEdit.present1 %>" step="1" min="1"></label>
-              </div>
-              <div>
+          </div>
+          <div>
             <input type="checkbox" name="pres" id="pres" checked> 1 litro
             <label>Precio<input type="number" name="price1" id="price1" value="<%= productToEdit.price1 %>" step="1" min="1"></label>
             <label>Piezas<input type="number" name="present2" id="present2" value="<%= productToEdit.present2 %>" step="1" min="1"></label>
-              </div>
-              <div>
+          </div>
+          <div>
             <input type="checkbox" name="pres" id="pres" checked> 1.89 litro
             <label>Precio<input type="number" name="price2" id="price2" value="<%= productToEdit.price2 %>" step="1" min="1"></label>
             <label>Piezas<input type="number" name="present3" id="present3" value="<%= productToEdit.present3 %>"  step="1" min="1"></label>
-              </div>
-          </div>
-          </div>
-        </div>
-        <div>
-          <button type="submit" class="register-button">MODIFICAR DATOS</button>
-        </div>
-        </div>
+          </div> 
+                  </div>
+            <button type="submit" class="register-button">MODIFICAR DATOS</button>
           </form>
           <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
             <button type="submit" class="register-button">ELIMINAR PRODUCTO</button>
           </form>
       </section>
+    </div>
     </main>
     <%- include('../partials/footer') %>
   </body>

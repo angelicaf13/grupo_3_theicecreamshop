@@ -3,58 +3,53 @@
     <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main class="fondo">
-      <section class="registro">
-        <div class="tabla-registro">
-          <h3>Agregar producto</h3>
-          <form action="/products/addProduct" method="POST" enctype="multipart/form-data" class="register-form">
-      <div class="ag">
-            <div>
-        <div class="parte1-ag">
-            <div>
+    <main class="main-add">
+      <div class="glass-container-add">
+      <section class="glass-add">
+          <form action="/products/addProduct" method="POST" enctype="multipart/form-data" class="add-form">
+            <h3>Agregar producto</h3>
+              <div>
+          <div>
             <label for="image">Imagen</label>
             <input type="file" name="image" id="image">
-            </div>
-            <div>
+          </div>
+          <div>
             <label for="brand">Marca</label>
             <input type="text" name="brand" id="brand" placeholder="p. ej. Holanda" minlength="5" required>
+          </div>
+          <div>
             <label for="flavor">Sabor</label>
             <input type="text" name="flavor" id="flavor" placeholder="p. ej. Chocolate" minlength="5" required>
-            </div>
-        </div>
-        <div>
-            <div class="descrip">
-            <label for="des">Descripción</label>
-            <textarea name="des" id="des" placeholder="Compuesto con ..."></textarea>
-            </div>
           </div>
-        </div>
-        <div>
-        <div class="parte2-ag">
+                </div>
+            <label for="des">Descripción</label>
+                <div>
+            <textarea name="des" id="des" class="descrip" placeholder="Compuesto con ..."></textarea>
+                </div>
             <label for="pres">Presentación</label>
-            <div class="pres-cant">
-              <div>
+                <div>
+          <div>
             <input type="checkbox" name="pres" id="pres"> 1/2 litro
             <label>Precio<input type="number" name="price" id="price" placeholder="p. ej. $40.00" step="1" min="1"></label>
             <label>Piezas<input type="number" name="piezas1" id="piezas1" placeholder="p. ej. 200" step="1" min="1"></label>
-              </div>
-              <div>
+          </div>
+          <div>
             <input type="checkbox" name="pres" id="pres"> 1 litro
             <label>Precio<input type="number" name="price1" id="price1" placeholder="p. ej. $50.00" step="1" min="1"></label>
             <label>Piezas<input type="number" name="piezas2" id="piezas2" placeholder="p. ej. 200" step="1" min="1"></label>
-              </div>
-              <div>
+          </div>
+          <div>
             <input type="checkbox" name="pres" id="pres"> 1.89 litro
             <label>Precio<input type="number" name="price2" id="price2" placeholder="p. ej. $60.00" step="1" min="1"></label>
             <label>Piezas<input type="number" name="piezas3" id="piezas2" placeholder="p. ej. 200" step="1" min="1"></label>
+          </div>    
               </div>
+          <div>
+            <button type="submit" class="register-button">AGREGAR</button>
           </div>
-          </div>
-        </div>
-        <button type="submit" class="register-button">AGREGAR</button>
-        </div>
           </form>
       </section>
+    </div>
     </main>
     <%- include('../partials/footer') %>
   </body>
