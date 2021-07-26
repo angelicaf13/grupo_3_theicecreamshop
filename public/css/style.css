@@ -64,10 +64,32 @@ header {
 
 header nav {
   display: flex;
+  flex-direction: column;
+}
+
+.top-nav{
+  display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
   font-size: 12px;
+}
+
+.mobile-option-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-option-list div {
+  width: 100%;
+  text-align: right;
+  margin: 5px 0;
+}
+
+.mobile-option-list div a{
+  width: 100%;
+  text-align: right;
+  font-size: 20px;
 }
 
 .option-button{
@@ -98,6 +120,7 @@ nav a,
 footer a {
   text-decoration: none;
   color: var(--dark-lavender);
+  font-size: 22px;
 }
 
 footer {
