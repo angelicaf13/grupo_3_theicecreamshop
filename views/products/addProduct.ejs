@@ -29,19 +29,19 @@
             <label for="pres">Presentación</label>
                 <div>
           <div>
-            <input type="checkbox" name="pres" id="pres"> 1/2 litro
-            <label>Precio<input type="number" name="price" id="price" placeholder="p. ej. $40.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas1" id="piezas1" placeholder="p. ej. 200" step="1" min="1"></label>
+            <input type="checkbox" name="present1" id="present1" onclick="validate1()"> 1/2 litro
+            <label>Precio<input type="number" name="price1" id="price1" placeholder="p. ej. $40.00" step="1" min="1" disabled></label>
+            <label>Piezas<input type="number" name="cant1" id="cant1" placeholder="p. ej. 200" step="1" min="1" disabled></label>
           </div>
           <div>
-            <input type="checkbox" name="pres" id="pres"> 1 litro
-            <label>Precio<input type="number" name="price1" id="price1" placeholder="p. ej. $50.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas2" id="piezas2" placeholder="p. ej. 200" step="1" min="1"></label>
+            <input type="checkbox" name="present2" id="present2" onclick="validate2()"> 1 litro
+            <label>Precio<input type="number" name="price2" id="price2" placeholder="p. ej. $50.00" step="1" min="1" disabled></label>
+            <label>Piezas<input type="number" name="cant2" id="cant2" placeholder="p. ej. 200" step="1" min="1" disabled></label>
           </div>
           <div>
-            <input type="checkbox" name="pres" id="pres"> 1.89 litro
-            <label>Precio<input type="number" name="price2" id="price2" placeholder="p. ej. $60.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="piezas3" id="piezas2" placeholder="p. ej. 200" step="1" min="1"></label>
+            <input type="checkbox" name="present3" id="present3" onclick="validate3()"> 1.89 litro
+            <label>Precio<input type="number" name="price3" id="price3" placeholder="p. ej. $60.00" step="1" min="1" disabled></label>
+            <label>Piezas<input type="number" name="cant3" id="cant3" placeholder="p. ej. 200" step="1" min="1" disabled></label>
           </div>    
               </div>
           <div>
@@ -52,5 +52,37 @@
     </div>
     </main>
     <%- include('../partials/footer') %>
+
+    <script type="text/javascript">
+      function validate1() {
+          if (document.getElementById('present1').checked) {
+            document.getElementById('price1').disabled = false;
+            document.getElementById('cant1').disabled = false;
+          } else {
+            document.getElementById('price1').disabled = true;
+            document.getElementById('cant1').disabled = true;
+          }
+      }
+
+      function validate2() {
+          if (document.getElementById('present2').checked) {
+            document.getElementById('price2').disabled = false;
+            document.getElementById('cant2').disabled = false;
+          } else {
+            document.getElementById('price2').disabled = true;
+            document.getElementById('cant2').disabled = true;
+          }
+      }
+
+      function validate3() {
+          if (document.getElementById('present3').checked) {
+            document.getElementById('price3').disabled = false;
+            document.getElementById('cant3').disabled = false;
+          } else {
+            document.getElementById('price3').disabled = true;
+            document.getElementById('cant3').disabled = true;
+          }
+      }
+      </script>
   </body>
 </html>

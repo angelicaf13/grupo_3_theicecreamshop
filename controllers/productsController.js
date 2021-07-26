@@ -20,9 +20,15 @@ const productsControlador = {
 			id: Date.now(),
 			brand: req.body.brand,
             flavor: req.body.flavor,
-			price: parseInt(req.body.price),
-            price1: parseInt(req.body.price1),
+			price1: parseInt(req.body.price1),
             price2: parseInt(req.body.price2),
+            price3: parseInt(req.body.price3),
+            present1: "1/2 litro",
+            present2: "1 litro",
+            present3: "1.89 litro",
+            cant1: parseInt(req.body.cant1),
+            cant2: parseInt(req.body.cant2),
+            cant3: parseInt(req.body.cant3),
 			description: req.body.des 	
 		}
 
@@ -53,19 +59,20 @@ const productsControlador = {
 		
 			productToEdit.brand = req.body.brand;
             productToEdit.flavor = req.body.flavor;
-			productToEdit.price = parseInt(req.body.price);
-            productToEdit.price1 = parseInt(req.body.price1);
+			productToEdit.price1 = parseInt(req.body.price1);
             productToEdit.price2 = parseInt(req.body.price2);
+            productToEdit.price3 = parseInt(req.body.price3);
 			productToEdit.description = req.body.des;
-            productToEdit.present1 = req.body.present1;
-            productToEdit.present2 = req.body.present2;
-            productToEdit.present3 = req.body.present3;
+            productToEdit.cant1 = parseInt(req.body.cant1);
+            productToEdit.cant2 = parseInt(req.body.cant2);
+            productToEdit.cant3 = parseInt(req.body.cant3);
 			
 			if (req.file === undefined) {
-				productToEdit.image = 'default-image.png';
+				productToEdit.image = productToEdit.image;
 			  } else {
-				productToEdit.image = req.file.filename;
-			  }
+                fs.unlinkSync('./public/img/' + productToEdit.image);
+                productToEdit.image = req.file.filename;
+              }
 		
 		productsJSON = JSON.stringify(products, null, 2);
 
@@ -77,7 +84,9 @@ const productsControlador = {
         const id = parseInt(req.params.id);
 		const productToDelete = products.find(product => product.id === id);
 
-        console.log(productToDelete);
+
+        fs.unlinkSync('./public/img/' + productToDelete.image);
+
 		
 		products.splice(products.indexOf(productToDelete), 1);
 		
