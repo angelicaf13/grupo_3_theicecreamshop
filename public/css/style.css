@@ -1380,8 +1380,7 @@ article.perfil form button:hover{
 }
 
 @media (min-width: 768px) {
-
-  .nav-option-mobile{
+  .nav-option-mobile, .mobile-option-list{
     display: none;
   }
 
