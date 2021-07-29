@@ -46,10 +46,14 @@
                 document.getElementById('price1').style.color = 'black';
                 document.getElementById('price2').style.display = 'none';
                 document.getElementById('price3').style.display = 'none';
+                document.getElementById('present2').disabled = true;
+                document.getElementById('present3').disabled = true;
             } else {
                 document.getElementById('price1').style.display = 'none';
                 document.getElementById('price2').style.display = 'none';
                 document.getElementById('price3').style.display = 'none';
+                document.getElementById('present2').disabled = false;
+                document.getElementById('present3').disabled = false;
             }
         }
   
@@ -60,10 +64,14 @@
                 document.getElementById('price2').style.color = 'black';
                 document.getElementById('price1').style.display = 'none';
                 document.getElementById('price3').style.display = 'none';
+                document.getElementById('present1').disabled = true;
+                document.getElementById('present3').disabled = true;
             } else {
                 document.getElementById('price1').style.display = 'none';
                 document.getElementById('price2').style.display = 'none';
                 document.getElementById('price3').style.display = 'none';
+                document.getElementById('present1').disabled = false;
+                document.getElementById('present3').disabled = false;
             }
         }
   
@@ -74,10 +82,14 @@
                 document.getElementById('price3').style.color = 'black';
                 document.getElementById('price2').style.display = 'none';
                 document.getElementById('price1').style.display = 'none';
+                document.getElementById('present1').disabled = true;
+                document.getElementById('present2').disabled = true;
             } else {
                 document.getElementById('price1').style.display = 'none';
                 document.getElementById('price2').style.display = 'none';
                 document.getElementById('price3').style.display = 'none';
+                document.getElementById('present1').disabled = false;
+                document.getElementById('present2').disabled = false;
             }
         }
         </script>
