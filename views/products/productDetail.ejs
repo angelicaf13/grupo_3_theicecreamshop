@@ -18,9 +18,9 @@
         <form action="">
                 <h3>Presentación:</h3>
             <div class="inputs">
-                <input type="checkbox" name="present1" id="present1" onclick="validate1()"> 1/2 Litro
-                <input type="checkbox" name="present2" id="present2" onclick="validate2()"> 1 Litro
-                <input type="checkbox" name="present3" id="present3" onclick="validate3()"> 1.89 Litros
+                <input type="checkbox" name="present1" id="present1" onclick="validate1Detalle()"> 1/2 Litro
+                <input type="checkbox" name="present2" id="present2" onclick="validate2Detalle()"> 1 Litro
+                <input type="checkbox" name="present3" id="present3" onclick="validate3Detalle()"> 1.89 Litros
             </div>
             <div class="precios">
                 <h3>Precio:</h3>
@@ -39,7 +39,7 @@
     </main>
     <%- include('../partials/footer') %>
     <script type="text/javascript">
-        function validate1() {
+        function validate1Detalle() {
             if (document.getElementById('present1').checked) {
                 document.getElementById('price1').disabled = true;
                 document.getElementById('price1').style.display = 'block';
@@ -53,7 +53,7 @@
             }
         }
   
-        function validate2() {
+        function validate2Detalle() {
             if (document.getElementById('present2').checked) {
                 document.getElementById('price2').disabled = true;
                 document.getElementById('price2').style.display = 'block';
@@ -67,7 +67,7 @@
             }
         }
   
-        function validate3() {
+        function validate3Detalle() {
             if (document.getElementById('present3').checked) {
                 document.getElementById('price3').disabled = true;
                 document.getElementById('price3').style.display = 'block';
