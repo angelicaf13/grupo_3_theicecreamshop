@@ -18,13 +18,15 @@
         <form action="">
                 <h3>Presentación:</h3>
             <div class="inputs">
-                <input type="radio" name="tamano" id="medio"> 1/2 Litro
-                <input type="radio" name="tamano" id="litro"> 1 Litro
-                <input type="radio" name="tamano" id="litromas"> 1.89 Litros
+                <input type="checkbox" name="present1" id="present1" onclick="validate1()"> 1/2 Litro
+                <input type="checkbox" name="present2" id="present2" onclick="validate2()"> 1 Litro
+                <input type="checkbox" name="present3" id="present3" onclick="validate3()"> 1.89 Litros
             </div>
             <div class="precios">
                 <h3>Precio:</h3>
-                <p>$<%= producto.price1 %></p>
+                <input type="text" name="price1" id="price1" value="$<%= producto.price1 %>">
+                <input type="text" name="price2" id="price2" value="$<%= producto.price2 %>">
+                <input type="text" name="price3" id="price3" value="$<%= producto.price3 %>">
             </div>
             <% }}) %>
             <label for="cantidadCompra">Cantidad:</label>
@@ -36,5 +38,48 @@
         </section>
     </main>
     <%- include('../partials/footer') %>
+    <script type="text/javascript">
+        function validate1() {
+            if (document.getElementById('present1').checked) {
+                document.getElementById('price1').disabled = true;
+                document.getElementById('price1').style.display = 'block';
+                document.getElementById('price1').style.color = 'black';
+                document.getElementById('price2').style.display = 'none';
+                document.getElementById('price3').style.display = 'none';
+            } else {
+                document.getElementById('price1').style.display = 'none';
+                document.getElementById('price2').style.display = 'none';
+                document.getElementById('price3').style.display = 'none';
+            }
+        }
+  
+        function validate2() {
+            if (document.getElementById('present2').checked) {
+                document.getElementById('price2').disabled = true;
+                document.getElementById('price2').style.display = 'block';
+                document.getElementById('price2').style.color = 'black';
+                document.getElementById('price1').style.display = 'none';
+                document.getElementById('price3').style.display = 'none';
+            } else {
+                document.getElementById('price1').style.display = 'none';
+                document.getElementById('price2').style.display = 'none';
+                document.getElementById('price3').style.display = 'none';
+            }
+        }
+  
+        function validate3() {
+            if (document.getElementById('present3').checked) {
+                document.getElementById('price3').disabled = true;
+                document.getElementById('price3').style.display = 'block';
+                document.getElementById('price3').style.color = 'black';
+                document.getElementById('price2').style.display = 'none';
+                document.getElementById('price1').style.display = 'none';
+            } else {
+                document.getElementById('price1').style.display = 'none';
+                document.getElementById('price2').style.display = 'none';
+                document.getElementById('price3').style.display = 'none';
+            }
+        }
+        </script>
 </body>
 </html>
