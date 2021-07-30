@@ -6,7 +6,6 @@ const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
 const PORT = process.env.PORT || 3000
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
-
 app.set('view engine', 'ejs');
 
 const publicPath= path.resolve(__dirname, './public');
