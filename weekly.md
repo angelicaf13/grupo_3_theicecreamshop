@@ -45,3 +45,10 @@ En este periodo se realizaron mejoras en las vistas ejs, modificando los estilos
 ## Sprint 4 - Semana 1
 
 Se desarrollaron las funcionalidades para la edición y eliminación de productos y de igual forma se habilitó la funcionalidad para registrar un producto nuevo, para ello se utilizaron los métodos/verbos HTTP previamente estudiados, estos son GET, POST, PUT y DELETE. Además, se realizó la instalación y configuración de Multer en el proyecto, para lograr el almacenamiento de imágenes. También, se agregaron nuevos campos de información en el archivo [products.json](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/data/products.json) y se creó una versión inicial del archivo [users.json](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/data/users.json), con el objetivo de mantener la información de los usuarios del sitio. Un aspecto importante fue la detección de ciertos errores en los enlaces de redireccionamiento del sitio y con lo cual se decidió realizar un periodo de pruebas al estado actual del proyecto, para detectar errores y ahorrar tiempo en un futuro. 
+
+## Sprint 4 - Semana 2
+
+Se hicieron mejoras a los trabajos de la semana pasada como la separación del middleware multer en una carpeta aparte para mantener el código lo más organizado posible. Se modificó la vista de detalle de producto para cambiar el precio de la nieve dependiendo de la presentación del mismo, y los formularios de registro y modificación de producto. Además, se decidió agregar un mensaje de confirmación a la hora de querer elimnar un producto (DELETE). Se siguieron haciendo pruebas para verificar que la página funcione correctamente y mejoras de diseño. 
+
+
+
