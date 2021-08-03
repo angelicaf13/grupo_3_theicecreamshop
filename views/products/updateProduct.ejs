@@ -52,7 +52,7 @@
             <button type="submit" class="register-button">MODIFICAR DATOS</button>
           </form>
           <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
-            <button type="submit" class="register-button">ELIMINAR PRODUCTO</button>
+            <button type="submit" class="register-button" onclick="confirmDelete()">ELIMINAR PRODUCTO</button>
           </form>
       </section>
     </div>
@@ -96,5 +96,16 @@
           }
       }
       </script>
+      <script>
+        function confirmDelete() {
+            const mensaje = confirm("¿Realmente deseas eliminar el producto? Recuerda que no podras recuperar la información");
+            if (mensaje) {
+            alert("¡Producto eliminado!");
+            }
+            else {
+            alert("La acción no se realizó");
+            }
+        }
+    </script>
   </body>
 </html>
