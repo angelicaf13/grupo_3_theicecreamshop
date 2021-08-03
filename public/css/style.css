@@ -801,6 +801,10 @@ padding-top: 10px;
   padding: 5px;
 }
 
+.product-container a{
+  text-decoration: none;
+}
+
 .product-container h4{
   text-align: center;
   color: #65526a;
