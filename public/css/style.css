@@ -1,3 +1,4 @@
+                    /* <<------------------------------ PALETA DE COLORES ------------------------------>> */
 :root {
   --pale-pink: #f7d1cd;
   --queen-pink: #e8c2ca;
@@ -7,7 +8,7 @@
   --logo-back: #e4d4dd;
   --dark-lavender: #65526a;
 }
-
+                    /* <<------------------------------ FUENTES ------------------------------>> */
 @font-face {
   font-family: Cervo-Neue-Black;
   src: url(./fonts/CervoNeue-BlackNeue.otf);
@@ -48,6 +49,7 @@
   src: url(./fonts/MuseoSans-700.otf);
 }
 
+                    /* <<------------------------------ GLOBAL ------------------------------>> */
 * {
   margin: 0;
   padding: 0;
@@ -55,6 +57,31 @@
   font-family: "Cervo-Neue-Bold", sans-serif;
 }
 
+main {
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+}
+
+h2 {
+  color: #65526a;
+}
+
+h5 {
+  padding-bottom: 20px;
+  color: #735d78;
+  font-weight: bold;
+}
+
+textarea {
+  font-weight: bold;
+  font-size: 12px;
+  color: #65526a;
+  background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+  border-radius: 1rem;
+  backdrop-filter: blur(1.2rem);
+  border-style: none;
+}
+
+                    /* <<------------------------------ HEADER ------------------------------>> */
 header {
   background-color: #e4d4dd;
   width: 100%;
@@ -116,13 +143,13 @@ header nav {
   color: var(--old-lavender);
 }
 
-nav a,
-footer a {
+nav a, footer a {
   text-decoration: none;
   color: var(--dark-lavender);
   font-size: 22px;
 }
 
+                    /* <<------------------------------ FOOTER ------------------------------>> */
 footer {
   background-color: #e4d4dd;
   width: 100%;
@@ -136,30 +163,7 @@ footer div {
   font-size: 12px;
 }
 
-main {
-  background: linear-gradient(to right top, #b392ac, #e8c2ca);
-}
-
-h2 {
-  color: #65526a;
-}
-
-h5 {
-  padding-bottom: 20px;
-  color: #735d78;
-  font-weight: bold;
-}
-
-textarea {
-  font-weight: bold;
-  font-size: 12px;
-  color: #65526a;
-  background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
-  border-radius: 1rem;
-  backdrop-filter: blur(1.2rem);
-  border-style: none;
-}
-
+                    /* <<------------------------------ HOME ------------------------------>> */
 .links-invisible {
   width: 50px;
 }
@@ -192,8 +196,7 @@ textarea {
   position: relative;
 }
 
-.prev,
-.next {
+.prev,.next {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -331,7 +334,6 @@ figure:hover .text-brand{
 
 .comentario {
   text-align: center;
-  
 }
 
 .comments-button-left {
@@ -364,6 +366,7 @@ figure:hover .text-brand{
     background-color: #b45ecc;
 }
 
+                    /* <<------------------------------ CARRITO DE COMPRAS ------------------------------>> */
 .seguir-comprando {
   padding: 15px;
   display: flex;
@@ -394,13 +397,12 @@ figure:hover .text-brand{
   background-color: #fff;
 }
 
-
 .shopping-cart {
   width: 100%;
   border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
-    background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+  padding: 10px;
+  margin: 5px;
+  background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
 }
 
 .title {
@@ -465,17 +467,16 @@ figure:hover .text-brand{
   justify-content: space-evenly;
 }
 
-.ticket-column-1 p,
-.ticket-column-2 p {
+.ticket-column-1 p,.ticket-column-2 p {
   font-size: 12px;
   padding: 5px;
 }
 
 .container-product-cart{
-margin: 0px 15px;
+  margin: 0px 15px;
 }
 
-/* Login */
+                    /* <<------------------------------ LOGIN ------------------------------>> */
 
 .main-login {
   background: linear-gradient(to right top, #b392ac, #e8c2ca);
@@ -486,30 +487,30 @@ margin: 0px 15px;
 }
 
 .glass-container{
-    min-height: 68vh;
-    width: 85%;
-    max-width: 360px;
-    border-radius: 1rem;
-    position: relative;
+  min-height: 68vh;
+  width: 85%;
+  max-width: 360px;
+  border-radius: 1rem;
+  position: relative;
 }
 
 .glass-login{
-    background: white;
-    min-height: 68vh;
-    width: 100%;
-    max-width: 360px;
-    background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.1)
+  background: white;
+  min-height: 68vh;
+  width: 100%;
+  max-width: 360px;
+  background: linear-gradient(
+  to right bottom,
+ rgba(255, 255, 255, 0.5), 
+ rgba(255, 255, 255, 0.1)
   );
-    border-radius: 1rem;
-    z-index: 2;
-    position: absolute;
-    backdrop-filter: blur(1.2rem);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  border-radius: 1rem;
+  z-index: 2;
+  position: absolute;
+  backdrop-filter: blur(1.2rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .login-background {
@@ -526,9 +527,9 @@ margin: 0px 15px;
   align-items: center;
   margin: 40px 25px;
   background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.1)
+  to right bottom,
+ rgba(255, 255, 255, 0.5),
+ rgba(255, 255, 255, 0.1)
   );
   backdrop-filter: blur(1.2rem);
   width: 400px;
@@ -622,23 +623,24 @@ input:focus-visible {
 }
 
 .login-button:hover{
-    background-color: #b45ecc;
+  background-color: #b45ecc;
 }
 
 .ice-cream-cone-img-1, .ice-cream-cone-img-2{
-    display: none;
+  display: none;
 }
 
+                    /* <<------------------------------ ANIMACION HELADOS ------------------------------>> */
 @keyframes iceCream1 {
     0% {
         display: block;
     }
 
     100%{
-            width: 15rem;
-            top: 11%;
-            left: -43%;
-            transform: rotate(-13deg);
+        width: 15rem;
+        top: 11%;
+        left: -43%;
+        transform: rotate(-13deg);
     }
     
 }
@@ -657,9 +659,7 @@ input:focus-visible {
     
 }
 
-
-/* Product List */
-
+                    /* <<------------------------------ PRODUCT LIST ------------------------------>> */
 .main-product-list{
   background: linear-gradient(to right top, #b392ac, #e8c2ca);
   min-height: 90vh;
@@ -689,8 +689,7 @@ input:focus-visible {
 .ordenar-checkbox-container{
   display: none;
   margin: 0px 20px;
-padding-top: 10px;
-
+  padding-top: 10px;
 }
 
 .filters-products {
@@ -703,19 +702,19 @@ padding-top: 10px;
 }
 
 .container-main-product-list{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .category h3{
-    font-family: 'Cervo-Neue-Regular', sans-serif;
-    margin: 10px;
+  font-family: 'Cervo-Neue-Regular', sans-serif;
+  margin: 10px;
 }
 
 .apply-button{
   display: block;
- margin-top: 30px;
- margin-left: 70px;
+  margin-top: 30px;
+  margin-left: 70px;
   font-family: "Cervo-Neue-Regular", sans-serif;
   font-size: 14px;
   background-color: #735d78;
@@ -731,12 +730,12 @@ padding-top: 10px;
 }
 
 .productos{
-    width: 100vw;
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
+  width: 100vw;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .productos > a {
@@ -744,14 +743,14 @@ padding-top: 10px;
 }
 
 .product-container{
-    width: 100%;
-    max-width: 180px;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
-    backdrop-filter: blur(1.2rem);
-    border-radius: 0.2rem;
-    margin: 10px;
-    min-height: 247px;
-    position: relative;
+  width: 100%;
+  max-width: 180px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(1.2rem);
+  border-radius: 0.2rem;
+  margin: 10px;
+  min-height: 247px;
+  position: relative;
 }
 
 .edit-button{
@@ -823,41 +822,45 @@ padding-top: 10px;
   animation: hoverProduct 0.4s forwards;
 }
 
-/* Registro */
+                    /* <<------------------------------ REGISTRO ------------------------------>> */
 .ice-cream-reg-img-1, .ice-cream-reg-img-2{
   display: none;
 }
+
 .main-register{
   background: linear-gradient(to right top, #b392ac, #e8c2ca);
   min-height: 90vh;
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
+
 .glass-container-register{
   width: 85%;
   max-width: 360px;
   height: 530px;
   position: relative;
 }
+
 .glass-register{
   width: 100%;
   background: white;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-      to right bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.1)
-    );
-    border-radius: 1rem;
-      z-index: 2;
-      position: absolute;
-      backdrop-filter: blur(1.2rem);
-      display: flex;
-      flex-direction: column;
-      text-align: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+  to right bottom,
+  rgba(255, 255, 255, 0.5),
+   rgba(255, 255, 255, 0.1)
+);
+  border-radius: 1rem;
+  z-index: 2;
+  position: absolute;
+  backdrop-filter: blur(1.2rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
+
 .glass-register h3 {
   font-family: "Cervo-Neue-Bold", sans-serif;
   margin-top: 30px;
@@ -871,6 +874,7 @@ padding-top: 10px;
   font-family: "Museo-Sans-Medium", sans-serif;
   font-size: 12px;
 }
+
 .glass-register p {
   font-family: "Museo-Sans-Medium", sans-serif;
   color: #65526a;
@@ -878,24 +882,29 @@ padding-top: 10px;
   text-align: center;
   margin-top: 3px;
 }
+
 .glass-register h2 {
   margin-bottom: 20px;
   font-family: "Museo-Sans-Medium", sans-serif;
   font-size: 12px;
   text-align: center;
 }
+
 .glass-register h2 a{
   font-family: "Museo-Sans-Medium", sans-serif;
   text-decoration: none;
 }
+
 .glass-register p a{
   font-family: "Museo-Sans-Medium", sans-serif;
-    font-size: 12px;
-    text-decoration: none;
+  font-size: 12px;
+  text-decoration: none;
 }
+
 .register-form{
   margin: 10px;
 }
+
 .register-form div {
   display: flex;
   flex-direction: column;
@@ -905,12 +914,14 @@ padding-top: 10px;
   text-align: center;
   font-weight: none;
 }
+
 .register-form div div {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%
 }
+
 .register-form div div input {
   border: none;
   border-radius: 8px;
@@ -921,6 +932,7 @@ padding-top: 10px;
   width: 100%;
   height: 28px;
 }
+
 .register-form div div label {
   align-self: flex-start;
   margin: 5px;
@@ -945,12 +957,12 @@ padding-top: 10px;
   background-color: #b45ecc;
 }
 
-
-/* Perfil */
+                    /* <<------------------------------ PERFIL ------------------------------>> */
 .mainPerfil{
   padding: 15px;
   background-color:  #b392ac; 
 }
+
 article.perfil, .historial{
   width: 100%;
   border-radius: 5px;
@@ -958,6 +970,7 @@ article.perfil, .historial{
   margin: 5px;
   background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
 }
+
 article.perfil form{
   display: flex;
   flex-direction: column;
@@ -966,6 +979,7 @@ article.perfil form{
   line-height: 35px;
   font-size: 10px;
 }
+
 article.perfil form input{
   width: 230px;
   padding: 3px;
@@ -973,11 +987,13 @@ article.perfil form input{
   border: none;
   border-radius: 5px;
 }
+
 #fotoPerfil{
   display: flex;
   align-self: center;
   padding: 3px;
 }
+
 article.perfil form button{
   margin: 15px;
   border-radius: 12px;
@@ -991,17 +1007,21 @@ article.perfil form button{
   align-self: center;
   transition: background-color 0.5s ;
 }
+
 article.perfil form button:hover{
   background-color: #b45ecc;
 }
+
 .titulos{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .titulos h1{
   font-size: 15px;
 }
+
 .enh3 h3{
   padding-bottom: 20px;
   color: #735d78;
@@ -1009,9 +1029,11 @@ article.perfil form button:hover{
   text-align: center;
   font-size: 26px;
 }
+
 .historial div img{
   width: 100px;
 }
+
 .historial div{
   display: flex;
   flex-direction: row;
@@ -1020,20 +1042,24 @@ article.perfil form button:hover{
   align-items: center;
   font-size: 16px;
 }
+
 .description, article.perfil form {
   font-size: 16px;
   color: #65526a;
   padding:2px;
 }
+
 .fec{
   display: flex;
   justify-content: flex-end;
   margin-top: 15px;
 }
+
 #fechas{
   border-radius: 6px;
   margin: 0px 10px;
 }
+
 .historial .pagoFinal{
   margin:0px;
   display: flex;
@@ -1042,20 +1068,22 @@ article.perfil form button:hover{
   align-items: center;
   text-align: left;
 }
+
 .pagoFinal h1, .pagoFinal p{
   font-family: "Cervo-Neue-Regular", sans-serif;
   font-size: 18px;
   background-color: #735d78;
   color: white;
   padding: 6px;
-} 
-
-/*Detalle del producto */
+}
+ 
+                    /* <<------------------------------ DETALLE DEL PRODUCTO ------------------------------>> */
 .product-img{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .product-img img{
   width: 60%;
 }
@@ -1063,11 +1091,13 @@ article.perfil form button:hover{
   width: 100%;
   height: 100%;
 }
+
 .descripcion p{
   text-align: justify;
   font-size: 10px;
   font-family: Cardo;
 }
+
 .detail{
   display: flex;
   flex-direction: column;
@@ -1079,25 +1109,30 @@ article.perfil form button:hover{
   margin-left: 50px;
   margin-right: 50px;
 }
+
 .detail h3, .detail label{
   font-family: 'Cardo', serif;
   font-size: 16px;
 }
+
 .detail .inputs, .detail h1{
   text-align: center;
   font-size: 16px;
   font-weight: bold;
 }
+
 .detail h1{
   color: #65526a;
   font-size: 18px;
   font-weight: bold;
 }
+
 div.precios{
   display: flex;
   display: flex;
   flex-direction: column;
 }
+
 .precios input{
   align-self: center;
   font-size: 20px;
@@ -1107,6 +1142,7 @@ div.precios{
   background: none;
   display: none;
 }
+
 #cantidadCompra{
   font-size: 14px;
   padding: 2px;
@@ -1114,6 +1150,7 @@ div.precios{
   text-align: center;
   display: inline;
 }
+
 .detail button, .bt{
   display: flex;
   align-self: center;
@@ -1132,36 +1169,39 @@ div.precios{
 .detail button:hover{
   background-color: #b45ecc;
 }
+
 .bt:hover{
   background-color: #b45ecc;
 }
 
-/*Agregar producto*/
+                    /* <<------------------------------ AGREGAR PRODUCTO ------------------------------>> */
 .main-add{
   background: linear-gradient(to right top, #b392ac, #e8c2ca);
   min-height: 90vh;
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
+
 .glass-add{
   width: 100%;
   background: white;
-      width: 100%;
-      background: linear-gradient(
-      to right bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.1)
-    );
-    border-radius: 1rem;
-      z-index: 2;
-      backdrop-filter: blur(1.2rem);
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      margin: 2%;
-      padding: 10px;
+  width: 100%;
+  background: linear-gradient(
+  to right bottom,
+ rgba(255, 255, 255, 0.5),
+ rgba(255, 255, 255, 0.1)
+);
+  border-radius: 1rem;
+  z-index: 2;
+  backdrop-filter: blur(1.2rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2%;
+  padding: 10px;
 }
+
 .glass-container-add{
   width: 85%;
 }
@@ -1173,6 +1213,7 @@ div.precios{
   color: #65526a;
   font-size: 20px;
 }
+
 .add-form div {
   display: flex;
   flex-direction: column;
@@ -1183,12 +1224,14 @@ div.precios{
   font-weight: none;
   padding: 2px;
 }
+
 .add-form div div {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%
 }
+
 .add-form div input {
   border: none;
   border-radius: 8px;
@@ -1199,6 +1242,7 @@ div.precios{
   width: 100%;
   height: 28px;
 }
+
 .add-form div label, .add-form label{
   align-self: center;
   margin: 5px;
@@ -1206,17 +1250,18 @@ div.precios{
   font-family: "Cervo-Neue-Bold", sans-serif;
   font-size: 16px;
 }
+
 .descrip {
   width: 90%;
   padding: 3px;
 }
 
-/*Editar producto */
-  .img-editar{
-    width: 40%;
-  }
+                    /* <<------------------------------ EDITAR PRODUCTO ------------------------------>> */
+.img-editar{
+  width: 40%;
+}
 
-/*Error */
+                    /* <<------------------------------ ERROR 404 ------------------------------>> */
 .ex{
   display: flex;
   flex-direction: row;
@@ -1225,6 +1270,7 @@ div.precios{
   justify-content: center;
   padding: 0px 50px 0px;
 }
+
 .ex2{
   padding: 0px 70px;
   display: flex;
@@ -1232,15 +1278,18 @@ div.precios{
   align-items: center;
   justify-content: center;
 }
+
 .ex2 a{
   color:#735D78;
   font-size: 22px;
   font-style: oblique;
   font-weight:bolder;
 }
+
 .ex3{
   padding: 10px 70px 0px;
 }
+
 .err{
   font-size: 18px;
   font-style: oblique;
@@ -1249,16 +1298,16 @@ div.precios{
   text-align: justify;
   text-align: center;
 }
+
 .err1{
   width: 100%;
   opacity: 80%;
 }
 
+                    /* <<------------------------------ MOBILE FIRST ------------------------------>> */
+                    /* <<------------------------------ MIN-WIDTH 480PX ------------------------------>> */
 @media (min-width: 480px) {
-
-  header nav,
-  .historia,
-  .contacto {
+  header nav,.historia,.contacto {
     font-size: 18px;
   }
 
@@ -1340,96 +1389,102 @@ div.precios{
   .ice-cream-reg-img-1, .ice-cream-reg-img-2{
     width: 9rem;
     display: block;
-}
+  }
 
-.ice-cream-reg-img-1{
+  .ice-cream-reg-img-1{
     z-index: 0;
     position: absolute;
     order: 1;
     top: 12%;
     left: -20%;
-}
+  }
 
-.ice-cream-reg-img-2{
+  .ice-cream-reg-img-2{
     z-index: 0;
     position: absolute;
     top: 62%;
     left: 77%;
     -webkit-transform: scaleX(-1);
     transform: rotate(180deg) scaleX(-1);
-}
+  }
 
   .ice-cream-cone-img-1, .ice-cream-cone-img-2{
     width: 9rem;
     display: block;
-}
+  }
 
-.ice-cream-cone-img-1{
+  .ice-cream-cone-img-1{
     z-index: 0;
     position: absolute;
     order: 1;
     top: 9%;
     left: -23%;
-}
+  }
 
-.ice-cream-cone-img-2{
+  .ice-cream-cone-img-2{
     z-index: 0;
     position: absolute;
     top: 62%;
     left: 77%;
     -webkit-transform: scaleX(-1);
     transform: rotate(180deg) scaleX(-1);
-}
-
-.links i {
-  font-size: 14px;
-}
-.links-invisible i{
-  font-size: 14px;
-}
-.descripcion p{
-  font-size: 1em;
-}
- .detail h3,.detail label, .inputs, .precios p, #cantidadCompra, .detail button{
-  font-size: 1.1em;
   }
-.detail h1{
-  padding: 2%;
-  font-size: 1.2em;
-  font-weight: bold;
-}
+
+  .links i {
+    font-size: 14px;
+  }
+
+  .links-invisible i{
+    font-size: 14px;
+  }
+
+  .descripcion p{
+    font-size: 1em;
+  }
+  .detail h3,.detail label, .inputs, .precios p, #cantidadCompra, .detail button{
+    font-size: 1.1em;
+  }
+
+  .detail h1{
+    padding: 2%;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
   .precios p{
     font-size: 1.5em;
   }
+
   .glass-container-register{
   max-width: 400px;
   }
+
   .err1{
     width: 70%;
   }
+
   .ex2 a{
     font-size: 1em;
   }
+
   .err{
     font-size: 1.5em;
   }
-
 }
 
+                    /* <<------------------------------ ANIMACION HELADOS ------------------------------>> */
 @keyframes iceCreamReg1 {
   0% {
       display: block;
       top: 11%;
       left: -10%;
   }
-
   100%{
-          width: 15rem;
-          top: 11%;
-          left: -23%;
-          transform: rotate(-13deg);
+      width: 15rem;
+      top: 11%;
+      left: -23%;
+      transform: rotate(-13deg);
   }
-  
 }
 @keyframes iceCreamReg2 {
   0%{
@@ -1437,7 +1492,6 @@ div.precios{
       top: 65%;
       left: 80%;
   }
-
   100%{
       width: 15rem;
       top: 45%;
@@ -1445,9 +1499,9 @@ div.precios{
       -webkit-transform: scaleX(-1);
       transform: rotate(13deg) scaleX(-1);
   }
-  
 }
 
+                    /* <<------------------------------ MIN-WIDTH 768PX ------------------------------>> */
 @media (min-width: 768px) {
   .nav-option-mobile, .mobile-option-list{
     display: none;
@@ -1456,28 +1510,36 @@ div.precios{
   #desktop-op{
     display: block;
   }
+
   .tabla-registro {
     width: 50%;
   }
+
   .ice-cream-cone-img-1{
-      animation: iceCream1 3s 1 forwards;
+    animation: iceCream1 3s 1 forwards;
   }
+
   .ice-cream-cone-img-2{
-      animation: iceCream2 3s 1 forwards;
+    animation: iceCream2 3s 1 forwards;
   }
-   .glass-container-register{
+
+  .glass-container-register{
     max-width: 550px;
     height: 550px;
   }
+
   .glass-register{
     padding: 20px;
   }
+
   .ice-cream-reg-img-1{
     animation: iceCreamReg1 3s 1 forwards;
-}
-.ice-cream-reg-img-2{
+  }
+
+  .ice-cream-reg-img-2{
     animation: iceCreamReg2 3s 1 forwards;
-}
+  }
+
   .ordenar-filtrar-button{
     display: none;
   }
@@ -1548,6 +1610,7 @@ div.precios{
   .links i {
     font-size: 16px;
   }
+
   .links-invisible i{
     font-size: 16px;
   }
@@ -1574,99 +1637,112 @@ div.precios{
     justify-content: center;
     align-items: center;
   }
+
   article.historial{
     width: 95vw;
     justify-content: center;
   }
+
   .description, article.perfil form {
     font-size: 16px;
     padding:2px;
-}
+  }
+
   textarea {
     width: 35vw;
     font-size: 16px;
   }
+
   .product-img img{
     width: 40vw;
     height: 50vh;
-    }
-.descripcion{
+  }
+  
+  .descripcion{
     width: 100%;
     height: 100%;
     padding-top:35px;
     padding-left: 20px;
     padding-right: 0px;
-}
-.detail{
+  }
+
+  .detail{
     display: flex;
     flex-direction: row-reverse;
     margin-left: 20px;
     margin-right: 20px;
-    }
+  }
 
-    .descripcion p{
-      font-size: 1em;
-    }
-    .detail .inputs, .detail h1{
-      font-size: 1.2em;
-      font-weight: bold;
-      }
-    .precios p{
-      font-size: 2em;
-      }
-    .detail h1{
-      font-size: 1.5em;
-    }
+  .descripcion p{
+    font-size: 1em;
+  }
+    
+  .detail .inputs, .detail h1{
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .precios p{
+    font-size: 2em;
+  }
 
-    article.perfil form label{
-      font-size: 1.1em;
-      }
+  .detail h1{
+    font-size: 1.5em;
+  }
+
+  article.perfil form label{
+    font-size: 1.1em;
+  }
     
-    #fotoPerfil{
-      font-size: 1.1em;
-      }
+  #fotoPerfil{
+    font-size: 1.1em;
+  }
     
-      .err1{
-        width: 40%;
-      }
-      .ex2 a{
-        font-size: 1.2em;
-      }
-      .err{
-        font-size: 2em;
-      }
-      .add-form div {
-        flex-direction: row;
-      }
-      .main-add{
-        min-height: 0px;
-      }
-      .add-form div.uplinea{
-        display: flex;
-        flex-direction: column;
-        padding-right: 10%;
-      }
-      .add-form div.ordenup{
-        display: flex;
-        flex-direction: row;
-        padding: 2%;
-      }
+  .err1{
+    width: 40%;
+  }
+      
+  .ex2 a{
+    font-size: 1.2em;
+  }
+  
+  .err{
+    font-size: 2em;
+  }
+      
+  .add-form div {
+    flex-direction: row;
+  }
+  
+  .main-add{
+    min-height: 0px;
+  }
+  
+  .add-form div.uplinea{   
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+  }
+  .add-form div.ordenup{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+  }
 }
 
+                    /* <<------------------------------ ANIMACION HELADOS ------------------------------>> */
 @keyframes iceCreamReg1ver2 {
   0% {
       display: block;
       top: 11%;
       left: 0%;
   }
-
   100%{
-          width: 15rem;
-          top: 11%;
-          left: -15%;
-          transform: rotate(-13deg);
+      width: 15rem;
+      top: 11%;
+      left: -15%;
+      transform: rotate(-13deg);
   }
-  
 }
 @keyframes iceCreamReg2ver2 {
   0%{
@@ -1674,7 +1750,6 @@ div.precios{
       top: 65%;
       left: 75%;
   }
-
   100%{
       width: 15rem;
       top: 45%;
@@ -1684,34 +1759,41 @@ div.precios{
   }
 }
 
-
+                    /* <<------------------------------ MIN-WIDTH 1279PX ------------------------------>> */
 @media (min-width: 1279px) {
   .text-brand p{
     display: block;
     font-size: 16px;
   }  
 
-.glass-container-register{
- max-width: 960px;
-}
-.ice-cream-reg-img-1{
-  animation: iceCreamReg1ver2 3s 1 forwards;
-}
-.ice-cream-reg-img-2{
-  animation: iceCreamReg2ver2 3s 1 forwards;
-}
+  .glass-container-register{
+    max-width: 960px;
+  }
+
+  .ice-cream-reg-img-1{
+    animation: iceCreamReg1ver2 3s 1 forwards;
+  }
+
+  .ice-cream-reg-img-2{
+    animation: iceCreamReg2ver2 3s 1 forwards;
+  }
+
   .tabla-registro {
     width: 60%;
   }
+
   .tabla-registro h3 {
     font-size: 2em;
   }
+
   .tabla-registro p {
     font-size: 1em;
   }
+
   .tabla-registro h2 {
     font-size: 1em;
   }
+
   .register-form div {
     flex-direction: row;
     font-size: 1em;
@@ -1725,6 +1807,7 @@ div.precios{
   .links i {
     font-size: 18px;
   }
+
   .links-invisible i{
     font-size: 18px;
   }
@@ -1736,81 +1819,103 @@ div.precios{
   header nav {
     font-size: 25px;
   }
+
   article.perfil{
     width: 40vw;
     margin-left: 2%;
   }
+
   section.enh3{
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .description, article.perfil form {
     font-size: 16px;
     padding:2px;
-}
+  }
+
   article.historial{
     width: 60vw;
   }
+
   .historial div{
     font-size: 1em;
   }
+
   .titulos h1{
     font-size: 1em;
   }
+
   .descripcion p{
     font-size: 1em;
   }
+
   .detail h3,.detail label,#cantidadCompra,.detail button, .detail .inputs{
     font-size: 1.2em;
-    }
+  }
+
   .descripcion{
     padding-top:40px;
     padding-left: 40px;
-    }
+  }
+
   .product-img img{
     width: 40vw;
     height: 75vh;
-    }
+  }
+
   .detail h1{
     font-size: 2em;
-    }
+  }
+
   .precios p{
     font-size: 2em;
-    }
+  }
+
   .detail{
     margin-left: 60px;
     margin-right: 60px;
   }
+
   .login-button{
     font-size: 1.2em;
   }
+
   article.perfil form label{
     font-size: 1.2em;
   }
+
   #fotoPerfil{
     font-size: 1.2em;
   }
+
   .register-button{
     font-size: 1.2em;
   }
+
   .register-form div.ag{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
   .button-register{
     align-items: center;
   }
+
   .err1{
     width: 25%;
   }
+
   .err{
     font-size: 2.5em;
   }
+
   .glass-add{
-  width: 70%;
-  margin-left: 15%;
+    width: 70%;
+    margin-left: 15%;
   }
 }
 
