@@ -10,42 +10,42 @@
 
 @font-face {
   font-family: Cervo-Neue-Black;
-  src: url(CervoNeue-BlackNeue.otf);
+  src: url(./fonts/CervoNeue-BlackNeue.otf);
 }
 
 @font-face {
   font-family: Cervo-Neue-Bold;
-  src: url(CervoNeue-BoldNeue.otf);
+  src: url(./fonts/CervoNeue-BoldNeue.otf);
 }
 
 @font-face {
   font-family: Cervo-Neue-Regular;
-  src: url(CervoNeue-RegularNeue.otf);
+  src: url(./fonts/CervoNeue-RegularNeue.otf);
 }
 
 @font-face {
   font-family: Cervo-Neue-Light;
-  src: url(CervoNeue-LightNeue.otf);
+  src: url(./fonts/CervoNeue-LightNeue.otf);
 }
 
 @font-face {
   font-family: Museo-Sans-Thin;
-  src: url(MuseoSans-100.otf);
+  src: url(./fonts/MuseoSans-100.otf);
 }
 
 @font-face {
   font-family: Museo-Sans-Light;
-  src: url(MuseoSans-300.otf);
+  src: url(./fonts/MuseoSans-300.otf);
 }
 
 @font-face {
   font-family: Museo-Sans-Medium;
-  src: url(MuseoSans-500.otf);
+  src: url(./fonts/MuseoSans-500.otf);
 }
 
 @font-face {
   font-family: Museo-Sans-Bold;
-  src: url(MuseoSans-700.otf);
+  src: url(./fonts/MuseoSans-700.otf);
 }
 
 * {
