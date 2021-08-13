@@ -8,20 +8,30 @@
         <section class="glass-login">
           <h3>Acceder</h3>
           <p>¿Aún no tienes cuenta?<a href="/register"> Regístrate aquí</a></p>
-          <form action="" class="login-form">
+          <form method="POST" action="/login" class="login-form">
             <div class="form-control">
-              <label for="correo">Correo electrónico</label>
-              <input type="email" name="correo" id="correo" required/>
+              <label for="email">Correo electrónico</label>
+              <input type="email" name="email" id="email" required/>
+              <% if (locals.errors && errors.email) { %>
+                <p class="invalid">
+                  <%= errors.email.msg %>
+                </p>
+              <% } %>
             </div>
             <div class="form-control">
               <label for="pass">Contraseña</label>
-              <input type="password" name="pass" id="pass" required/>
+              <input type="password" name="password" id="password" required/>
+              <% if (locals.errors && errors.password) { %>
+                <p class="invalid">
+                  <%= errors.password.msg %>
+                </p>
+              <% } %>
             </div>
             <div class="form-control">
               <a href="">¿Olvidaste tu constraseña?</a>
             </div>
             <div class="form-control">
-              <label>Recordarme <input type="checkbox" /></label>
+              <label>Recordarme <input type="checkbox" name="remember_user" /></label>
             </div>
             <button type="submit" class="login-button">INGRESAR</button>
           </form>

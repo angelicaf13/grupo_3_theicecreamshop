@@ -1932,4 +1932,7 @@ p.invalid{
   border:maroon 2px solid;
 }
 
+.login-form div input.invalid{
+  border:maroon 2px solid;
+}
 
