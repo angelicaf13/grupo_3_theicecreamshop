@@ -69,7 +69,7 @@ const productsControlador = {
 			if (req.file === undefined) {
 				productToEdit.image = productToEdit.image;
 			  } else {
-                fs.unlinkSync('./public/img/' + productToEdit.image);
+                fs.unlinkSync('./public/img/products/' + productToEdit.image);
                 productToEdit.image = req.file.filename;
               }
 		
@@ -84,7 +84,7 @@ const productsControlador = {
 		const productToDelete = products.find(product => product.id === id);
 
 
-        fs.unlinkSync('./public/img/' + productToDelete.image);
+        fs.unlinkSync('./public/img/products/' + productToDelete.image);
 
 		
 		products.splice(products.indexOf(productToDelete), 1);
