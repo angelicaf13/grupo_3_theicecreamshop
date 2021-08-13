@@ -1,7 +1,12 @@
 const path = require('path');
+
+// ************ USERS JSON ************
 const fs = require('fs');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+// ************ Bcryptjs Require ************
+const bcrypt = require('bcryptjs');
 
 const usersControlador = {
     car: (req,res)=>{
@@ -19,8 +24,8 @@ const usersControlador = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
-            password: req.body.password,
-            passwordConfirm: req.body.passwordConfirm,
+            password: bcrypt.hashSync(req.body.password,10),
+            passwordConfirm: bcrypt.hashSync(req.body.passwordConfirm,10),
             categoryUser: "cliente"
 		}
         if (req.file === undefined) {
@@ -33,7 +38,7 @@ const usersControlador = {
 		usersJSON = JSON.stringify(users, null, 2);
 
 		fs.writeFileSync(usersFilePath, usersJSON);
-        res.redirect('/profile');
+        res.redirect('/login');
     },
     profile: (req,res)=>{
         res.render('./users/profile');
