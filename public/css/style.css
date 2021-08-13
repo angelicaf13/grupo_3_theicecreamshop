@@ -1917,5 +1917,19 @@ div.precios{
     width: 70%;
     margin-left: 15%;
   }
+
+  .glass-register {
+    height: 80%;
+    margin-top: 50px;
+  }
 }
+                    /* <<------------------------------ EXPRESS VALIDATOR ------------------------------>> */
+p.invalid{
+  color: maroon;
+}
+
+.register-form div div input.invalid{
+  border:maroon 2px solid;
+}
+
 

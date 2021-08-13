@@ -8,6 +8,9 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 // ************ Bcryptjs Require ************
 const bcrypt = require('bcryptjs');
 
+// ************ Express Validator Require ************
+const { validationResult } = require('express-validator');
+
 const usersControlador = {
     car: (req,res)=>{
         res.render('./users/productCar');
@@ -25,7 +28,6 @@ const usersControlador = {
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password,10),
-            passwordConfirm: bcrypt.hashSync(req.body.passwordConfirm,10),
             categoryUser: "cliente"
 		}
         if (req.file === undefined) {
@@ -33,12 +35,16 @@ const usersControlador = {
           } else {
             user.foto = req.file.filename;
           }
-		users.push(user); 
 
-		usersJSON = JSON.stringify(users, null, 2);
-
-		fs.writeFileSync(usersFilePath, usersJSON);
-        res.redirect('/login');
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            users.push(user); 
+            usersJSON = JSON.stringify(users, null, 2);
+            fs.writeFileSync(usersFilePath, usersJSON);
+            res.redirect('/login');
+        } else {
+        res.render('./users/register', { errors: errors.mapped(), old: req.body });
+        }
     },
     profile: (req,res)=>{
         res.render('./users/profile');

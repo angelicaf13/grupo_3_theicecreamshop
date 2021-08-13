@@ -6,17 +6,6 @@
     "lastName": "Torres",
     "email": "danielatorres24@gmail.com",
     "password": "1234456",
-    "passwordConfirm": "1234456",
     "categoryUser": "cliente"
-  },
-  {
-    "id": 1628865942341,
-    "firstName": "Ana",
-    "lastName": "Hernández",
-    "email": "afanafa2010@hotmail.com",
-    "password": "$2a$10$nfZyQxr1PcHZDcWyFMqZR.pStdHDLWTfyQXephOUaqbJyYcyzVriC",
-    "passwordConfirm": "$2a$10$dqF6wHQsHb5OeKu08GawhOIy4xWRU9jqWRFTxcukUaFeUoGtGD99K",
-    "categoryUser": "cliente",
-    "foto": "default-user.jpg"
   }
 ]
