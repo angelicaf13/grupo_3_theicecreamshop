@@ -50,5 +50,10 @@ Se desarrollaron las funcionalidades para la edición y eliminación de producto
 
 Se hicieron mejoras a los trabajos de la semana pasada como la separación del middleware multer en una carpeta aparte para mantener el código lo más organizado posible. Se modificó la vista de detalle de producto para cambiar el precio de la nieve dependiendo de la presentación del mismo, y los formularios de registro y modificación de producto. Además, se decidió agregar un mensaje de confirmación a la hora de querer elimnar un producto (DELETE). Se siguieron haciendo pruebas para verificar que la página funcione correctamente y mejoras de diseño. 
 
+## Sprint 5 - Semana 1
 
+Se realizó la repartición de tareas para este sprint, identificando las actividades requeridas para cumplir con los objetivos del sprint. De igual forma se solucionaron algunos errores encontrados en el funcionamiento de la página al realizar pruebas, uno de ellos fue durante el proceso de eliminación de un producto, ya que se añadió una ventana emergente para que el usuario confirme la eliminación, sin embargo se presentó el problema en donde no se completaba la eliminación. 
 
+## Sprint 5 - Semana 2
+
+Siguiendo la retroalimentación y los comentarios recibidos por parte de los profesores, se hicieron algunas modificaciones a la estructura y organización del proyecto y sus carpetas y archivos. Por una parte se dividieron y organizaron los archivos de imágenes, al igual que se agruparon los archivos para las fuentes utilizadas en los textos del sitio web. De igual forma, se iniciaron con las tareas asignadas de este sprint, específicamente con el proceso de registro y la validación en el formulario de este mismo. 
