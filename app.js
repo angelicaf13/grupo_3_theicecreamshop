@@ -4,6 +4,8 @@ const path = require('path');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 
+const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
+
 app.use(session({
     secret: 'Shh, es un secreto!',
     resave: false,
@@ -11,6 +13,8 @@ app.use(session({
 }));
 
 app.use(cookies());
+
+app.use(userLoggedMiddleware); //Tiene que ir después de session ya que esta se tiene que inicializar antes 
 
 const publicPath= path.resolve(__dirname, './public');
 console.log(publicPath);

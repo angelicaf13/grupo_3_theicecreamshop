@@ -33,7 +33,7 @@ const usersControlador = {
 					res.cookie('userEmail', req.body.email), { maxAge: (1000 * 60) * 2 };
 				}
 
-				return res.redirect('/profile'); 
+                return res.redirect('/profile'); 
 			}
 			return res.render('./users/login', {
 				errors: {
@@ -81,7 +81,14 @@ const usersControlador = {
         }
     },
     profile: (req,res)=>{
+        //console.log(req.cookies.userEmail);
+        //console.log(req.session.userLogged );
         res.render('./users/profile');
-    }
+    },
+    logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
 }
 module.exports = usersControlador;
