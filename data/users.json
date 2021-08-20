@@ -16,5 +16,14 @@
     "password": "$2a$10$Li4BRPiSzjiEu6gu2gV0NOI11rYxB6uLE6bM//d5lqc78eL7nCimG",
     "categoryUser": "cliente",
     "foto": "ana.jpg"
+  },
+  {
+    "id": 1629439043662,
+    "firstName": "Angelica",
+    "lastName": "Figueroa",
+    "email": "swiftie13_98@outlook.com",
+    "password": "$2a$10$f0FolhXqtvqjGzryW/qNueYFHk9MJJFa/FfjGqTh42Qq.CeHf8rCa",
+    "categoryUser": "cliente",
+    "foto": "user1629439043636.PNG"
   }
 ]
