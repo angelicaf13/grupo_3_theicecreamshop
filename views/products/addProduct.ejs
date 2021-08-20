@@ -15,16 +15,28 @@
           </div>
           <div>
             <label for="brand">Marca</label>
-            <input type="text" name="brand" id="brand" placeholder="p. ej. Holanda" minlength="5" required>
+            <input type="text" name="brand" id="brand" value="<%= locals.old ? old.brand: null %>" 
+            class="<%= locals.errors && errors.brand ? 'invalid' : 'null' %>" placeholder="p. ej. Holanda" required>
+            <% if (locals.errors && errors.brand) { %>
+              <p class="invalid"><%= errors.brand.msg %></p>
+              <% } %>
           </div>
           <div>
             <label for="flavor">Sabor</label>
-            <input type="text" name="flavor" id="flavor" placeholder="p. ej. Chocolate" minlength="5" required>
+            <input type="text" name="flavor" id="flavor" value="<%= locals.old ? old.flavor : null %>" 
+            class="<%= locals.errors && errors.flavor ? 'invalid' : 'null' %>" placeholder="p. ej. Chocolate" required>
+            <% if (locals.errors && errors.flavor) { %>
+              <p class="invalid"><%= errors.flavor.msg %></p>
+              <% } %>
           </div>
                 </div>
             <label for="des">Descripción</label>
                 <div>
-            <textarea name="des" id="des" class="descrip" placeholder="Compuesto con ..."></textarea>
+            <textarea name="des" id="des" class="descrip" value="<%= locals.old ? old.des : null %>" 
+              class="<%= locals.errors && errors.des ? 'invalid' : 'null' %>" placeholder="Compuesto con ..."></textarea>
+            <% if (locals.errors && errors.des) { %>
+              <p class="invalid"><%= errors.des.msg %></p>
+              <% } %>
                 </div>
             <label for="pres">Presentación</label>
                 <div>

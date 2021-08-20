@@ -57,26 +57,29 @@ const usersControlador = {
     },
     create: (req, res)=>{
         const user = {
-			id: Date.now(),
+            id: Date.now(),
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password,10),
             categoryUser: "cliente"
-		}
-        if (req.file === undefined) {
-            user.foto = 'default-user.jpg';
-          } else {
-            user.foto = req.file.filename;
-          }
-
+        }
         let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            if (req.file === undefined) {
+                user.foto = 'default-user.jpg';
+              } else {
+                user.foto = req.file.filename;
+              }
+        } else{
+                user.foto = 'default-user.jpg';
+        }
         if (errors.isEmpty()) {
             users.push(user); 
             usersJSON = JSON.stringify(users, null, 2);
             fs.writeFileSync(usersFilePath, usersJSON);
             res.redirect('/login');
-        } else {
+        } else {   
         res.render('./users/register', { errors: errors.mapped(), old: req.body });
         }
     },

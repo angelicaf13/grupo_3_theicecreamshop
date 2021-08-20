@@ -1936,3 +1936,10 @@ p.invalid{
   border:maroon 2px solid;
 }
 
+.add-form div div input.invalid{
+  border:maroon 2px solid;
+}
+.add-form div div textarea.invalid{
+  border:maroon 2px solid;
+}
+

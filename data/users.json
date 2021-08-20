@@ -25,5 +25,14 @@
     "password": "$2a$10$f0FolhXqtvqjGzryW/qNueYFHk9MJJFa/FfjGqTh42Qq.CeHf8rCa",
     "categoryUser": "cliente",
     "foto": "user1629439043636.PNG"
+  },
+  {
+    "id": 1629470052859,
+    "firstName": "Ana Bertha",
+    "lastName": "Hernández González",
+    "email": "hernandezgonzalezg7@gmail.com",
+    "password": "$2a$10$D4xMcVBvGEqNpKGMP1Q/le8CMr0Ux6IevgQiMqmeout0jwWdnRb/S",
+    "categoryUser": "cliente",
+    "foto": "default-user.jpg"
   }
 ]

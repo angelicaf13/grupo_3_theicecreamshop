@@ -19,15 +19,27 @@
                   <div class="uplinea">
           <div>
             <label for="brand">Marca</label>
-            <input type="text" name="brand" id="brand" minlength="5" value="<%= productToEdit.brand %>" required> 
+            <input type="text" name="brand" id="brand" minlength="5" value="<%= productToEdit.brand %>"
+            class="<%= locals.errors && errors.brand ? 'invalid' : 'null' %>" required> 
+            <% if (locals.errors && errors.brand) { %>
+              <p class="invalid"><%= errors.brand.msg %></p>
+              <% } %>
           </div> 
           <div>
             <label for="flavor">Sabor</label>
-            <input type="text" name="flavor" id="flavor" minlength="5" value="<%= productToEdit.flavor %>" required> 
+            <input type="text" name="flavor" id="flavor" minlength="5" value="<%= productToEdit.flavor %>" 
+            class="<%= locals.errors && errors.flavor ? 'invalid' : 'null' %>" required> 
+            <% if (locals.errors && errors.flavor) { %>
+              <p class="invalid"><%= errors.flavor.msg %></p>
+              <% } %>
           </div>     
             <label for="des">Descripción</label>
           <div>
-            <textarea name="des" id="des" class="descrip"><%= productToEdit.description %></textarea>
+            <textarea name="des" id="des" class="descrip" 
+            class="<%= locals.errors && errors.des ? 'invalid' : 'null' %>"><%= productToEdit.description %></textarea>
+            <% if (locals.errors && errors.des) { %>
+              <p class="invalid"><%= errors.des.msg %></p>
+              <% } %>
           </div>
                   </div>
                 </div>

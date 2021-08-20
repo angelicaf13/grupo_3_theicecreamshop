@@ -3,6 +3,9 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+// ************ Express Validator Require ************
+const { validationResult } = require('express-validator');
+
 const productsControlador = {
     detail: (req,res)=>{
         let idProducto = req.params.id;
@@ -15,6 +18,7 @@ const productsControlador = {
         res.render('./products/addProduct');
     },
     store: (req, res) => {
+        let errors = validationResult(req);
 		const product = {
 			id: Date.now(),
 			brand: req.body.brand,
@@ -30,20 +34,19 @@ const productsControlador = {
             cant3: parseInt(req.body.cant3),
 			description: req.body.des 	
 		}
-
         if (req.file === undefined) {
             product.image = 'default-image.png';
           } else {
             product.image = req.file.filename;
           }
-
+         if (errors.isEmpty()) {
 		products.push(product); 
-
 		productsJSON = JSON.stringify(products, null, 2);
-
 		fs.writeFileSync(productsFilePath, productsJSON);
-
 		res.redirect('/products/productList');
+        } else {  
+            res.render('./products/addProduct', { errors: errors.mapped(), old: req.body });
+        }
     },
     edit: (req,res)=>{
         const id = parseInt(req.params.id);
@@ -52,8 +55,8 @@ const productsControlador = {
         res.render('./products/updateProduct', {productToEdit : productToEdit});
     },
     update: (req, res) => {
-
-		const id = parseInt(req.params.id);
+        let errors = validationResult(req);
+            const id = parseInt(req.params.id);
 		const productToEdit = products.find(product => product.id === id);
 		
 			productToEdit.brand = req.body.brand;
@@ -72,12 +75,13 @@ const productsControlador = {
                 fs.unlinkSync('./public/img/products/' + productToEdit.image);
                 productToEdit.image = req.file.filename;
               }
-		
+        if (errors.isEmpty()) {
 		productsJSON = JSON.stringify(products, null, 2);
-
 		fs.writeFileSync(productsFilePath, productsJSON);
-
 		res.redirect('/products/productList')
+        }else{
+        res.render('./products/updateProduct', {productToEdit : productToEdit, errors: errors.mapped(), old: req.body});
+        }
 	},
     destroy: (req,res)=>{
         const id = parseInt(req.params.id);
