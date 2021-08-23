@@ -7,8 +7,8 @@
         <section class="detail">
             <% listaProductos.forEach(producto => {%>
                 <% if (producto.id == idProducto) {%>
-            <article class="product-img">
-                <img src="/img/products/<%= producto.image %>" alt="imagen-producto">
+            <article class="product-img" >
+                <img src="/img/products/<%= producto.image %>" alt="imagen-producto" style="width: 85%; height: 85%;">
             </article>
         <div>
             <article class="descripcion">
