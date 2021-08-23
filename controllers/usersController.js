@@ -90,6 +90,9 @@ const usersControlador = {
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
-	}
+	},
+    accessError: (req, res) => {
+        res.render('./errores/accessError')
+    }
 }
 module.exports = usersControlador;

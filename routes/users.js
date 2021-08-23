@@ -29,4 +29,7 @@ router.get('/productCar', usersController.car);
 /*** LOGOUT ***/
 router.get('/logout', usersController.logout);
 
+/*** ACCESS DENIED ***/
+router.get('/accessError', usersController.accessError);
+
 module.exports = router;
