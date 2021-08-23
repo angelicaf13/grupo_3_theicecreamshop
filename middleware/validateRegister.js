@@ -13,7 +13,7 @@ const registerValidations = [
 
     body('password').notEmpty().withMessage('Debes ingresar una contraseña').bail()
 .isLength({ min: 8 }).withMessage('Recuerda que la contraseña debe tener 8 caracteres minimo').bail()
-.matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/, "i").withMessage('La contraseña debe contener una mayúscula minimo y un número minimo'),
+.matches(/^(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*.]{8,}$/, "i").withMessage('La contraseña debe contener minimo una mayúscula y un número'),
 ]; 
 
 module.exports = registerValidations; 
