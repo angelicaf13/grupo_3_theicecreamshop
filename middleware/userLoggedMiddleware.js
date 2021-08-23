@@ -11,7 +11,7 @@ function userLoggedMiddleware (req, res, next) {
         req.session.userLogged = userFromCookie;
     }
 
-    if (req.session.userLogged) { //este if es para modificar las vistaA
+    if (req.session.userLogged) { //este if es para modificar las vista
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged; //para pasar una variable local a la vista 
     }
