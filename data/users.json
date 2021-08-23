@@ -18,15 +18,6 @@
     "foto": "ana.jpg"
   },
   {
-    "id": 1629439043662,
-    "firstName": "Angelica",
-    "lastName": "Figueroa",
-    "email": "swiftie13_98@outlook.com",
-    "password": "$2a$10$f0FolhXqtvqjGzryW/qNueYFHk9MJJFa/FfjGqTh42Qq.CeHf8rCa",
-    "categoryUser": "cliente",
-    "foto": "user1629439043636.PNG"
-  },
-  {
     "id": 1629470052859,
     "firstName": "Ana Bertha",
     "lastName": "Hernández González",
@@ -34,5 +25,14 @@
     "password": "$2a$10$D4xMcVBvGEqNpKGMP1Q/le8CMr0Ux6IevgQiMqmeout0jwWdnRb/S",
     "categoryUser": "cliente",
     "foto": "default-user.jpg"
+  },
+  {
+    "id": 1629743333389,
+    "firstName": "Angelica",
+    "lastName": "Figueroa",
+    "email": "swiftie13_98@outlook.com",
+    "password": "$2a$10$87SZnkYiGB6ivG8vBS/vfuIhlK9MHAxP5mMlrE6pFGl3zrL3fDi3.",
+    "categoryUser": "cliente",
+    "foto": "user1629743333317.PNG"
   }
 ]
