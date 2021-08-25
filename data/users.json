@@ -1,43 +1,4 @@
 [
-<<<<<<< HEAD
-    {
-      "id": 1,
-      "foto": "default-user.jpg",
-      "firstName": "Daniela",
-      "lastName": "Torres",
-      "email": "danielatorres24@gmail.com",
-      "password": "1234456",
-      "categoryUser": "cliente"
-    },
-    {
-      "id": 1629126111321,
-      "firstName": "Ana",
-      "lastName": "Fierro",
-      "email": "anafierro190498@gmail.com",
-      "password": "$2a$10$Li4BRPiSzjiEu6gu2gV0NOI11rYxB6uLE6bM//d5lqc78eL7nCimG",
-      "categoryUser": "cliente",
-      "foto": "ana.jpg"
-    },
-    {
-      "id": 1629470052859,
-      "firstName": "Ana Bertha",
-      "lastName": "Hernández González",
-      "email": "hernandezgonzalezg7@gmail.com",
-      "password": "$2a$10$D4xMcVBvGEqNpKGMP1Q/le8CMr0Ux6IevgQiMqmeout0jwWdnRb/S",
-      "categoryUser": "cliente",
-      "foto": "default-user.jpg"
-    },
-    {
-      "id": 1629743333389,
-      "firstName": "Angelica",
-      "lastName": "Figueroa",
-      "email": "swiftie13_98@outlook.com",
-      "password": "$2a$10$87SZnkYiGB6ivG8vBS/vfuIhlK9MHAxP5mMlrE6pFGl3zrL3fDi3.",
-      "categoryUser": "cliente",
-      "foto": "user1629743333317.PNG"
-    }
-  ]
-=======
   {
     "id": 1,
     "foto": "default-user.jpg",
@@ -75,4 +36,4 @@
     "foto": "user1629743333317.PNG"
   }
 ]
->>>>>>> 59562ef358cc5b3e9adf1a3547020cb3fdb4518a
+
