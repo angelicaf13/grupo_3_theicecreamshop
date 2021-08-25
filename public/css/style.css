@@ -1076,6 +1076,11 @@ article.perfil form button:hover{
   color: white;
   padding: 6px;
 }
+
+.img-user-editar{
+  width: 20%;
+  margin: auto;
+}
  
                     /* <<------------------------------ DETALLE DEL PRODUCTO ------------------------------>> */
 .product-img{
@@ -1885,6 +1890,10 @@ div.precios{
 
   article.perfil form label{
     font-size: 1.2em;
+  }
+
+  article.perfil form input {
+    font-size: .8em;
   }
 
   #fotoPerfil{

@@ -8,13 +8,17 @@
         <article class="perfil">
           <h3>Perfil</h3>
           <form action="" class="">
+            <img src="/img/users/<%= locals.userLogged.foto %>" class="img-user-editar">
             <input type="file" name="fotoPerfil" id="fotoPerfil">
-            <label for="nombre">Nombre
-            <input type="text" name="nombre" id="nombre" placeholder="p. ej. Daniela" minlength="6" required></label>
-            <label for="apellido">Apellido
-            <input type="text" name="apellido" id="apellido" placeholder="p. ej. Campos" minlength="6" required></label>
+            <label for="nombre">Nombre (s)
+            <input type="text" name="nombre" id="nombre" placeholder="p. ej. Daniela" minlength="6" 
+            value="<%= locals.userLogged.firstName %>" required></label>
+            <label for="apellido">Apellido (s)
+            <input type="text" name="apellido" id="apellido" placeholder="p. ej. Campos" minlength="6"
+            value="<%= locals.userLogged.lastName %>" required></label>
             <label for="correo">Correo electrónico
-            <input type="email" name="correo" id="correo" placeholder="p. ej. danielacampos@hotmail.com" required></label>
+            <input type="email" name="correo" id="correo" placeholder="p. ej. danielacampos@hotmail.com" 
+            value="<%= locals.userLogged.email %>"required></label>
             <label for="contra">Contraseña
             <input type="password" name="contra" id="contra" minlength="8" required></label>
             <label for="contra2">Confirmar contraseña
