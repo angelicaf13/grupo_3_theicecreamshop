@@ -21,9 +21,9 @@ const productsControlador = {
         res.render('./products/addProduct');
     },
     store: (req, res) => {
-        const resultValidation = validationResult(req);
+        const errors = validationResult(req);
 
-        if (!resultValidation.isEmpty()) {
+        if (!errors.isEmpty()) {
 			return res.render('./products/addProduct', { 
 				errors : resultValidation.mapped(), 
 				oldData : req.body 
@@ -55,38 +55,47 @@ const productsControlador = {
     },
     edit: (req,res)=>{
         const id = parseInt(req.params.id);
-		const productToEdit = products.find(product => product.id === id);
+		const productToEdit = Product.findByPk(id);
 
         res.render('./products/updateProduct', {productToEdit : productToEdit});
     },
     update: (req, res) => {
-        let errors = validationResult(req);
+
+            let errors = validationResult(req);
+            //const id = parseInt(req.params.id);
+            //const productToEdit = Product.findByPk(id);
             const id = parseInt(req.params.id);
-		const productToEdit = products.find(product => product.id === id);
-		
-			productToEdit.brand = req.body.brand;
-            productToEdit.flavor = req.body.flavor;
-			productToEdit.price1 = parseInt(req.body.price1);
-            productToEdit.price2 = parseInt(req.body.price2);
-            productToEdit.price3 = parseInt(req.body.price3);
-			productToEdit.description = req.body.des;
-            productToEdit.cant1 = parseInt(req.body.cant1);
-            productToEdit.cant2 = parseInt(req.body.cant2);
-            productToEdit.cant3 = parseInt(req.body.cant3);
-			
-			if (req.file === undefined) {
+            const productToEdit = products.find(product => product.id === id);
+        
+            if (!errors.isEmpty()) {
+                return res.render('./products/updateProduct', {
+                    productToEdit: productToEdit,
+                    errors : resultValidation.mapped(), 
+                    oldData : req.body 
+                })
+            } 
+    
+                productToEdit.brand = req.body.brand;
+                productToEdit.flavor = req.body.flavor;
+                productToEdit.price1 = parseInt(req.body.price1);
+                productToEdit.price2 = parseInt(req.body.price2);
+                productToEdit.price3 = parseInt(req.body.price3);
+                productToEdit.description = req.body.description;
+                productToEdit.cant1 = parseInt(req.body.cant1);
+                productToEdit.cant2 = parseInt(req.body.cant2);
+                productToEdit.cant3 = parseInt(req.body.cant3);
+
+
+            if (req.file === undefined) {
 				productToEdit.image = productToEdit.image;
 			  } else {
                 fs.unlinkSync('./public/img/products/' + productToEdit.image);
                 productToEdit.image = req.file.filename;
-              }
-        if (errors.isEmpty()) {
-		productsJSON = JSON.stringify(products, null, 2);
-		fs.writeFileSync(productsFilePath, productsJSON);
-		res.redirect('/products/productList')
-        }else{
-        res.render('./products/updateProduct', {productToEdit : productToEdit, errors: errors.mapped(), old: req.body});
-        }
+              };
+
+            productsJSON = JSON.stringify(products, null, 2);
+            fs.writeFileSync(productsFilePath, productsJSON);
+            return res.redirect('/products/productList');
 	},
     destroy: (req,res)=>{
         const id = parseInt(req.params.id);

@@ -5,7 +5,7 @@ const productsValidations = [
 .notEmpty().withMessage('Debes ingresar la marca correspondiente'),
     body('flavor')
 .notEmpty().withMessage('Debes ingresar el sabor correspondiente'),
-    body('des')
+    body('description')
 .notEmpty().withMessage('Debes ingresar una breve descripción')
 ]; 
 

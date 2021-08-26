@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { all } = require('../routes/main');
 
+
 const Product = {
     fileName: './data/products.json',
     
@@ -38,7 +39,7 @@ const Product = {
         fs.writeFileSync(this.fileName, JSON.stringify(allProducts, null, ' '));
         return newProduct; //para usarlo después
     },
-
+    
     delete: function(id) {
         let allProducts = this.findAll();
         let finalProducts = allProducts.filter(oneProduct =>  oneProduct.id !== id);

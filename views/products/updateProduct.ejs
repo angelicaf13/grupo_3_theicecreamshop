@@ -35,7 +35,7 @@
           </div>     
             <label for="des">Descripción</label>
           <div>
-            <textarea name="des" id="des" class="descrip" 
+            <textarea name="description" id="description" class="descrip" 
             class="<%= locals.errors && errors.des ? 'invalid' : 'null' %>"><%= productToEdit.description %></textarea>
             <% if (locals.errors && errors.des) { %>
               <p class="invalid"><%= errors.des.msg %></p>

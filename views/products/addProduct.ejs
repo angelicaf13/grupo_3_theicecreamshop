@@ -30,9 +30,9 @@
               <% } %>
           </div>
                 </div>
-            <label for="des">Descripción</label>
+            <label for="description">Descripción</label>
                 <div>
-            <textarea name="des" id="des" class="descrip" value="<%= locals.old ? old.des : null %>" 
+            <textarea name="description" id="description" class="descrip" value="<%= locals.old ? old.des : null %>" 
               class="<%= locals.errors && errors.des ? 'invalid' : 'null' %>" placeholder="Compuesto con ..."></textarea>
             <% if (locals.errors && errors.des) { %>
               <p class="invalid"><%= errors.des.msg %></p>
