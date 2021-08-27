@@ -57,3 +57,13 @@ Se realizó la repartición de tareas para este sprint, identificando las activi
 ## Sprint 5 - Semana 2
 
 Siguiendo la retroalimentación y los comentarios recibidos por parte de los profesores, se hicieron algunas modificaciones a la estructura y organización del proyecto y sus carpetas y archivos. Por una parte se dividieron y organizaron los archivos de imágenes, al igual que se agruparon los archivos para las fuentes utilizadas en los textos del sitio web. De igual forma, se iniciaron con las tareas asignadas de este sprint, específicamente con el proceso de registro y la validación en el formulario de este mismo. 
+
+## Sprint 5 - Semana 3
+
+Las modificaciones de esta semana tuvieron que ver con la validación y funcionalidad del formulario de login, además de agregar las funcionalidades de session y las cookies para mantener la información del usuario conectado en el sitio. 
+
+## Sprint 5 - Semana 4
+
+En esta última semana del Sprint 5 se realizaron ciertas modificaciones a las vistas de [productList.ejs](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/views/products/productList.ejs) y [profile.ejs](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/views/users/profile.ejs), en el primer caso, se incluyo una validación para comprobar si el usuario es de tipo cliente o administrador y basándose en esto incluir o no el botón de edición de productos (ya que solo los administradores tienen acceso a esta función), para lo cual se incluyo el middleware [adminMiddleware.js](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/middleware/adminMiddleware.js), este último también es utilizado para la validación del tipo de usuario en la vista del perfil, donde se incluye o no un botón para la inclusión de un nuevo producto (cosa que solo un administrador puede hacer). También se incluyo una validación extra del tipo de usuario, esto al momento de ingresar directamente la URL para ingresar a la vista de [addProduct.ejs](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/views/products/addProduct.ejs), en la que si el usuario no es administrador, entonces es redireccionado a la vista [accessError.ejs](https://github.com/angelicaf13/grupo_3_theicecreamshop/blob/main/views/errores/accessError.ejs). 
+
+## Sprint 6 - Semana 1
