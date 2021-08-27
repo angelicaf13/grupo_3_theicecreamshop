@@ -93,6 +93,22 @@ const usersControlador = {
 	},
     accessError: (req, res) => {
         res.render('./errores/accessError')
+    },
+    update:(req, res) =>{
+        const userEdit = users.find(user => user.id === req.session.userLogged.id);
+        userEdit.firstName = req.body.firstName,
+        userEdit.lastName = req.body.lastName,
+        userEdit.email = req.body.email
+
+        if (req.file === undefined) {
+            userEdit.foto = userEdit.foto;
+          } else {
+            fs.unlinkSync('./public/img/users/' + userEdit.foto);
+            userEdit.foto = req.file.filename;
+          };
+        usersJSON = JSON.stringify(users, null, 2);
+        fs.writeFileSync(usersFilePath, usersJSON);
+        return res.redirect('/profile');
     }
 }
 module.exports = usersControlador;

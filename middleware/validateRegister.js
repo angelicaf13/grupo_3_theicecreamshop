@@ -1,3 +1,4 @@
+//VALIDACIONES PARA LOS CAMPOS CORRESPONDIENTES AL FORMULARIO DE CREACIÓN DE USUARIO
 const { body } = require('express-validator');
 
 const registerValidations = [

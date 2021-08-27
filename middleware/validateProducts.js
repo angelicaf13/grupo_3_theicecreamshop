@@ -1,3 +1,4 @@
+//VALIDACIONES PARA LOS CAMPOS CORRESPONDIENTES A LOS FORMULARIOS DE PRODUCTOS
 const { body } = require('express-validator');
 
 const productsValidations = [

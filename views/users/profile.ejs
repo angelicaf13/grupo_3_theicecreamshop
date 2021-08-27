@@ -7,24 +7,26 @@
       <section class="enh3">
         <article class="perfil">
           <h3>Perfil</h3>
-          <form action="" class="">
+          <form action="/profile?_method=PUT" method="POST" class="" enctype="multipart/form-data">
+            
             <img src="/img/users/<%= locals.userLogged.foto %>" class="img-user-editar">
-            <input type="file" name="fotoPerfil" id="fotoPerfil">
-            <label for="nombre">Nombre (s)
-            <input type="text" name="nombre" id="nombre" placeholder="p. ej. Daniela" minlength="6" 
+            <input type="file" name="foto" id="foto">
+
+            <label for="firstName">Nombre (s)
+            <input type="text" name="firstName" id="firstName" placeholder="p. ej. Daniela" minlength="6" 
             value="<%= locals.userLogged.firstName %>" required></label>
-            <label for="apellido">Apellido (s)
-            <input type="text" name="apellido" id="apellido" placeholder="p. ej. Campos" minlength="6"
+
+            <label for="lastName">Apellido (s)
+            <input type="text" name="lastName" id="lastName placeholder="p. ej. Campos" minlength="6"
             value="<%= locals.userLogged.lastName %>" required></label>
-            <label for="correo">Correo electrónico
-            <input type="email" name="correo" id="correo" placeholder="p. ej. danielacampos@hotmail.com" 
-            value="<%= locals.userLogged.email %>"required></label>
-            <label for="contra">Contraseña
-            <input type="password" name="contra" id="contra" minlength="8" required></label>
-            <label for="contra2">Confirmar contraseña
-            <input type="password" name="contra2" id="contra2" minlength="8" required></label>
+
+            <label for="email">Correo electrónico
+            <input type="email" name="email" id="email" placeholder="p. ej. danielacampos@hotmail.com" 
+            value="<%= locals.userLogged.email %>" required></label>
+
             <button type="submit" class="">GUARDAR CAMBIOS</button>
           </form>
+
           <% if (locals.isLogged) { %>
             <% if (locals.userLogged.categoryUser == 'administrador') { %>
               <a href="/products/addProduct"><button type="submit" class="bt">AGREGAR PRODUCTO</button></a>
