@@ -46,17 +46,17 @@
             <label for="pres">Presentación</label>
                   <div>
           <div>
-            <input type="checkbox" name="present1" id="present1" checked onclick="validate1()"> 1/2 litro
+            <input type="checkbox" name="present1" id="present1" checked onclick="validate1Update()"> 1/2 litro
             <label>Precio<input type="number" name="price1" id="price1" value="<%= productToEdit.price1 %>" step="1" min="1"></label>
             <label>Piezas<input type="number" name="cant1" id="cant1" value="<%= productToEdit.cant1 %>" step="1" min="1"></label>
           </div>
           <div>
-            <input type="checkbox" name="present2" id="present2" checked onclick="validate2()"> 1 litro
+            <input type="checkbox" name="present2" id="present2" checked onclick="validate2Update()"> 1 litro
             <label>Precio<input type="number" name="price2" id="price2" value="<%= productToEdit.price2 %>" step="1" min="1"></label>
             <label>Piezas<input type="number" name="cant2" id="cant2" value="<%= productToEdit.cant2 %>" step="1" min="1"></label>
           </div>
           <div>
-            <input type="checkbox" name="present3" id="present3" checked onclick="validate3()"> 1.89 litro
+            <input type="checkbox" name="present3" id="present3" checked onclick="validate3Update()"> 1.89 litro
             <label>Precio<input type="number" name="price3" id="price3" value="<%= productToEdit.price3 %>" step="1" min="1"></label>
             <label>Piezas<input type="number" name="cant3" id="cant3" value="<%= productToEdit.cant3 %>"  step="1" min="1"></label>
           </div> 
@@ -70,59 +70,5 @@
     </div>
     </main>
     <%- include('../partials/footer') %>
-
-    <script type="text/javascript">
-      function validate1() {
-          if (document.getElementById('present1').checked) {
-            document.getElementById('price1').disabled = false;
-            document.getElementById('cant1').disabled = false;
-          } else {
-            document.getElementById('price1').value = '';
-            document.getElementById('cant1').value = ''
-            document.getElementById('price1').disabled = true;
-            document.getElementById('cant1').disabled = true;
-          }
-      }
-
-      function validate2() {
-          if (document.getElementById('present2').checked) {
-            document.getElementById('price2').disabled = false;
-            document.getElementById('cant2').disabled = false;
-          } else {
-            document.getElementById('price2').value = '';
-            document.getElementById('cant2').value = ''
-            document.getElementById('price2').disabled = true;
-            document.getElementById('cant2').disabled = true;
-          }
-      }
-
-      function validate3() {
-        if (document.getElementById('present3').checked) {
-            document.getElementById('price3').disabled = false;
-            document.getElementById('cant3').disabled = false;
-          } else {
-            document.getElementById('price3').value = '';
-            document.getElementById('cant3').value = ''
-            document.getElementById('price3').disabled = true;
-            document.getElementById('cant3').disabled = true;
-          }
-      }
-      </script>
-      <script>
-        function confirmDelete() {
-            const mensaje = confirm("¿Realmente deseas eliminar el producto? Recuerda que no podras recuperar la información");
-            const formularioDelete = document.getElementById("mensaje-emergente");
-            if (mensaje === true) {
-              formularioDelete.method = "POST";
-              formularioDelete.action = "/products/delete/<%= productToEdit.id %>?_method=DELETE";
-              formularioDelete.submit();
-            alert("¡Producto eliminado!");
-            }
-            else {
-            alert("La acción no se realizó");
-            return ;
-            }
-        }
-    </script>
   </body>
 </html>
