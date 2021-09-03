@@ -77,11 +77,34 @@ Buscar material de apoyo o asesorías externas a los integrantes del equipo.
 
 __2. Hacer más__
 
-Pedir retroalimentación objetiva a miembros externos al grupo y buscar mejotras.
+Pedir retroalimentación objetiva a miembros externos al grupo y buscar mejoras.
 
 __3. Continuar haciendo__
 
 Probar diferentes funciones y botones del proyecto para verificar que funcionen de manera adecuada. El trabajo en tiempo y forma, y dividir el trabajo equitativamente.
+
+__4. Hacer menos__
+
+Por ahorita no hemos tenido ningún inconveniente.
+
+__5. Dejar de hacer__
+
+Por ahorita no hemos tenid ningún inconveniente.
+
+
+## Sprint 5
+
+__1. Comenzar a hacer__
+
+Buscar errores de las vistas que no habíamos identificado y material de apoyo para solucionarlos.
+
+__2. Hacer más__
+
+Pedir retroalimentación objetiva a miembros externos al grupo y buscar mejoras.
+
+__3. Continuar haciendo__
+
+Probar diferentes funciones y botones del proyecto para verificar que funcionen de manera adecuada. El trabajo en tiempo y forma, y dividir el trabajo equitativamente. Buscar continuamente mejoras que se le puedan hacer a la página.
 
 __4. Hacer menos__
 
