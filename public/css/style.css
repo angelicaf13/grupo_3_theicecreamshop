@@ -1728,10 +1728,15 @@ div.precios{
     flex-direction: column;
     padding-right: 10%;
   }
+
   .add-form div.ordenup{
     display: flex;
     flex-direction: row;
     padding: 2%;
+  }
+
+  .mobile-option-list{
+    display: none !important;
   }
 }
 
