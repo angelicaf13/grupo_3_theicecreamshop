@@ -17,7 +17,7 @@ router.get('/productList', productsController.list);
 
 /*** CREATE ONE PRODUCT ***/
 router.get('/addProduct', adminMiddleware, productsController.create);
-router.post('/addProduct', upload.single('image'), productsValidations, productsController.store);
+router.post('/addProduct', upload.single('productImage'), productsValidations, productsController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/updateProduct/:id', productsController.edit);

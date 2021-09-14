@@ -5,6 +5,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const Product = require('../models/Product');
+const db = require("../database/models");
 
 // ************ Express Validator Require ************
 const { validationResult } = require('express-validator');
@@ -18,40 +19,52 @@ const productsControlador = {
         res.render('./products/productList', {listaProductos: products});
     },
     create: (req,res)=>{
-        res.render('./products/addProduct');
+        let brands = db.Brand.findAll();
+        let flavors = db.Flavor.findAll();
+        let sizes = db.Size.findAll();
+
+        Promise
+        .all([brands, flavors, sizes])
+        .then(function([allBrands, allFlavors, allSizes]) {
+            res.render('./products/addProduct', { allBrands, allFlavors, allSizes })
+        })
     },
     store: (req, res) => {
         const errors = validationResult(req);
 
-        if (!errors.isEmpty()) {
-			return res.render('./products/addProduct', { 
-				errors : resultValidation.mapped(), 
-				oldData : req.body 
-			});
-		}
+        //if (!errors.isEmpty()) {
+		//	return res.render('./products/addProduct', { 
+		//		errors : errors.mapped(), 
+		//		oldData : req.body,
+        //        allBrands,
+        //        allFlavors,
+        //        allSizes 
+		//	});
+		//}
 
-        let productToCreate = {
-			...req.body,
-			present1: "1/2 litro",
-            present2: "1 litro",
-            present3: "1.89 litro",
-            price1: parseInt(req.body.price1),
-            price2: parseInt(req.body.price2),
-            price3: parseInt(req.body.price3),
-            cant1: parseInt(req.body.cant1),
-            cant2: parseInt(req.body.cant2),
-            cant3: parseInt(req.body.cant3),
-		}
-
+        const {id_brand, id_flavor, description, id_size, price, stock} = req.body;
+        const status = 1;
+        
         if (req.file === undefined) {
-            productToCreate.image = 'default-image.png';
+            productImage = 'default-image.png';
           } else {
-            productToCreate.image = req.file.filename;
+            productImage = req.file.filename;
         }
 
-		let productCreated = Product.create(productToCreate);
+        db.Product.create({
+            id_brand,
+            id_flavor,
+            description, 
+            id_size,
+            price,
+            stock,
+            status,
+            productImage
+        })
 
-		return res.redirect('/products/productList');
+        .then(() => {
+            res.redirect('/products/productList');
+        })
     },
     edit: (req,res)=>{
         const id = parseInt(req.params.id);
@@ -70,7 +83,7 @@ const productsControlador = {
             if (!errors.isEmpty()) {
                 return res.render('./products/updateProduct', {
                     productToEdit: productToEdit,
-                    errors : resultValidation.mapped(), 
+                    errors : errors.mapped(), 
                     oldData : req.body 
                 })
             } 
