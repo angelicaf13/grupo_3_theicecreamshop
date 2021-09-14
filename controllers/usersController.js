@@ -1,5 +1,6 @@
 const path = require('path');
 const User = require('../models/User');
+const db = require("../database/models");
 
 // ************ USERS JSON ************
 const fs = require('fs');
@@ -56,29 +57,33 @@ const usersControlador = {
         res.render('./users/register');
     },
     create: (req, res)=>{
-        const user = {
-            id: Date.now(),
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password,10),
-            categoryUser: "cliente"
+        const errors = validationResult(req);
+
+        const {first_name, last_name, email} = req.body;
+        const pass = req.body.pass;
+        const id_category = 2;
+
+        if (req.file === undefined) {
+            profileImage = 'default-user.png';
+          } else {
+            profileImage = req.file.filename;
         }
-        let errors = validationResult(req);
+
         if (errors.isEmpty()) {
-            if (req.file === undefined) {
-                user.foto = 'default-user.jpg';
-              } else {
-                user.foto = req.file.filename;
-              }
-        } 
-        if (errors.isEmpty()) {
-            users.push(user); 
-            usersJSON = JSON.stringify(users, null, 2);
-            fs.writeFileSync(usersFilePath, usersJSON);
-            res.redirect('/login');
+            db.User.create({
+                first_name,
+                last_name,
+                email, 
+                pass: bcrypt.hashSync(pass,10),
+                id_category,
+                profileImage
+            })
+    
+            .then(() => {
+                res.redirect('/login');
+            })
         } else {   
-        res.render('./users/register', { errors: errors.mapped(), old: req.body });
+            res.render('./users/register', { errors: errors.mapped(), old: req.body });
         }
     },
     profile: (req,res)=>{

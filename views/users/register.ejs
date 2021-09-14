@@ -10,27 +10,27 @@
             <form action="/register" method="POST" enctype="multipart/form-data" class="register-form">
                 <div>
                   <div>
-                    <label for="foto">Foto de perfil</label>
-                    <input type="file" name="foto" id="foto">
+                    <label for="profileImage">Foto de perfil</label>
+                    <input type="file" name="profileImage" id="profileImage">
                   </div>
 
                     <div>
-                    <label for="firstName">Nombre</label>
-                    <input type="text" name="firstName" id="firstName" value="<%= locals.old ? old.firstName : null %>" 
-                    placeholder="p. ej. Daniela" class="<%= locals.errors && errors.firstName ? 'invalid' : 'null' %>" 
+                    <label for="first_name">Nombre</label>
+                    <input type="text" name="first_name" id="first_name" value="<%= locals.old ? old.first_name : null %>" 
+                    placeholder="p. ej. Daniela" class="<%= locals.errors && errors.first_name ? 'invalid' : 'null' %>" 
                     minlength="3" required>
-                    <% if (locals.errors && errors.firstName) { %>
-                      <p class="invalid"><%= errors.firstName.msg %></p>
+                    <% if (locals.errors && errors.first_name) { %>
+                      <p class="invalid"><%= errors.first_name.msg %></p>
                       <% } %>
                     </div>
 
                     <div>
-                    <label for="lastName">Apellido</label>
-                    <input type="text" name="lastName" id="lastName" value="<%= locals.old ? old.lastName: null %>" 
-                    placeholder="p. ej. Campos" class="<%= locals.errors && errors.lastName? 'invalid' : 'null' %>" 
+                    <label for="last_name">Apellido</label>
+                    <input type="text" name="last_name" id="last_name" value="<%= locals.old ? old.last_name: null %>" 
+                    placeholder="p. ej. Campos" class="<%= locals.errors && errors.last_name? 'invalid' : 'null' %>" 
                     minlength="6" required>
-                    <% if (locals.errors && errors.lastName) { %>
-                      <p class="invalid"><%= errors.lastName.msg %></p>
+                    <% if (locals.errors && errors.last_name) { %>
+                      <p class="invalid"><%= errors.last_name.msg %></p>
                       <% } %>
                     </div>
                 </div>
@@ -47,11 +47,11 @@
                     </div>
 
                     <div>
-                    <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password" value="<%= locals.old ? old.password: null %>" 
-                    class="<%= locals.errors && errors.password ? 'invalid' : 'null' %>" minlength="8" required>
-                    <% if (locals.errors && errors.password) { %>
-                      <p class="invalid"><%= errors.password.msg %></p>
+                    <label for="pass">Contraseña</label>
+                    <input type="pass" name="pass" id="pass" value="<%= locals.old ? old.pass: null %>" 
+                    class="<%= locals.errors && errors.pass ? 'invalid' : 'null' %>" minlength="8" required>
+                    <% if (locals.errors && errors.pass) { %>
+                      <p class="invalid"><%= errors.pass.msg %></p>
                       <% } %>
                     </div>
                 </div>

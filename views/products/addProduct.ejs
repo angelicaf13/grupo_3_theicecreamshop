@@ -16,6 +16,7 @@
           <div>
             <label for="id_brand">Marca</label>
             <select name="id_brand" class="<%= locals.errors && errors.id_brand ? 'invalid' : 'null' %>" required>
+              <option value="">Seleccione la marca</option>
               <% for(i=0; i < allBrands.length; i++) { %>
                   <option value="<%= allBrands[i].id_brand %>">
                       <%= allBrands[i].name %>
@@ -29,6 +30,7 @@
           <div>
             <label for="id_flavor">Sabor</label>
             <select name="id_flavor" class="<%= locals.errors && errors.id_flavor ? 'invalid' : 'null' %>" required>
+              <option value="">Seleccione un sabor</option>
               <% for(i=0; i < allFlavors.length; i++) { %>
                   <option value="<%= allFlavors[i].id_flavor %>">
                       <%= allFlavors[i].name %>
@@ -45,7 +47,7 @@
             <textarea name="description" id="description" class="descrip" 
             value="<%= locals.old ? old.description : null %>" 
             class="<%= locals.errors && errors.description ? 'invalid' : 'null' %>" 
-            placeholder="Compuesto con ..."></textarea>
+            placeholder="Compuesto con ..." required></textarea>
             <% if (locals.errors && errors.description) { %>
               <p class="invalid"><%= errors.description.msg %></p>
               <% } %>
@@ -54,14 +56,15 @@
                 <div>
           <div>
             <select name="id_size" required>
+              <option value="">Seleccione una presentación</option>
               <% for(i=0; i < allSizes.length; i++) { %>
                   <option value="<%= allSizes[i].id_size %>">
                       <%= allSizes[i].name %>
                   </option>
               <% } %>
             </select>
-            <label>Precio<input type="number" name="price" id="price" placeholder="p. ej. $40.00" step="1" min="1"></label>
-            <label>Piezas<input type="number" name="stock" id="stock" placeholder="p. ej. 200" step="1" min="1"></label>
+            <label>Precio<input type="number" name="price" id="price" placeholder="p. ej. $40.00" step="1" min="1" required></label>
+            <label>Piezas<input type="number" name="stock" id="stock" placeholder="p. ej. 200" step="1" min="1" required></label>
           </div> 
               </div>
           <div>

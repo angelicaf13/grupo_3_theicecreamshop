@@ -31,17 +31,6 @@ const productsControlador = {
     },
     store: (req, res) => {
         const errors = validationResult(req);
-
-        //if (!errors.isEmpty()) {
-		//	return res.render('./products/addProduct', { 
-		//		errors : errors.mapped(), 
-		//		oldData : req.body,
-        //        allBrands,
-        //        allFlavors,
-        //        allSizes 
-		//	});
-		//}
-
         const {id_brand, id_flavor, description, id_size, price, stock} = req.body;
         const status = 1;
         
@@ -51,20 +40,29 @@ const productsControlador = {
             productImage = req.file.filename;
         }
 
-        db.Product.create({
-            id_brand,
-            id_flavor,
-            description, 
-            id_size,
-            price,
-            stock,
-            status,
-            productImage
-        })
+        if (errors.isEmpty()) {
+            db.Product.create({
+                id_brand,
+                id_flavor,
+                description, 
+                id_size,
+                price,
+                stock,
+                status,
+                productImage
+            })
 
-        .then(() => {
-            res.redirect('/products/productList');
-        })
+            .then(() => {
+                res.redirect('/products/productList');
+            })
+        } else {
+                res.render('./products/addProduct', { 
+                    errors: errors.mapped,
+                    old: req.body,
+                    allBrands: db.Brand.findAll(), 
+                    allFlavors: db.Flavor.findAll(), 
+                    allSizes: db.Size.findAll()})
+        }
     },
     edit: (req,res)=>{
         const id = parseInt(req.params.id);

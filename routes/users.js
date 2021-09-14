@@ -12,7 +12,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 /*** CREATE ONE USER ***/
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', upload.single('foto'), registerValidations, usersController.create);
+router.post('/register', upload.single('profileImage'), registerValidations, usersController.create);
 
 /*** LOGIN FORM ***/
 router.get('/login', guestMiddleware, usersController.login);
