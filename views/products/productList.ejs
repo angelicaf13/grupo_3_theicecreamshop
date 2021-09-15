@@ -75,13 +75,13 @@
           </div>
           <div class="productos">
             <% for(let producto of listaProductos) {%>
-              <a href="/products/productDetail/<%= producto.id %>">
+              <a href="/products/productDetail/<%= producto.id_product %>">
                 <article class="product-container">
                   <div>
-                    <img src="/img/products/<%= producto.image %>" alt="">
+                    <img src="/img/products/<%= producto.productImage %>" alt="">
                   </div>
                   <h4>
-                    <%= producto.brand + " " + producto.flavor %>
+                    <%= producto.brand.name + " - " + producto.flavor.name + " Ice Cream"%>
                   </h4>
 
                   <% if (locals.isLogged) { %>

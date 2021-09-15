@@ -9,14 +9,41 @@ const db = require("../database/models");
 
 // ************ Express Validator Require ************
 const { validationResult } = require('express-validator');
+//const { where } = require('../../clase-33-crud/CRUD/node_modules/sequelize/types');
 
 const productsControlador = {
     detail: (req,res)=>{
-        let idProducto = req.params.id;
-        res.render('./products/productDetail', {idProducto, listaProductos: products});
+
+        db.Product.findByPk(req.params.id, {
+            include: [{association: "brand"}, {association: "flavor"}]
+        })
+        .then(product => {
+            db.Product.findAll({
+                where: {
+                    id_brand: product.id_brand,
+                    id_flavor: product.id_flavor
+                },
+                include: [{association: "size"}]
+            }).then(sizes => {
+            res.render('./products/productDetail', { producto : product, allSizes: sizes });
+
+            })
+        })
+
+        // Version anterior donde se obtiene desde el JSON
+        // let idProducto = req.params.id;
+        // res.render('./products/productDetail', {idProducto, listaProductos: products});
     },
     list: (req,res)=>{
-        res.render('./products/productList', {listaProductos: products});
+        db.Product.findAll({
+            include: [{association: "brand"}, {association: "flavor"}],
+            group: ['id_brand', 'id_flavor']
+        })
+        .then(products => {
+            console.log(typeof products)
+            res.render('./products/productList', {listaProductos: products});
+        })
+        //res.render('./products/productList', {listaProductos: products});
     },
     create: (req,res)=>{
         let brands = db.Brand.findAll();
