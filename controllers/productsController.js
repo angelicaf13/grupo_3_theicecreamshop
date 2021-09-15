@@ -35,7 +35,7 @@ const productsControlador = {
     list: (req,res)=>{
         db.Product.findAll({
             include: [{association: "brand"}, {association: "flavor"}],
-            group: [('id_brand', 'id_flavor')]
+            group: ['id_brand', 'id_flavor']
         })
         .then(products => {
             console.log(products)
