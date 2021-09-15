@@ -38,7 +38,7 @@ const productsControlador = {
             group: [('id_brand', 'id_flavor')]
         })
         .then(products => {
-            console.log(typeof products)
+            console.log(products)
             res.render('./products/productList', {listaProductos: products});
         })
         //res.render('./products/productList', {listaProductos: products});
