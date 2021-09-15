@@ -1,4 +1,3 @@
-const User = require('../models/User'); //nos traemos el modelo para poder hacer operaciones con la base de datos
 const db = require("../database/models");
 
 function userLoggedMiddleware (req, res, next) {

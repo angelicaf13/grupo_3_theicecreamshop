@@ -1,11 +1,4 @@
-const path = require('path');
-const User = require('../models/User');
 const db = require("../database/models");
-
-// ************ USERS JSON ************
-const fs = require('fs');
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 // ************ Bcryptjs Require ************
 const bcrypt = require('bcryptjs');
@@ -26,21 +19,21 @@ const usersControlador = {
         .then(function(result){
             const password = req.body.pass;
             const pass = result.pass;
-            console.log(pass);
+            //console.log(pass);
 
 		    if(userToLogin) {
 		    	let isOkThePassword = bcrypt.compareSync(password, pass);
 		    	if(isOkThePassword) {
 		    		delete userToLogin.pass;
 		    		req.session.userLogged = result;
-                    console.log(req.session.userLogged)
+                    //console.log(req.session.userLogged)
 
 
 		    		if (req.body.remember_user) {
 		    			res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30 });
 		    		}
 
-                    console.log(req.cookies.userEmail)
+                    //console.log(req.cookies.userEmail)
 
                     return res.redirect('/profile'); 
 		    	}

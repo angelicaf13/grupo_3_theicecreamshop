@@ -3,8 +3,6 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-
-const Product = require('../models/Product');
 const db = require("../database/models");
 
 // ************ Express Validator Require ************
@@ -37,7 +35,7 @@ const productsControlador = {
     list: (req,res)=>{
         db.Product.findAll({
             include: [{association: "brand"}, {association: "flavor"}],
-            group: ['id_brand', 'id_flavor']
+            group: [('id_brand', 'id_flavor')]
         })
         .then(products => {
             console.log(typeof products)
@@ -92,48 +90,95 @@ const productsControlador = {
         }
     },
     edit: (req,res)=>{
-        const id = parseInt(req.params.id);
-		const productToEdit = Product.findByPk(id);
+        let brands = db.Brand.findAll();
+        let flavors = db.Flavor.findAll();
 
-        res.render('./products/updateProduct', {productToEdit : productToEdit});
+        db.Product.findByPk(req.params.id, {
+            include: [{association: "brand"}, {association: "flavor"}]
+        })
+        .then(product => {
+            db.Product.findAll({
+                where: {
+                    id_brand: product.id_brand,
+                    id_flavor: product.id_flavor
+                },
+                include: [{association: "size"}]
+            }).then(sizes => {
+                Promise
+                .all([brands, flavors])
+                    .then(function([allBrands, allFlavors]) {
+                        res.render('./products/updateProduct', { 
+                            producto : product, 
+                            allSizes: sizes, 
+                            allBrands, 
+                            allFlavors });
+                })
+            })
+        })
     },
     update: (req, res) => {
+        db.Product.findByPk(req.params.id, {
+            include: [{association: "brand"}, {association: "flavor"}]
+        })
+        .then(product => {
+            db.Product.findAll({
+                where: {
+                    id_brand: product.id_brand,
+                    id_flavor: product.id_flavor
+                },
+                include: [{association: "size"}]
+            }).then(sizes => {
+                let errors = validationResult(req);
 
-            let errors = validationResult(req);
-            //const id = parseInt(req.params.id);
-            //const productToEdit = Product.findByPk(id);
-            const id = parseInt(req.params.id);
-            const productToEdit = products.find(product => product.id === id);
+                const {id_brand, id_flavor, description, price, stock} = req.body;
+
+                if (req.file === undefined) {
+                    productImage = 'default-image.png';
+                  } else {
+                    productImage = req.file.filename;
+                }
+            
+                const newData = {
+                    id_brand,
+                    id_flavor,
+                    description,
+                    price,
+                    stock,
+                    productImage
+                }
         
-            if (!errors.isEmpty()) {
-                return res.render('./products/updateProduct', {
-                    productToEdit: productToEdit,
-                    errors : errors.mapped(), 
-                    oldData : req.body 
-                })
-            } 
-    
-                productToEdit.brand = req.body.brand;
-                productToEdit.flavor = req.body.flavor;
-                productToEdit.price1 = parseInt(req.body.price1);
-                productToEdit.price2 = parseInt(req.body.price2);
-                productToEdit.price3 = parseInt(req.body.price3);
-                productToEdit.description = req.body.description;
-                productToEdit.cant1 = parseInt(req.body.cant1);
-                productToEdit.cant2 = parseInt(req.body.cant2);
-                productToEdit.cant3 = parseInt(req.body.cant3);
+                const options = { 
+                    where: {
+                        id_brand: product.id_brand, 
+                        id_flavor: product.id_flavor, 
+                        id_size: req.body.id_size
+                    } 
+                }
+            
+                console.log(product.id_brand);
+                console.log(product.id_flavor);
+                console.log(req.body.id_size);
+                
+                if (errors.isEmpty()) {
+                    db.Product.update(newData, options)
+                    
+                    .then(() => {
+                        res.redirect('/products/productList')
+                    })
+                } else {
+                        res.render('./products/updateProduct', {
+                            productToEdit: productToEdit,
+                            errors : errors.mapped(), 
+                            old: req.body,
+                            producto : product, 
+                            allBrands: db.Brand.findAll(), 
+                            allFlavors: db.Flavor.findAll(), 
+                            allSizes: sizes 
+                        })
+                }
 
-
-            if (req.file === undefined) {
-				productToEdit.image = productToEdit.image;
-			  } else {
-                fs.unlinkSync('./public/img/products/' + productToEdit.image);
-                productToEdit.image = req.file.filename;
-              };
-
-            productsJSON = JSON.stringify(products, null, 2);
-            fs.writeFileSync(productsFilePath, productsJSON);
-            return res.redirect('/products/productList');
+            })
+        })
 	},
     destroy: (req,res)=>{
         const id = parseInt(req.params.id);

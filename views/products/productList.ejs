@@ -86,7 +86,7 @@
 
                   <% if (locals.isLogged) { %>
                     <% if (locals.userLogged.id_category == '1') { %>
-                      <a href="/products/updateProduct/<%= producto.id %>">
+                      <a href="/products/updateProduct/<%=  producto.id_product%>">
                         <button class="edit-button"><i class="fas fa-pencil-alt"></i></button>
                       </a>
                      
