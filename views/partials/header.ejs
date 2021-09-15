@@ -28,8 +28,8 @@
 
       <div class="links" id="desktop-op">
         <% if (locals.isLogged) { %>
-          <img src="/img/users/<%= locals.userLogged.foto %>" width="40" style="border-radius: 100%;">
-          Hola <%= locals.userLogged.firstName %>
+          <img src="/img/users/<%= locals.userLogged.profileImage %>" width="40" style="border-radius: 100%;">
+          Hola <%= locals.userLogged.first_name %>
           <a href="/productCar"><i class="fas fa-shopping-cart"></i></a>
           <a href="/profile"><i class="far fa-user"></i></a>
           <a href="/logout"><i class="fas fa-sign-out-alt"></i></a>
@@ -44,7 +44,7 @@
       </div>
       <% if (locals.isLogged) { %>
       <div class="nav-option-mobile">
-      <h2 style="display: inline">Hola <%= locals.userLogged.firstName %></h2>
+      <h2 style="display: inline">Hola <%= locals.userLogged.first_name %></h2>
       </div>
       <% } %>
       <div class="nav-option-mobile">

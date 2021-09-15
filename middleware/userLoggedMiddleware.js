@@ -1,15 +1,21 @@
 const User = require('../models/User'); //nos traemos el modelo para poder hacer operaciones con la base de datos
+const db = require("../database/models");
 
 function userLoggedMiddleware (req, res, next) {
     res.locals.isLogged = false; //res.locals son variables que se pueden compartir en todas las vistas indistintamente del controlador
 
-    let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = User.findByField('email', emailInCookie);
+    console.log(req.cookies.userEmail);
+    let userFromCookie =  db.User.findOne({where: {email: req.cookies.userEmail}})
+    
+        .then(function(result) {
 
+            if(result) { //este of es para loggear de manera automática si se presionó el checkbox de recordar
+               req.session.userLogged = result;
+            }
+            
+            //console.log(req.session.userLogged )
 
-    if(userFromCookie) { //este of es para loggear de manera automática si se presionó el checkbox de recordar
-        req.session.userLogged = userFromCookie;
-    }
+        });
 
     if (req.session.userLogged) { //este if es para modificar las vista
         res.locals.isLogged = true;

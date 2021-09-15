@@ -20,10 +20,10 @@
             </div>
             <div class="form-control">
               <label for="pass">Contraseña</label>
-              <input type="password" name="password" id="password" required/>
-              <% if (locals.errors && errors.password) { %>
+              <input type="password" name="pass" id="pass" required/>
+              <% if (locals.errors && errors.pass) { %>
                 <p class="invalid">
-                  <%= errors.password.msg %>
+                  <%= errors.pass %>
                 </p>
               <% } %>
             </div>

@@ -21,28 +21,37 @@ const usersControlador = {
         res.render('./users/login');
     },
     loginProcess: (req, res) => {
-		//console.log (req.body.remember_user);
-        let userToLogin = User.findByField('email', req.body.email);
+        //let userToLogin = User.findByField('email', req.body.email);
+        let userToLogin = db.User.findOne({where: {email: req.body.email}})
+        .then(function(result){
+            const password = req.body.pass;
+            const pass = result.pass;
+            console.log(pass);
 
-		if(userToLogin) {
-			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
-			if(isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
+		    if(userToLogin) {
+		    	let isOkThePassword = bcrypt.compareSync(password, pass);
+		    	if(isOkThePassword) {
+		    		delete userToLogin.pass;
+		    		req.session.userLogged = result;
+                    console.log(req.session.userLogged)
 
-				if (req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30 });
-				}
 
-                return res.redirect('/profile'); 
-			}
-			return res.render('./users/login', {
-				errors: {
-					password: {
-						msg: 'Las credenciales son inválidas'
-					}
-				} 
-			});
+		    		if (req.body.remember_user) {
+		    			res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30 });
+		    		}
+
+                    console.log(req.cookies.userEmail)
+
+                    return res.redirect('/profile'); 
+		    	}
+		    	return res.render('./users/login', {
+		    		errors: {
+		    			pass: {
+		    				msg: 'Las credenciales son inválidas'
+		    			}
+		    		} 
+		    })
+        .catch(error => res.send(error))
 		}
 
 		return res.render('./users/login', {
@@ -51,7 +60,9 @@ const usersControlador = {
 					msg: 'No se encuentra este email en nuestra base de datos'
 				}
 			} 
-		})
+		    })
+        })
+ 
 	},
     register: (req,res)=>{
         res.render('./users/register');
@@ -100,20 +111,26 @@ const usersControlador = {
         res.render('./errores/accessError')
     },
     update:(req, res) =>{
-        const userEdit = users.find(user => user.id === req.session.userLogged.id);
-        userEdit.firstName = req.body.firstName,
-        userEdit.lastName = req.body.lastName,
-        userEdit.email = req.body.email
-
+        const {first_name, last_name, email} = req.body;
+        
         if (req.file === undefined) {
-            userEdit.foto = userEdit.foto;
+            profileImage = 'default-user.png';
           } else {
-            fs.unlinkSync('./public/img/users/' + userEdit.foto);
-            userEdit.foto = req.file.filename;
-          };
-        usersJSON = JSON.stringify(users, null, 2);
-        fs.writeFileSync(usersFilePath, usersJSON);
-        return res.redirect('/profile');
+            profileImage = req.file.filename;
+        }
+
+        const newData = {
+            first_name,
+            last_name,
+            email,
+            profileImage
+        }
+        const options = { where: {email: req.session.userLogged.email} }
+        
+        db.User.update(newData, options)
+        .then(() => {
+            res.redirect('/profile')
+        })
     }
 }
 module.exports = usersControlador;

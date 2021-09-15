@@ -9,16 +9,16 @@
           <h3>Perfil</h3>
           <form action="/profile?_method=PUT" method="POST" class="" enctype="multipart/form-data">
             
-            <img src="/img/users/<%= locals.userLogged.foto %>" class="img-user-editar">
-            <input type="file" name="foto" id="foto">
+            <img src="/img/users/<%= locals.userLogged.profileImage %>" class="img-user-editar">
+            <input type="file" name="profileImage" id="profileImage">
 
-            <label for="firstName">Nombre (s)
-            <input type="text" name="firstName" id="firstName" placeholder="p. ej. Daniela" minlength="6" 
-            value="<%= locals.userLogged.firstName %>" required></label>
+            <label for="first_name">Nombre (s)
+            <input type="text" name="first_name" id="first_name" placeholder="p. ej. Daniela" minlength="6" 
+            value="<%= locals.userLogged.first_name %>" required></label>
 
-            <label for="lastName">Apellido (s)
-            <input type="text" name="lastName" id="lastName placeholder="p. ej. Campos" minlength="6"
-            value="<%= locals.userLogged.lastName %>" required></label>
+            <label for="last_name">Apellido (s)
+            <input type="text" name="last_name" id="last_name placeholder="p. ej. Campos" minlength="6"
+            value="<%= locals.userLogged.last_name %>" required></label>
 
             <label for="email">Correo electrónico
             <input type="email" name="email" id="email" placeholder="p. ej. danielacampos@hotmail.com" 
@@ -28,7 +28,7 @@
           </form>
 
           <% if (locals.isLogged) { %>
-            <% if (locals.userLogged.categoryUser == 'administrador') { %>
+            <% if (locals.userLogged.id_category == 1) { %>
               <a href="/products/addProduct"><button type="submit" class="bt">AGREGAR PRODUCTO</button></a>
             <% } %>
           <% } %>

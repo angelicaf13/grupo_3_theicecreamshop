@@ -25,7 +25,7 @@ router.get('/profile', authMiddleware, usersController.profile);
 router.get('/productCar', usersController.car);
 
 /*** EDIT PROFILE ***/
-router.put('/profile', upload.single('foto'), usersController.update);
+router.put('/profile', upload.single('profileImage'), usersController.update);
 
 /*** LOGOUT ***/
 router.get('/logout', usersController.logout);
