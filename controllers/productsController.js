@@ -4,6 +4,7 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const db = require("../database/models");
+const { Op } = require("sequelize");
 
 // ************ Express Validator Require ************
 const { validationResult } = require('express-validator');
@@ -16,6 +17,8 @@ const productsControlador = {
             include: [{association: "brand"}, {association: "flavor"}]
         })
         .then(product => {
+
+
             db.Product.findAll({
                 where: {
                     id_brand: product.id_brand,
@@ -32,16 +35,19 @@ const productsControlador = {
         // let idProducto = req.params.id;
         // res.render('./products/productDetail', {idProducto, listaProductos: products});
     },
-    list: (req,res)=>{
-        db.Product.findAll({
-            include: [{association: "brand"}, {association: "flavor"}],
-            group: ['id_brand', 'id_flavor']
-        })
-        .then(products => {
-            console.log(products)
-            res.render('./products/productList', {listaProductos: products});
-        })
-        //res.render('./products/productList', {listaProductos: products});
+    list: (req, res)=>{
+
+            db.Product.findAll({
+                include: [{association: "brand"}, {association: "flavor"}],
+                group: ['id_brand', 'id_flavor']
+            })
+            .then(products => {
+                console.log("Todos los productos: " + products)
+                res.render('./products/productList', {listaProductos: products});
+                console.log("Lo del req.query: " + req.query)
+            })
+            //res.render('./products/productList', {listaProductos: products});
+        
     },
     create: (req,res)=>{
         let brands = db.Brand.findAll();
