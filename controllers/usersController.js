@@ -107,7 +107,7 @@ const usersControlador = {
         const {first_name, last_name, email} = req.body;
         
         if (req.file === undefined) {
-            profileImage = 'default-user.png';
+            profileImage = req.session.userLogged.profileImage;
           } else {
             profileImage = req.file.filename;
         }
@@ -119,6 +119,8 @@ const usersControlador = {
             profileImage
         }
         const options = { where: {email: req.session.userLogged.email} }
+
+        console.log(req.session.userLogged)
         
         db.User.update(newData, options)
         .then(() => {

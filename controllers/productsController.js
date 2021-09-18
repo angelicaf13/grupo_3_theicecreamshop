@@ -139,7 +139,7 @@ const productsControlador = {
                 const {id_brand, id_flavor, description, price, stock} = req.body;
 
                 if (req.file === undefined) {
-                    productImage = 'default-image.png';
+                    productImage = product.productImage;
                   } else {
                     productImage = req.file.filename;
                 }

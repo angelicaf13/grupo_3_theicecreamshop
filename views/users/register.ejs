@@ -48,7 +48,7 @@
 
                     <div>
                     <label for="pass">Contraseña</label>
-                    <input type="pass" name="pass" id="pass" value="<%= locals.old ? old.pass: null %>" 
+                    <input type="password" name="pass" id="pass" value="<%= locals.old ? old.pass: null %>" 
                     class="<%= locals.errors && errors.pass ? 'invalid' : 'null' %>" minlength="8" required>
                     <% if (locals.errors && errors.pass) { %>
                       <p class="invalid"><%= errors.pass.msg %></p>
