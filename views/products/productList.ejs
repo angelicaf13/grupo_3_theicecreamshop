@@ -75,27 +75,61 @@
             </form>
           </div>
           <div class="productos">
-            <% for(let producto of listaProductos) {%>
-              <a href="/products/productDetail/<%= producto.id_product %>">
-                <article class="product-container">
-                  <div>
-                    <img src="/img/products/<%= producto.productImage %>" alt="">
-                  </div>
-                  <h4>
-                    <%= producto.brand.name + " - " + producto.flavor.name + " Ice Cream"%>
-                  </h4>
-
-                  <% if (locals.isLogged) { %>
-                    <% if (locals.userLogged.id_category == '1') { %>
+            
+          <% if (locals.isLogged) { %> <!-- User is logged -->
+            <% if (locals.userLogged.id_category == '1') { %> <!-- User logged is admin -->
+              <% for( let producto of listaProductos ) { %>
+                <% if (producto.status == true) { %> <!-- The product is available -->
+                  <a href="/products/productDetail/<%= producto.id_product %>">
+                    <article class="product-container">
+                      <div>
+                        <img src="/img/products/<%= producto.productImage %>" alt="">
+                      </div>
+                      <h4>
+                        <%= producto.brand.name + " - " + producto.flavor.name + " Ice Cream"%>
+                      </h4>
                       <a href="/products/updateProduct/<%=  producto.id_product%>">
                         <button class="edit-button"><i class="fas fa-pencil-alt"></i></button>
-                      </a>
-                     
-                    <% } %>
-                  <% } %>
-                </article>
-              </a>
+                      </a>  
+                    </article>
+                  </a>
+                <% } else { %> <!-- The product is NOT available -->
+                  <a href="/products/productDetail/<%= producto.id_product %>">
+                    <article class="product-container" id="unavailable">
+                      <div>
+                        <img src="/img/products/<%= producto.productImage %>" alt="">
+                      </div>
+                      <h4>
+                        <%= producto.brand.name + " - " + producto.flavor.name + " Ice Cream"%>
+                      </h4>
+                      <p>No disponible</p>
+                      <a href="/products/updateProduct/<%=  producto.id_product%>">
+                        <button class="edit-button"><i class="fas fa-pencil-alt"></i></button>
+                      </a>  
+                    </article>
+                  </a>
+                <% } %> 
+                
               <% } %>
+            <% } else {%> <!-- User logged is client -->
+              <% for( let producto of listaProductos ) { %>
+                <% if (producto.status == true) { %> <!-- Only show available products -->
+                  <a href="/products/productDetail/<%= producto.id_product %>">
+                    <article class="product-container">
+                      <div>
+                        <img src="/img/products/<%= producto.productImage %>" alt="">
+                      </div>
+                      <h4>
+                        <%= producto.brand.name + " - " + producto.flavor.name + " Ice Cream"%>
+                      </h4>
+                    </article>
+                  </a>
+                <% } %>
+              <% } %>
+            <% } %> 
+          <% } else { %> <!-- User is not logged -->
+                  
+          <% } %> 
           </div>
         </div>
       </main>

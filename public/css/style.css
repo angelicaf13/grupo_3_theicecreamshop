@@ -753,6 +753,19 @@ input:focus-visible {
   position: relative;
 }
 
+#unavailable{
+  background: linear-gradient(to right bottom, rgba(224, 31, 31, 0.356), rgba(255, 0, 0, 0.459));
+}
+
+#unavailable p{
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#unavailable img{
+  opacity: 50%;
+}
+
 .edit-button{
   background:transparent;
   color: var(--old-lavender);
