@@ -24,7 +24,8 @@ router.get('/updateProduct/:id', productsController.edit);
 router.put('/updateProduct/:id', upload.single('image'), productsValidations, productsController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:id', productsController.destroy); 
+router.put('/delete/:id',  productsController.destroy);
+router.put('/recuperar/:id',  productsController.recuperar); 
 
 
 module.exports = router;

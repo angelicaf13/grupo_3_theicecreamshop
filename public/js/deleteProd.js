@@ -3,7 +3,7 @@ function confirmDelete() {
   const formularioDelete = document.getElementById("mensaje-emergente");
   if (mensaje === true) {
       formularioDelete.method = "POST";
-      formularioDelete.action = "/products/delete/<%= productToEdit.id %>?_method=DELETE";
+      formularioDelete.action = "/products/delete/<%= producto.id_product %>?_method=PUT";
       formularioDelete.submit();
         alert("¡Producto eliminado!");
     } else {

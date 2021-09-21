@@ -66,8 +66,11 @@
                 </div>
             <button type="submit" class="register-button">MODIFICAR DATOS</button>
           </form>
-          <form id="mensaje-emergente">
-            <button class="register-button" onclick="confirmDelete()">ELIMINAR PRODUCTO</button>
+          <form id="mensaje-emergente" action="/products/delete/<%= producto.id_product %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <button class="register-button" type="submit">ELIMINAR PRODUCTO</button>
+          </form>
+          <form id="mensaje-emergente" action="/products/recuperar/<%= producto.id_product %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <button class="register-button" type="submit">ALTA DEL PRODUCTO</button>
           </form>
       </section>
     </div>

@@ -26,12 +26,14 @@
 
             <button type="submit" class="">GUARDAR CAMBIOS</button>
           </form>
-          <% if (locals.isLogged) { %>
-            <% if (locals.userLogged.id_category == 1) { %>
-              <a href="/admin"><button type="submit" class="bt">GESTIONAR USUARIOS</button></a>
-            <% } %>
-          <% } %>
         </article>
+        <% if (locals.isLogged) { %>
+          <% if (locals.userLogged.id_category == 1) { %>
+            <article class="gestion">
+            <a href="/admin"><button type="submit" class="bt">GESTIONAR USUARIOS</button></a>
+          </article>
+          <% } %>
+        <% } %>
         <article class="historial">
             <h3>Historial de compras</h3>
             <form action="">

@@ -187,21 +187,38 @@ const productsControlador = {
         })
 	},
     destroy: (req,res)=>{
-        const id = parseInt(req.params.id);
-		const productToDelete = products.find(product => product.id === id);
-
-
-        if (productToDelete.image != 'default-image.png') {
-            fs.unlinkSync('./public/img/products/' + productToDelete.image);
-        }
-        		
-		products.splice(products.indexOf(productToDelete), 1);
-		
-		productsJSON = JSON.stringify(products, null, 2);
-
-		fs.writeFileSync(productsFilePath, productsJSON);
-
-		res.redirect('/products/productList');
+        db.Product.findByPk(req.params.id,{
+            include: [{association: "size"}]
+        })
+        .then(producto =>{
+            db.Product.update({status:0},{
+                where: {
+                    id_brand: producto.id_brand,
+                    id_flavor: producto.id_flavor,
+                    id_size: producto.id_size
+                }
+            })
+            .then(()=>{
+                res.redirect('/products/productList');
+            })
+        })
+    },
+    recuperar: (req,res)=>{
+        db.Product.findByPk(req.params.id,{
+            include: [{association: "size"}]
+        })
+        .then(producto =>{
+            db.Product.update({status:1},{
+                where: {
+                    id_brand: producto.id_brand,
+                    id_flavor: producto.id_flavor,
+                    id_size: producto.id_size
+                }
+            })
+            .then(()=>{
+                res.redirect('/products/productList');
+            })
+        })
     }
 }
 

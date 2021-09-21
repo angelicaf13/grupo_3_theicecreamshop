@@ -1071,6 +1071,17 @@ article.perfil form{
   font-size: 10px;
 }
 
+article.gestion {
+  height: 40%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 article.perfil form input{
   width: 230px;
   padding: 3px;
@@ -1172,6 +1183,25 @@ article.perfil form button:hover{
   width: 20%;
   margin: auto;
 }
+.bt{
+  align-self: center;
+  background-color: #735D78;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  transition: background-color 0.5s ;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+}
+
+.bt:hover{
+  background-color: #b45ecc;
+}
+
  
                     /* <<------------------------------ DETALLE DEL PRODUCTO ------------------------------>> */
 .product-img{
@@ -1247,7 +1277,7 @@ div.precios{
   display: inline;
 }
 
-.detail button, .bt{
+.detail button{
   display: flex;
   align-self: center;
   background-color: #735D78;
