@@ -126,6 +126,40 @@ const usersControlador = {
         .then(() => {
             res.redirect('/profile')
         })
+    },
+    admin: (req, res) =>{
+            db.User.findAll({
+                include: [{association: "category"}]
+            })
+                .then(users => {
+                    res.render('./users/usersAdmin', {listausuarios: users});
+                })
+    },
+    change: (req, res)=>{
+        if(req.body.rol == 1){
+        db.User.update({
+            id_category:2
+        }, {
+            where: {
+                id_user: req.body.tipo
+            }
+        })
+        .then(() => {
+            res.redirect('/admin')
+        })
+    } else {
+        db.User.update({
+            id_category:1
+        }, {
+            where: {
+                id_user: req.body.tipo
+            }
+        })
+        .then(() => {
+            res.redirect('/admin')
+        })
+    }
+
     }
 }
 module.exports = usersControlador;

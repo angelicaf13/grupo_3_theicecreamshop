@@ -9,6 +9,7 @@ const upload = require('../middleware/multerUser');
 const registerValidations = require('../middleware/validateRegister');
 const guestMiddleware = require('../middleware/guestMiddleware');
 const authMiddleware = require('../middleware/authMiddleware');
+const adminMiddleware = require('../middleware/adminMiddleware');
 
 /*** CREATE ONE USER ***/
 router.get('/register', guestMiddleware, usersController.register);
@@ -29,6 +30,10 @@ router.put('/profile', upload.single('profileImage'), usersController.update);
 
 /*** LOGOUT ***/
 router.get('/logout', usersController.logout);
+
+/*** GESTION DE USUARIOS ***/
+router.get('/admin', adminMiddleware, usersController.admin);
+router.put('/admin', usersController.change);
 
 /*** ACCESS DENIED ***/
 router.get('/accessError', usersController.accessError);

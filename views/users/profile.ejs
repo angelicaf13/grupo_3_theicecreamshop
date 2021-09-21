@@ -26,10 +26,9 @@
 
             <button type="submit" class="">GUARDAR CAMBIOS</button>
           </form>
-
           <% if (locals.isLogged) { %>
             <% if (locals.userLogged.id_category == 1) { %>
-              <a href="/products/addProduct"><button type="submit" class="bt">AGREGAR PRODUCTO</button></a>
+              <a href="/admin"><button type="submit" class="bt">GESTIONAR USUARIOS</button></a>
             <% } %>
           <% } %>
         </article>

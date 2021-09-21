@@ -75,7 +75,18 @@
             </form>
           </div>  
           <div class="productos">
-           
+            <% if (locals.isLogged) { %> <!-- User is logged -->
+              <% if (locals.userLogged.id_category == '1') { %> <!-- User logged is admin -->
+            <article class="product-container" id="icono-add">
+              <div>
+                <a href="/products/addProduct"><img src="/img/products/ad.png"></a>
+              </div>
+              <h4>
+                AGREGAR NUEVO PRODUCTO
+              </h4>
+            </article>
+            <% } %> 
+            <% } %>
           <% if (locals.isLogged) { %> <!-- User is logged -->
             <% if (locals.userLogged.id_category == '1') { %> <!-- User logged is admin -->
               <% for( let producto of listaProductos ) { %>

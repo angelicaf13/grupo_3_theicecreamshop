@@ -658,6 +658,64 @@ input:focus-visible {
     }
     
 }
+                    /* <<------------------------------ USERS LIST ------------------------------>> */
+.main-user-list{
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 70vh;
+}
+
+.main-users-list{
+  padding: 50px;
+}
+
+.container-main-users-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.user-container{
+  width: 100%;
+  max-width: 180px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(1.2rem);
+  border-radius: 0.2rem;
+  margin: 10px;
+  min-height: 200px;
+  position: relative;
+  text-align: center;
+  padding: 15px;
+}
+
+.imagen-user{
+  width: 50%;
+}
+
+.user-button {
+  margin-top: 50px;
+  padding: 6px 28px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 20px;
+  background-color: #735d78;
+  color: white;
+  transition: all 0.5s;
+}
+
+.user-button:hover{
+  background-color: #b45ecc;
+}
+
+input#tipo, input#rol{
+  display: none;
+}
+
+.h2-users{
+  text-align: center;
+}
 
                     /* <<------------------------------ PRODUCT LIST ------------------------------>> */
 .main-product-list{
@@ -753,6 +811,15 @@ input:focus-visible {
   position: relative;
 }
 
+#icono-add{
+  background-color:var(--dark-lavender);
+}
+
+#icono-add h4{
+  color:black;
+  font-size: 18px;
+}
+
 #unavailable{
   background: linear-gradient(to right bottom, rgba(224, 31, 31, 0.356), rgba(255, 0, 0, 0.459));
 }
@@ -831,8 +898,19 @@ input:focus-visible {
   font-size: var(--dark-lavender);
 }
 
-.product-container:hover > h4{
+.product-container:hover > h4  h4{
   animation: hoverProduct 0.4s forwards;
+}
+
+@keyframes hoverPlus {
+  0% {
+  }
+  100%{
+    color:#735D78;
+  }
+}
+#icono-add:hover > h4{
+  animation: hoverPlus 0.4s forwards;
 }
 
                     /* <<------------------------------ REGISTRO ------------------------------>> */
