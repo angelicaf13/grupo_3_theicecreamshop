@@ -16,21 +16,18 @@
                 <p><%= producto.description %></p>
         <form action="">
                 <h3>Presentación:</h3>
-                <select name="id_size" required>
+
+                <select onchange="showPrice()" class="size-select" name="id_size" required>
                     <option value="">Seleccione una presentación</option>
                     <% for(i=0; i < allSizes.length; i++) { %>
-                        <option value="<%= allSizes[i].id_size %>">
+                        <option value="<%= allSizes[i].price %>">
                             <%= allSizes[i].size.name %>
                         </option>
                     <% } %>
                   </select>
             <div class="precios">
-                <h3>Precio:</h3>
-                <input type="text" name="price1" id="price1" value="$<%= producto.price1 %>">
-                <input type="text" name="price2" id="price2" value="$<%= producto.price2 %>">
-                <input type="text" name="price3" id="price3" value="$<%= producto.price3 %>">
+                <h3>Precio: </h3>
             </div>
-            
             <label for="cantidadCompra">Cantidad:</label>
             <input type="number" name="cantidad" id="cantidadCompra" step="1" min="1" max="100" maxlength="3" value="1">
             <button type="submit">AGREGAR AL CARRITO DE COMPRA</button>
