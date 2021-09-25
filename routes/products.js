@@ -13,7 +13,7 @@ const adminMiddleware = require('../middleware/adminMiddleware');
 router.get('/productDetail/:id', productsController.detail);
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/productList', productsController.list);
+router.get('/productList/', productsController.list);
 
 /*** CREATE ONE PRODUCT ***/
 router.get('/addProduct', adminMiddleware, productsController.create);

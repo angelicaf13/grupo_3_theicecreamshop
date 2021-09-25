@@ -4,10 +4,11 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const db = require("../database/models");
-const { Op } = require("sequelize");
+const { Op, where } = require("sequelize");
 
 // ************ Express Validator Require ************
 const { validationResult } = require('express-validator');
+const e = require('express');
 //const { where } = require('../../clase-33-crud/CRUD/node_modules/sequelize/types');
 
 const productsControlador = {
@@ -30,6 +31,9 @@ const productsControlador = {
 
             })
         })
+        .catch(e => {
+            console.log(e)
+        })
 
         // Version anterior donde se obtiene desde el JSON
         // let idProducto = req.params.id;
@@ -37,17 +41,103 @@ const productsControlador = {
     },
     list: (req, res)=>{
 
+        if(req.query.brands && req.query.priceRange){ // if both brands and prices filter are applied
+            //console.log(req.query.brands)
+            //console.log(req.query.priceRange)
+            let prices = req.query.priceRange;
+            prices = prices.toString().split('-').join(',').split(',');
+            prices = prices.map(price => parseInt(price));
+
+            db.Product.findAll({
+                include:[{association: "brand"}, {association: "flavor"}],
+                group: ['id_brand', 'id_flavor'],
+                where: {
+                    price: {
+                        [Op.between] : [prices[0], prices[prices.length - 1]]
+                    }
+                }
+            })
+            .then(products => {
+                products.forEach(element => {
+                    console.log(element.brand.dataValues.name)
+                });
+                let selectedBrands = req.query.brands;
+                let productsToSend = [];
+                products.forEach(element => {
+                    if(selectedBrands.includes(element.brand.dataValues.name)){
+                        productsToSend.push(element)
+                    }
+                });
+                res.render('./products/productList', {listaProductos: productsToSend});
+
+            })
+            .catch(e => {
+                console.log(e)
+            })
+
+        }else if(req.query.brands){ //if only brands filter is applied
+
+            db.Product.findAll({
+                include:[{association: "brand"}, {association: "flavor"}],
+                group: ['id_brand', 'id_flavor'],
+            })
+            .then(products => {
+                products.forEach(element => {
+                    console.log(element.brand.dataValues.name)
+                });
+                let selectedBrands = req.query.brands;
+                let productsToSend = [];
+                products.forEach(element => {
+                    if(selectedBrands.includes(element.brand.dataValues.name)){
+                        productsToSend.push(element)
+                    }
+                });
+                products = products.map(product => selectedBrands.includes(product.brand.dataValues.name))
+                res.render('./products/productList', {listaProductos: productsToSend});
+
+            })
+            .catch(e => {
+                console.log(e)
+            })
+
+        }else if(req.query.priceRange){ // if only price filter is applied
+            let prices = req.query.priceRange;
+            prices = prices.toString().split('-').join(',').split(',');
+            prices = prices.map(price => parseInt(price));
+
+            db.Product.findAll({
+                include: [{association: "brand"}, {association: "flavor"}],
+                group: ['id_brand', 'id_flavor'],
+                where: {
+                    price: {
+                        [Op.between] : [prices[0], prices[prices.length - 1]]
+                    }
+                }
+            })
+            .then(products => {
+                res.render('./products/productList', {listaProductos: products});
+
+            })
+            .catch(e => {
+                console.log(e)
+            })
+
+            //res.send(prices)
+            
+        }else{
             db.Product.findAll({
                 include: [{association: "brand"}, {association: "flavor"}],
                 group: ['id_brand', 'id_flavor']
             })
             .then(products => {
-                console.log("Todos los productos: " + products)
                 res.render('./products/productList', {listaProductos: products});
-                console.log("Lo del req.query: " + req.query)
+
+            })
+            .catch(e => {
+                console.log(e)
             })
             //res.render('./products/productList', {listaProductos: products});
-        
+        }
     },
     create: (req,res)=>{
         let brands = db.Brand.findAll();
@@ -58,6 +148,9 @@ const productsControlador = {
         .all([brands, flavors, sizes])
         .then(function([allBrands, allFlavors, allSizes]) {
             res.render('./products/addProduct', { allBrands, allFlavors, allSizes })
+        })
+        .catch(error => {
+            console.log(error)
         })
     },
     store: (req, res) => {
@@ -85,6 +178,9 @@ const productsControlador = {
 
             .then(() => {
                 res.redirect('/products/productList');
+            })
+            .catch(error => {
+                console.log(error)
             })
         } else {
                 res.render('./products/addProduct', { 

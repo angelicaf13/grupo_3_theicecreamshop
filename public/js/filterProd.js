@@ -1,36 +1,54 @@
 window.addEventListener('load', function(){
-    console.log('hello')
-
-    let brandCheckBoxes = document.querySelectorAll(".brand-check");
-    brandCheckBoxes.forEach(checkbox => {
-        console.log(checkbox.value + '-' + checkbox.checked);
-    });
-
-    let priceCheckBoxes = document.querySelectorAll(".price-check");
-    priceCheckBoxes.forEach(checkbox => {
-        console.log(checkbox.value);
-    });
-
-
-    let filterButton = document.getElementsByClassName('apply-button');
+    console.log('hello');
     
 
-    let filterForm = document.getElementsByClassName('filter-form');
+    const applyFilterBtn = document.querySelector('.apply-button');
+    applyFilterBtn.addEventListener('click', function(event){
+        //event.preventDefault();
+        console.log('The apply filters button was pressed');
 
-    
+        let form = document.querySelector('.filter-form');
 
+        let brandsSelect = document.querySelectorAll('.brand input'); // get all the input elements for the brands
+        brandsSelect = Object.values(brandsSelect); // transform the result to array
 
-    filterButton.onClick = function(event){
+        let priceSelect = document.querySelectorAll('.price input') // get all the input elements for the pruces
+        priceSelect = Object.values(priceSelect); // transform the result to array
+        console.log(new URL(document.location).searchParams);
 
-        brandCheckBoxes = brandCheckBoxes.filter(checkbox => checkbox.checked == true);
-        priceCheckBoxes = priceCheckBoxes.filter(checkbox => checkbox.checked == true);
+    //     let selectedBrands = []; 
+    //     let selectedPrices = [];
 
-        brandString = brandCheckBoxes.join();
-        priceString = branCheckBoxes.join('-');
+    //     brandsSelect.forEach(input => { // only keep the value of those brand inputs that were checked by user
+    //         if(input.checked == true){
+    //             selectedBrands.push(input.value)
+    //         }
+    //     });
 
-        console.log(brandString);
-        console.log(priceString);
+    //     priceSelect.forEach(input => { // only keep the value of those price inputs that were checked by user
+    //         if(input.checked == true){
+    //             selectedPrices.push(input.value)
+    //         }
+    //     });
 
-        window.location = "/"
-    }
+    //     console.log(selectedBrands.length);
+    //     console.log(selectedPrices.length);
+
+    //     if(selectedBrands.length > 0 && selectedPrices.length > 0){
+    //         // redirect with params for brands and price
+    //         console.log('YES')
+    //         form.action = "http://www.google.com";
+    //         form.submit();
+    //     }else if(brandsSelect.length > 0){
+    //         // redirect only with brand param
+    //     }else if(priceSelect.length > 0){
+    //         // redeirect only with price param
+    //     }else{
+    //         // do nothing
+    //     }
+
+    //     console.log(selectedBrands);
+    //     console.log(selectedPrices);
+
+     })
 })
