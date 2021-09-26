@@ -8,13 +8,10 @@
         <div class="ordenar-filtar-container">
           <button class="ordenar-filtrar-button">Ordenar & Filtrar</button>
           <div class="ordenar-checkbox-container">
-            <label for="ordenar">Ordenar por: </label>
-            <select name="ordenar" id="ordenar">
-              <option value="populares">Mas populares</option>
-              <option value="recientes">Recientes</option>
-              <option value="precio-as">Precio: ascendente</option>
-              <option value="precio-des">Precio: descendente</option>
-            </select>
+            <form class="search-form">
+              <input type="text" name="search" placeholder="Buscar producto">
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
           </div>
         </div>
         <div class="filters-products">

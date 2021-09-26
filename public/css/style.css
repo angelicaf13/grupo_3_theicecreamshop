@@ -809,6 +809,7 @@ input#tipo, input#rol{
   margin: 10px;
   min-height: 247px;
   position: relative;
+  transition: all 0.5s;
 }
 
 #icono-add{
@@ -1664,6 +1665,31 @@ div.precios{
 
   .ice-cream-reg-img-2{
     animation: iceCreamReg2 3s 1 forwards;
+  }
+
+  .search-form input{
+    border: none;
+    border-radius: 3px;
+    padding: 5px 9px;
+    width: 280px;
+    color: var(--dark-lavender);
+  }
+
+  .search-form input:focus{
+    border-bottom: 2px solid var(--dark-lavender);
+  }
+
+  .search-form button{
+    width: 40px;
+    height: 28px;
+    border: none;
+    color: var(--dark-lavender);
+    transition: all 0.5s;
+  }
+
+  .search-form button:hover{
+    background-color: var(--dark-lavender);
+    color: #EFEFEF;
   }
 
   .ordenar-filtrar-button{

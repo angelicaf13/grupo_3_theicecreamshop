@@ -9,6 +9,7 @@ const { Op, where } = require("sequelize");
 // ************ Express Validator Require ************
 const { validationResult } = require('express-validator');
 const e = require('express');
+const { search } = require('../routes/products');
 //const { where } = require('../../clase-33-crud/CRUD/node_modules/sequelize/types');
 
 const productsControlador = {
@@ -124,6 +125,27 @@ const productsControlador = {
 
             //res.send(prices)
             
+        }else if(req.query.search){
+            let search = req.query.search.toUpperCase();
+            db.Product.findAll({
+                include: [{association: "brand"}, {association: "flavor"}],
+                group: ['id_brand', 'id_flavor']
+            })
+            .then(products => {
+                let filteredProducts = [];
+                products.forEach(product => {
+                    let brand = product.brand.dataValues.name.toUpperCase();
+                    let flavor = product.flavor.dataValues.name.toUpperCase();
+                    if(brand.includes(search) || flavor.includes(search)){
+                        filteredProducts.push(product);
+                    }
+                });
+                res.render('./products/productList', {listaProductos: filteredProducts});
+
+            })
+            .catch(e => {
+                console.log(e)
+            })
         }else{
             db.Product.findAll({
                 include: [{association: "brand"}, {association: "flavor"}],
