@@ -7,9 +7,11 @@ const usersController = require('../controllers/usersController');
 // ************ Middleware Require ************
 const upload = require('../middleware/multerUser');
 const registerValidations = require('../middleware/validateRegister');
+const loginValidations = require('../middleware/validateLogin');
 const guestMiddleware = require('../middleware/guestMiddleware');
 const authMiddleware = require('../middleware/authMiddleware');
 const adminMiddleware = require('../middleware/adminMiddleware');
+const { login } = require('../controllers/usersController');
 
 /*** CREATE ONE USER ***/
 router.get('/register', guestMiddleware, usersController.register);
@@ -19,7 +21,7 @@ router.post('/register', upload.single('profileImage'), registerValidations, use
 router.get('/login', guestMiddleware, usersController.login);
 
 /*** LOGIN PROCESS ***/
-router.post('/login', usersController.loginProcess);
+router.post('/login', loginValidations, usersController.loginProcess);
 
 /*** USER PROFILE ***/
 router.get('/profile', authMiddleware, usersController.profile);

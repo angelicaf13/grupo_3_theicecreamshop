@@ -15,6 +15,7 @@ const usersControlador = {
     },
     loginProcess: (req, res) => {
         //let userToLogin = User.findByField('email', req.body.email);
+        //const errores = validationResult(req);
         let userToLogin = db.User.findOne({where: {email: req.body.email}})
         .then(function(result){
             const password = req.body.pass;
@@ -41,19 +42,21 @@ const usersControlador = {
 		    		errors: {
 		    			pass: {
 		    				msg: 'Las credenciales son inválidas'
-		    			}
-		    		} 
-		    })
-        .catch(error => res.send(error))
-		}
+		    			    }
+		    		    } 
+		            })
+        
+		        }
 
-		return res.render('./users/login', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			} 
-		    })
+            })
+        .catch(function(){
+            res.render('./users/login', { 
+                errors: { 
+                    email: { 
+                        msg: 'No se encuentra este email en nuestra base de datos' 
+                    } 
+                } 
+            })
         })
  
 	},
