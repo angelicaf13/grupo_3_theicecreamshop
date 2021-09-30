@@ -16,11 +16,11 @@ El trabajo en tiempo y forma.
 
 __4. Hacer menos__
 
-Por ahorita no hemos tenid ningún inconveniente.
+Por ahorita no hemos tenido ningún inconveniente.
 
 __5. Dejar de hacer__
 
-Por ahorita no hemos tenid ningún inconveniente.
+Por ahorita no hemos tenido ningún inconveniente.
 
 
 ## Sprint 2
@@ -43,7 +43,7 @@ Por ahorita no hemos tenido ningún inconveniente.
 
 __5. Dejar de hacer__
 
-Por ahorita no hemos tenid ningún inconveniente.
+Por ahorita no hemos tenido ningún inconveniente.
 
 
 ## Sprint 3
@@ -66,7 +66,7 @@ Por ahorita no hemos tenido ningún inconveniente.
 
 __5. Dejar de hacer__
 
-Por ahorita no hemos tenid ningún inconveniente.
+Por ahorita no hemos tenido ningún inconveniente.
 
 
 ## Sprint 4
@@ -89,7 +89,7 @@ Por ahorita no hemos tenido ningún inconveniente.
 
 __5. Dejar de hacer__
 
-Por ahorita no hemos tenid ningún inconveniente.
+Por ahorita no hemos tenido ningún inconveniente.
 
 
 ## Sprint 5
@@ -112,4 +112,27 @@ Por ahorita no hemos tenido ningún inconveniente.
 
 __5. Dejar de hacer__
 
-Por ahorita no hemos tenid ningún inconveniente.
+Por ahorita no hemos tenido ningún inconveniente.
+
+
+## Sprint 6
+
+__1. Comenzar a hacer__
+
+Buscar errores y elementos de la página que faltan por implementar. Revisar material que nos pueda ayudar a darles solución.
+
+__2. Hacer más__
+
+Pedir retroalimentación objetiva a miembros externos al grupo y buscar mejoras.
+
+__3. Continuar haciendo__
+
+El trabajo en tiempo y forma, y dividir el trabajo equitativamente. Buscar continuamente mejoras que se le puedan hacer a la página.
+
+__4. Hacer menos__
+
+Por ahorita no hemos tenido ningún inconveniente.
+
+__5. Dejar de hacer__
+
+Por ahorita no hemos tenido ningún inconveniente.
