@@ -15,8 +15,10 @@ const usersControlador = {
     },
     loginProcess: (req, res) => {
         //let userToLogin = User.findByField('email', req.body.email);
-        //const errores = validationResult(req);
-        let userToLogin = db.User.findOne({where: {email: req.body.email}})
+        const errores = validationResult(req);
+
+        if(errores.isEmpty()){
+            let userToLogin = db.User.findOne({where: {email: req.body.email}})
         .then(function(result){
             const password = req.body.pass;
             const pass = result.pass;
@@ -46,7 +48,7 @@ const usersControlador = {
 		    		    } 
 		            })
         
-		        }
+		        } 
 
             })
         .catch(function(){
@@ -58,7 +60,9 @@ const usersControlador = {
                 } 
             })
         })
- 
+        } else {
+            res.render('./users/login', { errores: errores.mapped(), old: req.body });
+        }
 	},
     register: (req,res)=>{
         res.render('./users/register');

@@ -8,10 +8,16 @@
         <section class="glass-login">
           <h3>Acceder</h3>
           <p>¿Aún no tienes cuenta?<a href="/register"> Regístrate aquí</a></p>
+          <ul class="errores"></ul>
           <form method="POST" action="/login" class="login-form">
             <div class="form-control">
               <label for="email">Correo electrónico</label>
-              <input type="email" name="email" id="email" required/>
+              <input type="email" name="email" id="email" />
+              <% if (locals.errores && errores.email) { %>
+                <p class="invalid">
+                  <%= errores.email.msg %>
+                </p>
+              <% } %>
               <% if (locals.errors && errors.email) { %>
                 <p class="invalid">
                   <%= errors.email.msg %>
@@ -20,7 +26,12 @@
             </div>
             <div class="form-control">
               <label for="pass">Contraseña</label>
-              <input type="password" name="pass" id="pass" required/>
+              <input type="password" name="pass" id="pass" />
+              <% if (locals.errores && errores.pass) { %>
+                <p class="invalid">
+                  <%= errores.pass.msg %>
+                </p>
+              <% } %>
               <% if (locals.errors && errors.pass) { %>
                 <p class="invalid">
                   <%= errors.pass.msg %>
@@ -41,5 +52,6 @@
       </div>
     </main>
     <%- include('../partials/footer') %>
+    <script src="/js/loginValidation.js"></script>
   </body>
 </html>

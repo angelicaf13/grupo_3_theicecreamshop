@@ -561,6 +561,15 @@ figure:hover .text-brand{
   text-decoration: none;
 }
 
+.errores{
+  margin-bottom: 20px;
+  font-family: "Museo-Sans-Medium", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  color: maroon;
+  font-weight: bold;
+}
+
 .login-form {
   width: 100%;
   display: flex;
@@ -2105,6 +2114,10 @@ p.invalid{
 
 .login-form div input.invalid{
   border:maroon 2px solid;
+}
+
+.login-form div input.valid{
+  border:green 2px solid;
 }
 
 .add-form div div input.invalid{
