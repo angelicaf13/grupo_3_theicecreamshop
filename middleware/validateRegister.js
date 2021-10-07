@@ -4,10 +4,10 @@ const { body } = require('express-validator');
 const registerValidations = [
     body('first_name')
 .notEmpty().withMessage('Debes ingresar un nombre').bail()
-.isLength({ min: 3 }).withMessage('El nombre no cuenta con el número de caracteres esperados'),
+.isLength({ min: 2 }).withMessage('El nombre no cuenta con el número de caracteres esperados'),
 
     body('last_name').notEmpty().withMessage('Debes ingresar un apellido').bail()
-.isLength({ min: 6 }).withMessage('El apellido no cuenta con el número de caracteres esperados'),
+.isLength({ min: 2 }).withMessage('El apellido no cuenta con el número de caracteres esperados'),
 
     body('email').notEmpty().withMessage('Debes ingresar un email').bail() 
 .isEmail().withMessage('Debes ingresar un email válido'),
