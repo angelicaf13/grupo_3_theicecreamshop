@@ -43,5 +43,5 @@ app.use((req, res, next) => {
     res.status(404).render('./errores/error404');
    })
 
-app.listen(PORT,()=> console.log('Servidor corriendo'));
+app.listen(PORT,()=> console.log('Servidor corriendo en el puerto ' + PORT));
 

@@ -237,7 +237,16 @@ const productsControlador = {
                             allBrands, 
                             allFlavors });
                 })
+                .catch(e => {
+                    console.log(e)
+                })
             })
+            .catch(e => {
+                console.log(e)
+            })
+        })
+        .catch(e => {
+            console.log(e)
         })
     },
     update: (req, res) => {
@@ -289,6 +298,10 @@ const productsControlador = {
                     .then(() => {
                         res.redirect('/products/productList')
                     })
+                    .catch(e => {
+                        console.log(e)
+                    })
+
                 } else {
                         res.render('./products/updateProduct', {
                             productToEdit: productToEdit,
@@ -302,6 +315,9 @@ const productsControlador = {
                 }
 
             })
+        })
+        .catch(e => {
+            console.log(e)
         })
 	},
     destroy: (req,res)=>{
@@ -319,6 +335,12 @@ const productsControlador = {
             .then(()=>{
                 res.redirect('/products/productList');
             })
+            .catch(e => {
+                console.log(e)
+            })
+        })
+        .catch(e => {
+            console.log(e)
         })
     },
     recuperar: (req,res)=>{
@@ -336,6 +358,12 @@ const productsControlador = {
             .then(()=>{
                 res.redirect('/products/productList');
             })
+            .catch(e => {
+                console.log(e)
+            })
+        })
+        .catch(e => {
+            console.log(e)
         })
     }
 }

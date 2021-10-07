@@ -2109,7 +2109,13 @@ p.invalid{
 }
 
 .register-form div div input.invalid{
-  border:maroon 2px solid;
+  border:firebrick 2px solid;
+  
+}
+
+.register-form div div input.invalid::placeholder{
+  color:firebrick;
+  
 }
 
 .login-form div input.invalid{

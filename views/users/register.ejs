@@ -9,7 +9,7 @@
             <h3>Registro</h3>
             <form action="/register" method="POST" enctype="multipart/form-data" class="register-form">
                 <div>
-                  <div>
+                  <div class="img-container">
                     <label for="profileImage">Foto de perfil</label>
                     <input type="file" name="profileImage" id="profileImage">
                   </div>
@@ -68,5 +68,6 @@
         </div>
       </main>
     <%- include('../partials/footer') %>
+    <script src="/js/registerValidation.js"></script>
   </body>
 </html>

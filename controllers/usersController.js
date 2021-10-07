@@ -93,6 +93,9 @@ const usersControlador = {
             .then(() => {
                 res.redirect('/login');
             })
+            .catch(e => {
+                console.log(e)
+            })
         } else {   
             res.render('./users/register', { errors: errors.mapped(), old: req.body });
         }
@@ -133,14 +136,20 @@ const usersControlador = {
         .then(() => {
             res.redirect('/profile')
         })
+        .catch(e => {
+            console.log(e)
+        })
     },
     admin: (req, res) =>{
             db.User.findAll({
                 include: [{association: "category"}]
             })
-                .then(users => {
-                    res.render('./users/usersAdmin', {listausuarios: users});
-                })
+            .then(users => {
+                res.render('./users/usersAdmin', {listausuarios: users});
+            })
+            .catch(e => {
+                console.log(e)
+            })
     },
     change: (req, res)=>{
         if(req.body.rol == 1){
@@ -154,6 +163,10 @@ const usersControlador = {
         .then(() => {
             res.redirect('/admin')
         })
+        .catch(e => {
+            console.log(e)
+        })
+
     } else {
         db.User.update({
             id_category:1
@@ -164,6 +177,9 @@ const usersControlador = {
         })
         .then(() => {
             res.redirect('/admin')
+        })
+        .catch(e => {
+            console.log(e)
         })
     }
 
