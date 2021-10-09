@@ -11,10 +11,10 @@
           <form action="/products/updateProduct/<%= producto.id_product %>?_method=PUT" method="POST" class="add-form" enctype="multipart/form-data">
       <h3>Modificar producto</h3>
               <div class="ordenup">
-          <div>
+          <div class="product-container-img">
             <label for="image">Imagen</label>
             <img src="/img/products/<%= producto.productImage %>" alt="Ejemplo imagen" class="img-editar">
-            <input type="file" name="image" id="image"> 
+            <input type="file" accept=".PNG, .JPG, .JPEG, .GIF" name="image" id="productImage"> 
           </div>
                   <div class="uplinea">
           <div>
@@ -52,7 +52,7 @@
             <label for="pres">Presentación</label>
                   <div>
           <div>
-            <select name="id_size" required>
+            <select name="id_size" id="id_size" required>
               <option value="">Seleccione una presentación</option>
               <% for(i=0; i < allSizes.length; i++) { %>
                   <option value="<%= allSizes[i].id_size %>">
@@ -69,7 +69,7 @@
           <form id="mensaje-emergente" action="/products/delete/<%= producto.id_product %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <button class="register-button" type="submit">ELIMINAR PRODUCTO</button>
           </form>
-          <form id="mensaje-emergente" action="/products/recuperar/<%= producto.id_product %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <form id="mensaje-emergente2" action="/products/recuperar/<%= producto.id_product %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <button class="register-button" type="submit">ALTA DEL PRODUCTO</button>
           </form>
       </section>

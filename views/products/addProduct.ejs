@@ -9,13 +9,13 @@
           <form action="/products/addProduct" method="POST" enctype="multipart/form-data" class="add-form">
             <h3>Agregar producto</h3>
               <div>
-          <div>
+          <div class="product-container-img">
             <label for="productImage">Imagen</label>
-            <input type="file" name="productImage" id="productImage">
+            <input type="file" accept=".PNG, .JPG, .JPEG, .GIF" name="productImage" id="productImage">
           </div>
           <div>
             <label for="id_brand">Marca</label>
-            <select name="id_brand" class="<%= locals.errors && errors.id_brand ? 'invalid' : 'null' %>" required>
+            <select name="id_brand" id="id_brand" class="<%= locals.errors && errors.id_brand ? 'invalid' : 'null' %>" required>
               <option value="">Seleccione la marca</option>
               <% for(i=0; i < allBrands.length; i++) { %>
                   <option value="<%= allBrands[i].id_brand %>">
@@ -29,7 +29,7 @@
           </div>
           <div>
             <label for="id_flavor">Sabor</label>
-            <select name="id_flavor" class="<%= locals.errors && errors.id_flavor ? 'invalid' : 'null' %>" required>
+            <select name="id_flavor" id="id_flavor" class="<%= locals.errors && errors.id_flavor ? 'invalid' : 'null' %>" required>
               <option value="">Seleccione un sabor</option>
               <% for(i=0; i < allFlavors.length; i++) { %>
                   <option value="<%= allFlavors[i].id_flavor %>">
@@ -55,7 +55,7 @@
             <label for="pres">Presentación</label>
                 <div>
           <div>
-            <select name="id_size" required>
+            <select name="id_size" id="id_size" required>
               <option value="">Seleccione una presentación</option>
               <% for(i=0; i < allSizes.length; i++) { %>
                   <option value="<%= allSizes[i].id_size %>">

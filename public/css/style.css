@@ -1369,7 +1369,7 @@ div.precios{
 }
 
 .add-form div input {
-  border: none;
+  border: 0px;
   border-radius: 8px;
   padding-left: 4px;
   font-family: "Museo-Sans-Light", sans-serif;
@@ -2129,7 +2129,18 @@ p.invalid{
 .add-form div div input.invalid{
   border:maroon 2px solid;
 }
+
 .add-form div div textarea.invalid{
   border:maroon 2px solid;
 }
+
+
+.invalid{
+  border:maroon 3px solid;
+}
+
+.valid{
+  border:green 3px solid;
+}
+
 
