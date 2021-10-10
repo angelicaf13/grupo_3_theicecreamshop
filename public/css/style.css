@@ -2105,7 +2105,7 @@ div.precios{
 }
                     /* <<------------------------------ EXPRESS VALIDATOR ------------------------------>> */
 p.invalid{
-  color: maroon;
+  color: firebrick;
 }
 
 .register-form div div input.invalid{
@@ -2119,7 +2119,12 @@ p.invalid{
 }
 
 .login-form div input.invalid{
-  border:maroon 2px solid;
+  border:firebrick 2px solid;
+}
+
+
+.login-form ::placeholder{
+  color: firebrick;
 }
 
 .login-form div input.valid{
@@ -2127,17 +2132,13 @@ p.invalid{
 }
 
 .add-form div div input.invalid{
-  border:maroon 2px solid;
+  border: firebrick 2px solid;
 }
 
 .add-form div div textarea.invalid{
-  border:maroon 2px solid;
+  border:firebrick 2px solid;
 }
 
-
-.invalid{
-  border:maroon 3px solid;
-}
 
 .valid{
   border:green 3px solid;

@@ -46,7 +46,7 @@ window.onload = function(){
         } else {
             input.classList.remove('invalid');
             lastEmailValue = input.value;
-            delete errores[input.name] 
+            delete errors[input.name] 
         }
 
     }

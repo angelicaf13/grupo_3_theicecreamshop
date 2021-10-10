@@ -1,49 +1,57 @@
 window.onload = function() {
     let errores = {};
+    let lastEmailValue = "";
     let formulario = document.querySelector('.login-form');
     let email = document.querySelector('#email');
     let password = document.querySelector('#pass');
     
     email.focus();
 
-    function validateIsRequired(input) {
-        const inputName = input.name;
-
-        if(input.value === "") {
-            input.classList.add('invalid');
-            console.log('value is required');
-            errores[inputName] = `${inputName} is required`
-        } else {
-            input.classList.remove('invalid');
-            //input.classList.add('valid');
-            console.log('value is valid');
-            delete errores[inputName]
-        }
-    }
-
-    function emailIsValid (input) {
+    function emailValidation(input){
         const inputName = input.name;
         const result = /\S+@\S+\.\S+/.test(input.value)
 
-        if(result) {
-            input.classList.remove('invalid');
-            //input.classList.add('valid');
-            console.log('value is email');
-            delete errores[inputName]
-        } else {
+        if(input.value === ""){
             input.classList.add('invalid');
+            input.placeholder = "Este campo es obligatorio";
+            console.log('email is required');
+            errores[inputName] = `${inputName} is required`
+        }else if(!result) {
+            input.classList.add('invalid');
+            input.placeholder = "El correo ingresado no es valido"
+            lastEmailValue = input.value;
+            input.value = "";
             console.log('value is not an email');
-            errores[inputName] = `${inputName} is not an email`
+            errores[input.name] = `${input.Name} is not an email`
+        } else {
+            input.classList.remove('invalid');
+            lastEmailValue = input.value;
+            delete errores[input.name] 
         }
-     }
+
+    }
+
+    function passwordValidation(input){
+        const inputName = input.name;
+        
+        if(input.value == ""){
+            input.classList.add('invalid');
+            input.placeholder = "Este campo es obligatorio";
+            console.log('password is required');
+            errores[inputName] = `${inputName} is required`
+        }else{
+            input.classList.remove('invalid');
+            delete errores[inputName]
+        }
+    }
+
 
     function validateEmail() {
-        validateIsRequired(email);
-        emailIsValid(email);
+        emailValidation(email);
     }
 
     function validatePassword() {
-        validateIsRequired(password);
+        passwordValidation(password);
     }
 
     function validateForm() {
@@ -53,6 +61,9 @@ window.onload = function() {
 
     email.addEventListener("blur", function(){
         validateEmail()
+    })
+    email.addEventListener("focus", () => {
+        email.value = lastEmailValue;
     })
             
     password.addEventListener("blur", function(){
@@ -65,9 +76,7 @@ window.onload = function() {
         
         if(Object.keys(errores).length) {
             e.preventDefault();
-            let ulErrores = document.querySelector("ul.errores");
-            ulErrores.classList.add('alert-warning');
-            ulErrores.innerHTML += `<pre><code>${JSON.stringify(errores, null, 4)}</pre></code>`
+            console.log(errores)
         } else {
             console.log('Todo bien')
         }
