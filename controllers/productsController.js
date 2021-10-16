@@ -34,16 +34,10 @@ const productsControlador = {
         .catch(e => {
             console.log(e)
         })
-
-        // Version anterior donde se obtiene desde el JSON
-        // let idProducto = req.params.id;
-        // res.render('./products/productDetail', {idProducto, listaProductos: products});
     },
     list: (req, res)=>{
 
         if(req.query.brands && req.query.priceRange){ // if both brands and prices filter are applied
-            //console.log(req.query.brands)
-            //console.log(req.query.priceRange)
             let prices = req.query.priceRange;
             prices = prices.toString().split('-').join(',').split(',');
             prices = prices.map(price => parseInt(price));
@@ -285,10 +279,6 @@ const productsControlador = {
                         id_size: req.body.id_size
                     } 
                 }
-            
-                console.log(product.id_brand);
-                console.log(product.id_flavor);
-                console.log(req.body.id_size);
                 
                 if (errors.isEmpty()) {
                     db.Product.update(newData, options)

@@ -1,12 +1,8 @@
 window.addEventListener('load', function(){
-    console.log('hello');
     
-
     const applyFilterBtn = document.querySelector('.apply-button');
     applyFilterBtn.addEventListener('click', function(event){
-        //event.preventDefault();
-        console.log('The apply filters button was pressed');
-
+        
         let form = document.querySelector('.filter-form');
 
         let brandsSelect = document.querySelectorAll('.brand input'); // get all the input elements for the brands

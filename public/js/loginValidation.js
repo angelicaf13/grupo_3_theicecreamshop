@@ -14,14 +14,12 @@ window.onload = function() {
         if(input.value === ""){
             input.classList.add('invalid');
             input.placeholder = "Este campo es obligatorio";
-            console.log('email is required');
             errores[inputName] = `${inputName} is required`
         }else if(!result) {
             input.classList.add('invalid');
             input.placeholder = "El correo ingresado no es valido"
             lastEmailValue = input.value;
             input.value = "";
-            console.log('value is not an email');
             errores[input.name] = `${input.Name} is not an email`
         } else {
             input.classList.remove('invalid');
@@ -37,7 +35,6 @@ window.onload = function() {
         if(input.value == ""){
             input.classList.add('invalid');
             input.placeholder = "Este campo es obligatorio";
-            console.log('password is required');
             errores[inputName] = `${inputName} is required`
         }else{
             input.classList.remove('invalid');
@@ -77,8 +74,6 @@ window.onload = function() {
         if(Object.keys(errores).length) {
             e.preventDefault();
             console.log(errores)
-        } else {
-            console.log('Todo bien')
-        }
+        } 
     })
 }

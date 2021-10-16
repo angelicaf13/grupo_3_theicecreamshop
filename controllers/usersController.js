@@ -121,8 +121,6 @@ const usersControlador = {
             profileImage
         }
         const options = { where: {email: req.session.userLogged.email} }
-
-        console.log(req.session.userLogged)
         
         db.User.update(newData, options)
         .then(() => {

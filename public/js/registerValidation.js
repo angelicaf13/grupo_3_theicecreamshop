@@ -40,8 +40,6 @@ window.onload = function(){
             input.placeholder = "El correo ingresado no es valido"
             lastEmailValue = input.value;
             input.value = ""
-            //input.classList.add('valid');
-            //console.log('value is email');
             errors[input.name] = `${input.name} is not an email`
         } else {
             input.classList.remove('invalid');
