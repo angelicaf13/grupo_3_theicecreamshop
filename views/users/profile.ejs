@@ -7,21 +7,22 @@
       <section class="enh3">
         <article class="perfil">
           <h3>Perfil</h3>
-          <form action="/profile?_method=PUT" method="POST" class="" enctype="multipart/form-data">
+          <form action="/profile?_method=PUT" method="POST" class="perfil-form" enctype="multipart/form-data">
             
             <img src="/img/users/<%= locals.userLogged.profileImage %>" class="img-user-editar">
-            <input type="file" name="profileImage" id="profileImage">
-
+            <input type="file" accept=".PNG, .JPG, .JPEG, .GIF" name="profileImage" id="profileImages">
+            
+            <div class="perfil-class"></div>
             <label for="first_name">Nombre (s)
-            <input type="text" name="first_name" id="first_name" placeholder="p. ej. Daniela" minlength="6" 
+            <input type="text" name="first_name" id="first_names" placeholder="p. ej. Daniela" minlength="2" 
             value="<%= locals.userLogged.first_name %>" required></label>
 
             <label for="last_name">Apellido (s)
-            <input type="text" name="last_name" id="last_name placeholder="p. ej. Campos" minlength="6"
+            <input type="text" name="last_name" id="last_names" placeholder="p. ej. Campos" minlength="2"
             value="<%= locals.userLogged.last_name %>" required></label>
 
             <label for="email">Correo electrónico
-            <input type="email" name="email" id="email" placeholder="p. ej. danielacampos@hotmail.com" 
+            <input type="email" name="email" id="emails" placeholder="p. ej. danielacampos@hotmail.com" 
             value="<%= locals.userLogged.email %>" required></label>
 
             <button type="submit" class="">GUARDAR CAMBIOS</button>

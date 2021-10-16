@@ -11,12 +11,12 @@ window.addEventListener('load',() =>{
 
     function descriptionValidation(input){
         if(input.value == ""){
-            input.style.border = "";
+            input.style.border = "solid maroon";
             input.classList.add('invalid');
             input.placeholder = "Este campo es obligatorio";
             errors[input.name] = `${input.name} is required`;
         }else if(input.value.length < 20){
-            input.style.border = "";
+            input.style.border = "solid maroon";
             input.classList.add('invalid');
             input.placeholder = "La descripción debe contener al menos 20 caracteres";
             input.value = "";
