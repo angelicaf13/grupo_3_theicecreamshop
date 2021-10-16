@@ -17,7 +17,6 @@ app.use(cookies());
 app.use(userLoggedMiddleware); //Tiene que ir después de session ya que esta se tiene que inicializar antes 
 
 const publicPath= path.resolve(__dirname, './public');
-console.log(publicPath);
 
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 app.set('view engine', 'ejs');

@@ -78,3 +78,12 @@ Se comenzó con el desarrollo del CRUD, iniciado con el trabajo en las vistas pa
 
 ## Sprint 6 - Semana 4
 Tras la revisión de los avances realizados en el sprint 3 se acordaron ciertas modificaciones y mejoras a implementar, una de ellas fue la de agregar un estilo para los productos que no están disponibles, siendo que estos se muestren con un contenedor de color rojo, esto último para el caso de los usuarios administradores, mientras que en el caso de los clientes, estos solo podrán visualizar aquellos productos disponibles. También se incorporó la muestra del precio del producto dependiendo de la presentación seleccionada en las opciones del detalle de producto. Además, en el listado de productos se agregó la opción de agregar un nuevo producto para los usuarios administradores y también en la vista del perfil del cliente se agregó la funcionalidad de eliminar un producto y modificar usuarios (solo a usuarios administradores). 
+
+## Sprint 7 - Semana 1
+Durante esta semana se trabajaron las validaciones del backend para el registro y login de usuarios, retomando middlewares que ya se habian desarrollado en sprints anteriores.
+
+## Sprint 7 - Semana 2
+En esta semana se realizaron actividades correspondientes al desarrollo de las validaciones del frontend para los formularios del registro y login de usuarios, al igual que el registro y la modificaciones de productos.
+
+## Sprint 7 - Semana 3
+Para esta semana, se continuo con el desarrollo de las validaciones del backend para el registro y la modificacion de productos, y de igual forma se trabajaron las validaciones del frontend para la edicion de usuarios.

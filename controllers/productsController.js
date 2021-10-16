@@ -9,7 +9,6 @@ const { Op, where } = require("sequelize");
 // ************ Express Validator Require ************
 const { validationResult } = require('express-validator');
 const e = require('express');
-const { search } = require('../routes/products');
 //const { where } = require('../../clase-33-crud/CRUD/node_modules/sequelize/types');
 
 const productsControlador = {
