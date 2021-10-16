@@ -5,7 +5,7 @@ const productsAPIController = require('../../controllers/api/productsAPIControll
 //Rutas
 //Listado de productos
 router.get('/', productsAPIController.list);
-//Detalle de una producto
+//Detalle de un producto
 router.get('/:id', productsAPIController.detail);
 
 

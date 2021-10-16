@@ -1,11 +1,11 @@
 const path = require('path');
-const db = require('../database/models');
+const db = require('../../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const moment = require('moment');
 
 
-const Products = db.Products;
+const Products = db.Product;
 
 
 const productsAPIController = {
