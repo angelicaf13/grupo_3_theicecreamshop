@@ -14,7 +14,6 @@ const usersControlador = {
         res.render('./users/login');
     },
     loginProcess: (req, res) => {
-        //let userToLogin = User.findByField('email', req.body.email);
         const errores = validationResult(req);
 
         if(errores.isEmpty()){
@@ -22,21 +21,16 @@ const usersControlador = {
         .then(function(result){
             const password = req.body.pass;
             const pass = result.pass;
-            //console.log(pass);
 
 		    if(userToLogin) {
 		    	let isOkThePassword = bcrypt.compareSync(password, pass);
 		    	if(isOkThePassword) {
 		    		delete userToLogin.pass;
 		    		req.session.userLogged = result;
-                    //console.log(req.session.userLogged)
-
 
 		    		if (req.body.remember_user) {
 		    			res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30 });
 		    		}
-
-                    //console.log(req.cookies.userEmail)
 
                     return res.redirect('/profile'); 
 		    	}
@@ -101,8 +95,6 @@ const usersControlador = {
         }
     },
     profile: (req,res)=>{
-        console.log(req.cookies.userEmail);
-        console.log(req.session.userLogged );
         res.render('./users/profile');
     },
     logout: (req, res) => {
