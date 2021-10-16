@@ -17,8 +17,7 @@
                     <div>
                     <label for="first_name">Nombre</label>
                     <input type="text" name="first_name" id="first_name" value="<%= locals.old ? old.first_name : null %>" 
-                    placeholder="p. ej. Daniela" class="<%= locals.errors && errors.first_name ? 'invalid' : 'null' %>" 
-                    minlength="3" required>
+                    placeholder="p. ej. Daniela" class="<%= locals.errors && errors.first_name ? 'invalid' : 'null' %>" required>
                     <% if (locals.errors && errors.first_name) { %>
                       <p class="invalid"><%= errors.first_name.msg %></p>
                       <% } %>
@@ -27,8 +26,7 @@
                     <div>
                     <label for="last_name">Apellido</label>
                     <input type="text" name="last_name" id="last_name" value="<%= locals.old ? old.last_name: null %>" 
-                    placeholder="p. ej. Campos" class="<%= locals.errors && errors.last_name? 'invalid' : 'null' %>" 
-                    minlength="6" required>
+                    placeholder="p. ej. Campos" class="<%= locals.errors && errors.last_name? 'invalid' : 'null' %>" required>
                     <% if (locals.errors && errors.last_name) { %>
                       <p class="invalid"><%= errors.last_name.msg %></p>
                       <% } %>
