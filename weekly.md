@@ -83,7 +83,7 @@ Tras la revisión de los avances realizados en el sprint 3 se acordaron ciertas 
 Durante esta semana se trabajaron las validaciones del backend para el registro y login de usuarios, retomando middlewares que ya se habian desarrollado en sprints anteriores.
 
 ## Sprint 7 - Semana 2
-En esta semana se realiaron actividades correspondientes al desarrollo de las validaciones del frontend para los formularios del registro y login de usuarios, al igual que el registro y la modificaciones de productos.
+En esta semana se realizaron actividades correspondientes al desarrollo de las validaciones del frontend para los formularios del registro y login de usuarios, al igual que el registro y la modificaciones de productos.
 
 ## Sprint 7 - Semana 3
 Para esta semana, se continuo con el desarrollo de las validaciones del backend para el registro y la modificacion de productos, y de igual forma se trabajaron las validaciones del frontend para la edicion de usuarios.
