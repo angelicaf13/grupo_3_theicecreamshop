@@ -124,7 +124,7 @@ const productsControlador = {
 
             //res.send(prices)
             
-        }else if(req.query.search){
+        }else if(req.query.search){ // if using the search bar
             let search = req.query.search.toUpperCase();
             db.Product.findAll({
                 include: [{association: "brand"}, {association: "flavor"}],
@@ -145,7 +145,7 @@ const productsControlador = {
             .catch(e => {
                 console.log(e)
             })
-        }else{
+        }else{ // if there aren't filter or search
             db.Product.findAll({
                 include: [{association: "brand"}, {association: "flavor"}],
                 group: ['id_brand', 'id_flavor']
@@ -157,7 +157,6 @@ const productsControlador = {
             .catch(e => {
                 console.log(e)
             })
-            //res.render('./products/productList', {listaProductos: products});
         }
     },
     create: (req,res)=>{
