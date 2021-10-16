@@ -16,10 +16,16 @@ const productsAPIController = {
             group: ['id_brand', 'id_flavor']
         })
         .then(products => {
+
+
+            Object.values(products).forEach(function (product) {
+                product.dataValues.detail = `api/products/${product.id_product}`;
+              });
+
             let response = {
                 meta: {
                     status: 200,
-                    total: products.length,
+                    count: Object.values(products).length,
                     url: 'api/products/'
                 },
                 data: products
