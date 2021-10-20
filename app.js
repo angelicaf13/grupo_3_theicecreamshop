@@ -42,7 +42,7 @@ app.use(usersRouter);
 //Usar la ruta de las api de products
 app.use('/api/products', apiProductsRouter);
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
 app.use((req, res, next) => {
     res.status(404).render('./errores/error404');

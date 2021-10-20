@@ -1,0 +1,2139 @@
+                   /* <<------------------------------ PALETA DE COLORES ------------------------------>> */
+:root {
+  --pale-pink: #f7d1cd;
+  --queen-pink: #e8c2ca;
+  --thistle: #d1b3c4;
+  --glossy-grape: #b392ac;
+  --old-lavender: #735d78;
+  --logo-back: #e4d4dd;
+  --dark-lavender: #65526a;
+}
+                    /* <<------------------------------ FUENTES ------------------------------>> */
+@font-face {
+  font-family: Cervo-Neue-Black;
+  src: url(./fonts/CervoNeue-BlackNeue.otf);
+}
+
+@font-face {
+  font-family: Cervo-Neue-Bold;
+  src: url(./fonts/CervoNeue-BoldNeue.otf);
+}
+
+@font-face {
+  font-family: Cervo-Neue-Regular;
+  src: url(./fonts/CervoNeue-RegularNeue.otf);
+}
+
+@font-face {
+  font-family: Cervo-Neue-Light;
+  src: url(./fonts/CervoNeue-LightNeue.otf);
+}
+
+@font-face {
+  font-family: Museo-Sans-Thin;
+  src: url(./fonts/MuseoSans-100.otf);
+}
+
+@font-face {
+  font-family: Museo-Sans-Light;
+  src: url(./fonts/MuseoSans-300.otf);
+}
+
+@font-face {
+  font-family: Museo-Sans-Medium;
+  src: url(./fonts/MuseoSans-500.otf);
+}
+
+@font-face {
+  font-family: Museo-Sans-Bold;
+  src: url(./fonts/MuseoSans-700.otf);
+}
+
+                    /* <<------------------------------ GLOBAL ------------------------------>> */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cervo-Neue-Bold", sans-serif;
+}
+
+main {
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+}
+
+h2 {
+  color: #65526a;
+}
+
+h5 {
+  padding-bottom: 20px;
+  color: #735d78;
+  font-weight: bold;
+}
+
+textarea {
+  font-weight: bold;
+  font-size: 12px;
+  color: #65526a;
+  background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+  border-radius: 1rem;
+  backdrop-filter: blur(1.2rem);
+  border-style: none;
+}
+
+                    /* <<------------------------------ HEADER ------------------------------>> */
+header {
+  background-color: #e4d4dd;
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-nav{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+}
+
+.mobile-option-list{
+  display: none;
+  flex-direction: column;
+}
+
+.mobile-option-list div {
+  width: 100%;
+  text-align: right;
+  margin: 5px 0;
+}
+
+.mobile-option-list div a{
+  width: 100%;
+  text-align: right;
+  font-size: 20px;
+}
+
+.option-button{
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 20px;
+  background-color: var(--old-lavender);
+  width: 30px;
+  height: 30px;
+}
+
+#desktop-op{
+  display: none;
+}
+
+.nav-option{
+  width: 10%;
+  text-align: center;
+}
+
+.nav-option-mobile h2{
+  font-size: 18px;
+  color: var(--old-lavender);
+}
+
+nav a, footer a {
+  text-decoration: none;
+  color: var(--dark-lavender);
+  font-size: 22px;
+}
+
+                    /* <<------------------------------ FOOTER ------------------------------>> */
+footer {
+  background-color: #e4d4dd;
+  width: 100%;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+                    /* <<------------------------------ HOME ------------------------------>> */
+.links-invisible {
+  width: 50px;
+}
+
+.links-invisible i{
+  display: block;
+  padding: 5px 10px;
+  font-size: 12px;
+  justify-content: left;
+}
+
+.links {
+  width: 50px;
+  text-align: center;
+}
+
+.links i {
+  display: block;
+  padding: 5px 10px;
+  font-size: 12px;
+  justify-content: left;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.container {
+  position: relative;
+}
+
+.prev,.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.container-2 {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(9, 5vw);
+  grid-gap: 15px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.gallery-item-2 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.gallery-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
+.gallery-item-4 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
+.gallery-item-5 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 7;
+  grid-row-end: 10;
+}
+
+.gallery-item-6 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 7;
+  grid-row-end: 10;
+}
+
+.gallery > figure {
+  position: relative;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.gallery > figure > .text-brand {
+  position: absolute;
+  color: white;
+  opacity: 0;
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.text-brand h2{
+  color: var(--thistle);
+}
+
+.text-brand p{
+  display: none;
+}
+
+figure:hover .text-brand{
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.historia {
+  background-color: #e4d4dd;
+  color: #65526a;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.contacto {
+  text-align: center;
+  color: #65526a;
+  padding: 15px;
+  font-size: 12px;
+}
+
+.contacto i {
+  padding: 10px;
+  font-size: 22px;
+  color: #735d78;
+}
+
+.contacto-box {
+  width: 100%;
+  padding: 20px;
+}
+
+.comentario {
+  text-align: center;
+}
+
+.comments-button-left {
+  margin: 15px 5px 15px 0px;
+  border-radius: 12px;
+  padding: 6px 15px 6px 15px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  background-color: #735d78;
+  color: white;
+  transition: background-color 0.5s;
+}
+
+.comments-button-left:hover{
+    background-color: #b45ecc;
+}
+
+.comments-button-right {
+  margin: 15px 15px 15px 0px;
+  border-radius: 12px;
+  padding: 6px 15px 6px 15px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  background-color: #735d78;
+  color: white;
+  transition: background-color 0.5s;
+}
+
+.comments-button-right:hover{
+    background-color: #b45ecc;
+}
+
+                    /* <<------------------------------ CARRITO DE COMPRAS ------------------------------>> */
+.seguir-comprando {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seguir-comprando a {
+  text-decoration: none;
+}
+
+.seguir-comprando button {
+  margin: 15px;
+  border-radius: 12px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  background-color: #735d78;
+  color: white;
+  transition: background-color 0.5s;
+}
+
+.seguir-comprando button:hover{
+    background-color: #b45ecc;
+}
+
+.main-2 {
+  background-color: #fff;
+}
+
+.shopping-cart {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+}
+
+.title {
+  color: #735d78;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px 15px 10px;
+  font-size: 12px;
+}
+
+.image {
+  width: 25%;
+}
+
+.item {
+  display: flex;
+}
+
+.description {
+  font-size: 10px;
+  padding: 10px;
+  width: 30%;
+}
+
+.quantity {
+  width: 30%;
+  text-align: center;
+}
+
+.total-price {
+  width: 15%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.ticket {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background: linear-gradient( to left , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+}
+
+.ticket button {
+  margin: 15px;
+  border-radius: 12px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  background-color: #735d78;
+  color: white;
+  transition: background-color 0.5s;
+}
+
+.ticket button:hover{
+    background-color: #b45ecc;
+}
+
+.ticket-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ticket-column-1 p,.ticket-column-2 p {
+  font-size: 12px;
+  padding: 5px;
+}
+
+.container-product-cart{
+  margin: 0px 15px;
+}
+
+                    /* <<------------------------------ LOGIN ------------------------------>> */
+
+.main-login {
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-container{
+  min-height: 68vh;
+  width: 85%;
+  max-width: 360px;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.glass-login{
+  background: white;
+  min-height: 68vh;
+  width: 100%;
+  max-width: 360px;
+  background: linear-gradient(
+  to right bottom,
+ rgba(255, 255, 255, 0.5), 
+ rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 1rem;
+  z-index: 2;
+  position: absolute;
+  backdrop-filter: blur(1.2rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login-background {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 25px;
+  background: linear-gradient(
+  to right bottom,
+ rgba(255, 255, 255, 0.5),
+ rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(1.2rem);
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.glass-login h3 {
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #65526a;
+  font-size: 20px;
+}
+
+.glass-login p {
+  margin-bottom: 20px;
+  font-family: "Museo-Sans-Medium", sans-serif;
+  color: #65526a;
+  font-size: 12px;
+}
+
+.glass-login p a {
+  margin-bottom: 20px;
+  font-family: "Museo-Sans-Medium", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.errores{
+  margin-bottom: 20px;
+  font-family: "Museo-Sans-Medium", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  color: maroon;
+  font-weight: bold;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-control {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-control label {
+  display: block;
+  align-self: flex-start;
+  color: #65526a;
+  font-family: "Cervo-Neue-Bold", sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+}
+
+.form-control input[type=email], .form-control input[type=password] {
+  align-self: flex-start;
+  width: 100%;
+  height: 28px;
+  font-family: "Museo-Sans-Light", sans-serif;
+  font-size: 13px;
+  color: #65526a;
+  border: none;
+  border-radius: 5px;
+  padding-left: 4px;
+}
+
+input:focus-visible {
+  border: solid 2px #65526a;
+  outline: none;
+}
+
+.form-control a {
+  font-family: "Museo-Sans-Medium", sans-serif;
+  margin-top: 16px;
+  text-align: right;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.login-button {
+  margin-top: 50px;
+  padding: 6px 28px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 16px;
+  background-color: #735d78;
+  color: white;
+  transition: all 0.5s;
+}
+
+.login-button:hover{
+  background-color: #b45ecc;
+}
+
+.ice-cream-cone-img-1, .ice-cream-cone-img-2{
+  display: none;
+}
+
+                    /* <<------------------------------ ANIMACION HELADOS ------------------------------>> */
+@keyframes iceCream1 {
+    0% {
+        display: block;
+    }
+
+    100%{
+        width: 15rem;
+        top: 11%;
+        left: -43%;
+        transform: rotate(-13deg);
+    }
+    
+}
+@keyframes iceCream2 {
+    0%{
+        display: block;
+    }
+
+    100%{
+        width: 15rem;
+        top: 45%;
+        left: 76%;
+        -webkit-transform: scaleX(-1);
+        transform: rotate(13deg) scaleX(-1);
+    }
+    
+}
+                    /* <<------------------------------ USERS LIST ------------------------------>> */
+.main-user-list{
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 70vh;
+}
+
+.main-users-list{
+  padding: 50px;
+}
+
+.container-main-users-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.user-container{
+  width: 100%;
+  max-width: 180px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(1.2rem);
+  border-radius: 0.2rem;
+  margin: 10px;
+  min-height: 200px;
+  position: relative;
+  text-align: center;
+  padding: 15px;
+}
+
+.imagen-user{
+  width: 50%;
+}
+
+.user-button {
+  margin-top: 50px;
+  padding: 6px 28px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 20px;
+  background-color: #735d78;
+  color: white;
+  transition: all 0.5s;
+}
+
+.user-button:hover{
+  background-color: #b45ecc;
+}
+
+input#tipo, input#rol{
+  display: none;
+}
+
+.h2-users{
+  text-align: center;
+}
+
+                    /* <<------------------------------ PRODUCT LIST ------------------------------>> */
+.main-product-list{
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 90vh;
+}
+
+.ordenar-filtar-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.ordenar-filtrar-button{
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 14px;
+  background-color: #735d78;
+  padding: 6px 10px;
+  margin: 8px;
+  color: white;
+  border: none;
+  transition: all 0.5s;
+}
+
+.ordenar-filtrar-button:hover{
+  background-color: #b45ecc;;
+}
+
+.ordenar-checkbox-container{
+  display: none;
+  margin: 0px 20px;
+  padding-top: 10px;
+}
+
+.filters-products {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filtros{
+  display: none;
+}
+
+.container-main-product-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.category h3{
+  font-family: 'Cervo-Neue-Regular', sans-serif;
+  margin: 10px;
+}
+
+.apply-button{
+  display: block;
+  margin-top: 30px;
+  margin-left: 70px;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 14px;
+  background-color: #735d78;
+  padding: 6px 14px;
+  color: white;
+  border: none;
+  transition: all 0.5s;
+  align-self: center;
+}
+
+.apply-button:hover{
+  background-color: #b45ecc;
+}
+
+.productos{
+  width: 100vw;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.productos > a {
+  text-decoration: none;
+}
+
+.product-container{
+  width: 100%;
+  max-width: 180px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(1.2rem);
+  border-radius: 0.2rem;
+  margin: 10px;
+  min-height: 247px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+#icono-add{
+  background-color:var(--dark-lavender);
+}
+
+#icono-add h4{
+  color:black;
+  font-size: 18px;
+}
+
+#unavailable{
+  background: linear-gradient(to right bottom, rgba(224, 31, 31, 0.356), rgba(255, 0, 0, 0.459));
+}
+
+#unavailable p{
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#unavailable img{
+  opacity: 50%;
+}
+
+.edit-button{
+  background:transparent;
+  color: var(--old-lavender);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  border-radius: 2px;
+  width: 28px;
+  height: 28px;
+  font-size: 15px;
+  transition: all 0.4s;
+}
+
+.edit-button:hover{
+  color: var(--logo-back);
+  background-color: var(--old-lavender);
+}
+
+@keyframes hoverProduct {
+  0% {
+  }
+  100%{
+    color: #b45ecc;
+  }
+}
+
+.product-container:hover{
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.product-container div {
+  min-height: 170px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.product-container img{
+  width: 60%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+.product-container a{
+  text-decoration: none;
+}
+
+.product-container h4{
+  text-align: center;
+  color: #65526a;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.product-container p{
+  text-align: center;
+  color: grey;
+  margin-bottom: 10px;
+  font-size: var(--dark-lavender);
+}
+
+.product-container:hover > h4  h4{
+  animation: hoverProduct 0.4s forwards;
+}
+
+@keyframes hoverPlus {
+  0% {
+  }
+  100%{
+    color:#735D78;
+  }
+}
+#icono-add:hover > h4{
+  animation: hoverPlus 0.4s forwards;
+}
+
+                    /* <<------------------------------ REGISTRO ------------------------------>> */
+.ice-cream-reg-img-1, .ice-cream-reg-img-2{
+  display: none;
+}
+
+.main-register{
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-container-register{
+  width: 85%;
+  max-width: 360px;
+  height: 530px;
+  position: relative;
+}
+
+.glass-register{
+  width: 100%;
+  background: white;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+  to right bottom,
+  rgba(255, 255, 255, 0.5),
+   rgba(255, 255, 255, 0.1)
+);
+  border-radius: 1rem;
+  z-index: 2;
+  position: absolute;
+  backdrop-filter: blur(1.2rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.glass-register h3 {
+  font-family: "Cervo-Neue-Bold", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 3px;
+  color: #65526a;
+  font-size: 20px;
+}
+
+.glass-register .condiciones-register{
+  margin-top: 14px;
+  font-family: "Museo-Sans-Medium", sans-serif;
+  font-size: 12px;
+}
+
+.glass-register p {
+  font-family: "Museo-Sans-Medium", sans-serif;
+  color: #65526a;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.glass-register h2 {
+  margin-bottom: 20px;
+  font-family: "Museo-Sans-Medium", sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.glass-register h2 a{
+  font-family: "Museo-Sans-Medium", sans-serif;
+  text-decoration: none;
+}
+
+.glass-register p a{
+  font-family: "Museo-Sans-Medium", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.register-form{
+  margin: 10px;
+}
+
+.register-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  font-weight: none;
+}
+
+.register-form div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%
+}
+
+.register-form div div input {
+  border: none;
+  border-radius: 8px;
+  padding-left: 4px;
+  font-family: "Museo-Sans-Light", sans-serif;
+  font-size: 13px;
+  color: #65526a;
+  width: 100%;
+  height: 28px;
+}
+
+.register-form div div label {
+  align-self: flex-start;
+  margin: 5px;
+  color: #65526a;
+  font-family: "Cervo-Neue-Bold", sans-serif;
+  font-size: 16px;
+}
+
+.register-button{
+  margin: 15px;
+  border-radius: 5px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 16px;
+  background-color: #735d78;
+  color: white;
+  transition: background-color 0.5s;
+}
+
+.register-button:hover{
+  background-color: #b45ecc;
+}
+
+                    /* <<------------------------------ PERFIL ------------------------------>> */
+.mainPerfil{
+  padding: 15px;
+  background-color:  #b392ac; 
+}
+
+article.perfil, .historial{
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+}
+
+article.perfil form{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: flex-end;
+  line-height: 35px;
+  font-size: 10px;
+}
+
+article.gestion {
+  height: 40%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background: linear-gradient( to right , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) );
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+article.perfil form input{
+  width: 230px;
+  padding: 3px;
+  margin-right: 2px;
+  border: none;
+  border-radius: 5px;
+}
+
+#fotoPerfil{
+  display: flex;
+  align-self: center;
+  padding: 3px;
+}
+
+article.perfil form button{
+  margin: 15px;
+  border-radius: 12px;
+  padding: 6px 28px;
+  border: none;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 18px;
+  background-color: #735d78;
+  color: white;
+  display: flex;
+  align-self: center;
+  transition: background-color 0.5s ;
+}
+
+article.perfil form button:hover{
+  background-color: #b45ecc;
+}
+
+.titulos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.titulos h1{
+  font-size: 15px;
+}
+
+.enh3 h3{
+  padding-bottom: 20px;
+  color: #735d78;
+  font-weight: bold;
+  text-align: center;
+  font-size: 26px;
+}
+
+.historial div img{
+  width: 100px;
+}
+
+.historial div{
+  display: flex;
+  flex-direction: row;
+  font-weight: none;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+}
+
+.description, article.perfil form {
+  font-size: 16px;
+  color: #65526a;
+  padding:2px;
+}
+
+.fec{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+#fechas{
+  border-radius: 6px;
+  margin: 0px 10px;
+}
+
+.historial .pagoFinal{
+  margin:0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: left;
+}
+
+.pagoFinal h1, .pagoFinal p{
+  font-family: "Cervo-Neue-Regular", sans-serif;
+  font-size: 18px;
+  background-color: #735d78;
+  color: white;
+  padding: 6px;
+}
+
+.img-user-editar{
+  width: 20%;
+  margin: auto;
+}
+.bt{
+  align-self: center;
+  background-color: #735D78;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  transition: background-color 0.5s ;
+  font-family: "Cervo-Neue-Regular", sans-serif;
+}
+
+.bt:hover{
+  background-color: #b45ecc;
+}
+
+ 
+                    /* <<------------------------------ DETALLE DEL PRODUCTO ------------------------------>> */
+.imagenDetalle{
+  width: 30%;
+  margin-left: 5%;
+}
+
+.descripcion {
+  width: 100%;
+  height: 100%;
+}
+
+.descripcion p{
+  text-align: justify;
+  font-size: 10px;
+  font-family: Cardo;
+}
+
+.detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  border: none;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.detail h3, .detail label{
+  font-family: 'Cardo', serif;
+  font-size: 16px;
+}
+
+.detail .inputs, .detail h1{
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.detail h1{
+  color: #65526a;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.precios{
+  display: flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.precios input{
+  align-self: center;
+  font-size: 20px;
+  text-align: center;
+  font-weight:bold;
+  border: none;
+  background: none;
+  display: none;
+}
+
+#cantidadCompra{
+  font-size: 14px;
+  padding: 2px;
+  width: 20%;
+  text-align: center;
+  display: inline;
+}
+
+.detail button{
+  display: flex;
+  align-self: center;
+  background-color: #735D78;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  transition: background-color 0.5s ;
+}
+
+.detail button:hover{
+  background-color: #b45ecc;
+}
+
+.bt:hover{
+  background-color: #b45ecc;
+}
+
+                    /* <<------------------------------ AGREGAR PRODUCTO ------------------------------>> */
+.main-add{
+  background: linear-gradient(to right top, #b392ac, #e8c2ca);
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-add{
+  width: 100%;
+  background: white;
+  width: 100%;
+  background: linear-gradient(
+  to right bottom,
+ rgba(255, 255, 255, 0.5),
+ rgba(255, 255, 255, 0.1)
+);
+  border-radius: 1rem;
+  z-index: 2;
+  backdrop-filter: blur(1.2rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2%;
+  padding: 10px;
+}
+
+.glass-container-add{
+  width: 85%;
+}
+
+.glass-add h3 {
+  font-family: "Cervo-Neue-Bold", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 3px;
+  color: #65526a;
+  font-size: 20px;
+}
+
+.add-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  font-weight: none;
+  padding: 2px;
+}
+
+.add-form div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%
+}
+
+.add-form div input {
+  border: 0px;
+  border-radius: 8px;
+  padding-left: 4px;
+  font-family: "Museo-Sans-Light", sans-serif;
+  font-size: 13px;
+  color: #65526a;
+  width: 100%;
+  height: 28px;
+}
+
+.add-form div label, .add-form label{
+  align-self: center;
+  margin: 5px;
+  color: #65526a;
+  font-family: "Cervo-Neue-Bold", sans-serif;
+  font-size: 16px;
+}
+
+.descrip {
+  width: 90%;
+  padding: 3px;
+}
+
+                    /* <<------------------------------ EDITAR PRODUCTO ------------------------------>> */
+.img-editar{
+  width: 40%;
+}
+
+                    /* <<------------------------------ ERROR 404 ------------------------------>> */
+.ex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px 0px;
+}
+
+.ex2{
+  padding: 0px 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ex2 a{
+  color:#735D78;
+  font-size: 22px;
+  font-style: oblique;
+  font-weight:bolder;
+}
+
+.ex3{
+  padding: 10px 70px 0px;
+}
+
+.err{
+  font-size: 18px;
+  font-style: oblique;
+  font-weight:bolder;
+  font-family: Cardo;
+  text-align: justify;
+  text-align: center;
+}
+
+.err1{
+  width: 100%;
+  opacity: 80%;
+}
+
+                    /* <<------------------------------ MOBILE FIRST ------------------------------>> */
+                    /* <<------------------------------ MIN-WIDTH 480PX ------------------------------>> */
+@media (min-width: 480px) {
+  header nav,.historia,.contacto {
+    font-size: 18px;
+  }
+
+  header {
+    font-size: 20px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(6, 5vw);
+    grid-gap: 15px;
+  }
+  
+  .gallery > figure > .text-brand {
+    padding: 20px;
+  }
+
+  .gallery-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .gallery-item-2 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .gallery-item-3 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .gallery-item-4 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 7;
+  }
+
+  .gallery-item-5 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 7;
+  }
+
+  .gallery-item-6 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 7;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .container-product-cart {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  footer div {
+    font-size: 18px;
+  }
+  
+  .ice-cream-reg-img-1, .ice-cream-reg-img-2{
+    width: 9rem;
+    display: block;
+  }
+
+  .ice-cream-reg-img-1{
+    z-index: 0;
+    position: absolute;
+    order: 1;
+    top: 12%;
+    left: -20%;
+  }
+
+  .ice-cream-reg-img-2{
+    z-index: 0;
+    position: absolute;
+    top: 62%;
+    left: 77%;
+    -webkit-transform: scaleX(-1);
+    transform: rotate(180deg) scaleX(-1);
+  }
+
+  .ice-cream-cone-img-1, .ice-cream-cone-img-2{
+    width: 9rem;
+    display: block;
+  }
+
+  .ice-cream-cone-img-1{
+    z-index: 0;
+    position: absolute;
+    order: 1;
+    top: 9%;
+    left: -23%;
+  }
+
+  .ice-cream-cone-img-2{
+    z-index: 0;
+    position: absolute;
+    top: 62%;
+    left: 77%;
+    -webkit-transform: scaleX(-1);
+    transform: rotate(180deg) scaleX(-1);
+  }
+
+  .links i {
+    font-size: 14px;
+  }
+
+  .links-invisible i{
+    font-size: 14px;
+  }
+
+  .descripcion p{
+    font-size: 1em;
+  }
+  .detail h3,.detail label, .inputs, .precios p, #cantidadCompra, .detail button{
+    font-size: 1.1em;
+  }
+
+  .detail h1{
+    padding: 2%;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .precios p{
+    font-size: 1.5em;
+  }
+
+  .glass-container-register{
+  max-width: 400px;
+  }
+
+  .err1{
+    width: 70%;
+  }
+
+  .ex2 a{
+    font-size: 1em;
+  }
+
+  .err{
+    font-size: 1.5em;
+  }
+}
+
+                    /* <<------------------------------ ANIMACION HELADOS ------------------------------>> */
+@keyframes iceCreamReg1 {
+  0% {
+      display: block;
+      top: 11%;
+      left: -10%;
+  }
+  100%{
+      width: 15rem;
+      top: 11%;
+      left: -23%;
+      transform: rotate(-13deg);
+  }
+}
+@keyframes iceCreamReg2 {
+  0%{
+      display: block;
+      top: 65%;
+      left: 80%;
+  }
+  100%{
+      width: 15rem;
+      top: 45%;
+      left: 80%;
+      -webkit-transform: scaleX(-1);
+      transform: rotate(13deg) scaleX(-1);
+  }
+}
+
+                    /* <<------------------------------ MIN-WIDTH 768PX ------------------------------>> */
+@media (min-width: 768px) {
+  .nav-option-mobile, .mobile-option-list{
+    display: none;
+  }
+
+  #desktop-op{
+    display: block;
+  }
+
+  .tabla-registro {
+    width: 50%;
+  }
+
+  .ice-cream-cone-img-1{
+    animation: iceCream1 3s 1 forwards;
+  }
+
+  .ice-cream-cone-img-2{
+    animation: iceCream2 3s 1 forwards;
+  }
+
+  .glass-container-register{
+    max-width: 550px;
+    height: 550px;
+  }
+
+  .glass-register{
+    padding: 20px;
+  }
+
+  .ice-cream-reg-img-1{
+    animation: iceCreamReg1 3s 1 forwards;
+  }
+
+  .ice-cream-reg-img-2{
+    animation: iceCreamReg2 3s 1 forwards;
+  }
+
+  .search-form input{
+    border: none;
+    border-radius: 3px;
+    padding: 5px 9px;
+    width: 280px;
+    color: var(--dark-lavender);
+  }
+
+  .search-form input:focus{
+    border-bottom: 2px solid var(--dark-lavender);
+  }
+
+  .search-form button{
+    width: 40px;
+    height: 28px;
+    border: none;
+    color: var(--dark-lavender);
+    transition: all 0.5s;
+  }
+
+  .search-form button:hover{
+    background-color: var(--dark-lavender);
+    color: #EFEFEF;
+  }
+
+  .ordenar-filtrar-button{
+    display: none;
+  }
+  
+  .ordenar-checkbox-container{
+    display: flex;
+    justify-content: space-around
+  }
+
+  .ordenar-checkbox-container label{
+    color: #65526a;
+  }
+
+  #ordenar{
+    margin-left: 5px;
+    border: none;
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+  }
+
+  #ordenar option{
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+  }
+
+  .filtros{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    max-width: 155px;
+    margin: 20px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(1.2rem);
+    border-radius: 0.2rem;
+  }
+
+  .filtros h3 {
+    margin: 5px;
+  }
+
+  .filter-form{
+    margin: 10px;
+  }
+
+  .filter-form > h3{
+    font-family: 'Cervo-Neue-Bold', sans-serif;
+    color: #65526a;
+  }
+
+  .category h3{
+    margin: 5px;
+    font-size: 16px;
+    font-family: 'Cervo-Neue-Regular', sans-serif;
+  }
+
+  .filter-group-checkboxes{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+  .filter-group-checkboxes div label{
+    font-family: 'Cervo-Neue-Light';
+  }
+
+  .productos{
+    justify-content: flex-start;
+  }
+
+  .links i {
+    font-size: 16px;
+  }
+
+  .links-invisible i{
+    font-size: 16px;
+  }
+
+  .contacto-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .botones-comentario {
+    text-align: right;
+  }
+
+  .container-product-cart {
+    padding: 0px 25px;
+  }
+  
+  article.perfil{
+    margin-left: 20%;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  article.historial{
+    width: 95vw;
+    justify-content: center;
+  }
+
+  .description, article.perfil form {
+    font-size: 16px;
+    padding:2px;
+  }
+
+  textarea {
+    width: 35vw;
+    font-size: 16px;
+  }
+
+  select {
+    font-family: "Museo-Sans-Light", sans-serif;
+    font-size: 13px;
+    color: #65526a;
+    backdrop-filter: blur(1.2rem);
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    border-radius: 1rem;
+    border-style: none;
+  }
+
+  .descripcion{
+    width: 100%;
+    height: 100%;
+    padding-top:35px;
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+
+  .detail{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .descripcion p{
+    font-size: 1em;
+  }
+    
+  .detail .inputs, .detail h1{
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .precios p{
+    font-size: 2em;
+  }
+
+  .detail h1{
+    font-size: 1.5em;
+  }
+
+  article.perfil form label{
+    font-size: 1.1em;
+  }
+    
+  #fotoPerfil{
+    font-size: 1.1em;
+  }
+    
+  .err1{
+    width: 40%;
+  }
+      
+  .ex2 a{
+    font-size: 1.2em;
+  }
+  
+  .err{
+    font-size: 2em;
+  }
+      
+  .add-form div {
+    flex-direction: row;
+  }
+  
+  .main-add{
+    min-height: 0px;
+  }
+  
+  .add-form div.uplinea{   
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+  }
+
+  .add-form div.ordenup{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+  }
+
+  .mobile-option-list{
+    display: none !important;
+  }
+}
+
+                    /* <<------------------------------ ANIMACION HELADOS ------------------------------>> */
+@keyframes iceCreamReg1ver2 {
+  0% {
+      display: block;
+      top: 11%;
+      left: 0%;
+  }
+  100%{
+      width: 15rem;
+      top: 11%;
+      left: -15%;
+      transform: rotate(-13deg);
+  }
+}
+@keyframes iceCreamReg2ver2 {
+  0%{
+      display: block;
+      top: 65%;
+      left: 75%;
+  }
+  100%{
+      width: 15rem;
+      top: 45%;
+      left: 90%;
+      -webkit-transform: scaleX(-1);
+      transform: rotate(13deg) scaleX(-1);
+  }
+}
+
+                    /* <<------------------------------ MIN-WIDTH 1279PX ------------------------------>> */
+@media (min-width: 1279px) {
+  .text-brand p{
+    display: block;
+    font-size: 16px;
+  }  
+
+  .glass-container-register{
+    max-width: 960px;
+  }
+
+  .ice-cream-reg-img-1{
+    animation: iceCreamReg1ver2 3s 1 forwards;
+  }
+
+  .ice-cream-reg-img-2{
+    animation: iceCreamReg2ver2 3s 1 forwards;
+  }
+
+  .tabla-registro {
+    width: 60%;
+  }
+
+  .tabla-registro h3 {
+    font-size: 2em;
+  }
+
+  .tabla-registro p {
+    font-size: 1em;
+  }
+
+  .tabla-registro h2 {
+    font-size: 1em;
+  }
+
+  .register-form div {
+    flex-direction: row;
+    font-size: 1em;
+    margin: 5px;
+  }
+
+  .button-register {
+    font-size: 1.5em;
+  }
+
+  .links i {
+    font-size: 18px;
+  }
+
+  .links-invisible i{
+    font-size: 18px;
+  }
+
+  .container-product-cart {
+    padding: 0px 40px;
+  }
+
+  header nav {
+    font-size: 25px;
+  }
+
+  article.perfil{
+    width: 40vw;
+    margin-left: 2%;
+  }
+
+  
+  .imagenDetalle{
+    width: 20%;
+  }
+
+
+  section.enh3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .description, article.perfil form {
+    font-size: 16px;
+    padding:2px;
+  }
+
+  article.historial{
+    width: 60vw;
+  }
+
+  .historial div{
+    font-size: 1em;
+  }
+
+  .titulos h1{
+    font-size: 1em;
+  }
+
+  .descripcion p{
+    font-size: 1em;
+  }
+
+  .detail h3,.detail label,#cantidadCompra,.detail button, .detail .inputs{
+    font-size: 1.2em;
+  }
+
+  .descripcion{
+    padding-top:40px;
+    padding-left: 40px;
+  }
+  
+  .detail h1{
+    font-size: 2em;
+  }
+
+  .precios p{
+    font-size: 2em;
+  }
+
+  .detail{
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .login-button{
+    font-size: 1.2em;
+  }
+
+  article.perfil form label{
+    font-size: 1.2em;
+  }
+
+  article.perfil form input {
+    font-size: .8em;
+  }
+
+  #fotoPerfil{
+    font-size: 1.2em;
+  }
+
+  .register-button{
+    font-size: 1.2em;
+  }
+
+  .register-form div.ag{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .button-register{
+    align-items: center;
+  }
+
+  .err1{
+    width: 25%;
+  }
+
+  .err{
+    font-size: 2.5em;
+  }
+
+  .glass-add{
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .glass-register {
+    height: 80%;
+    margin-top: 50px;
+  }
+}
+                    /* <<------------------------------ EXPRESS VALIDATOR ------------------------------>> */
+p.invalid{
+  color: firebrick;
+}
+
+.register-form div div input.invalid{
+  border:firebrick 2px solid;
+  
+}
+
+.register-form div div input.invalid::placeholder{
+  color:firebrick;
+  
+}
+
+.login-form div input.invalid{
+  border:firebrick 2px solid;
+}
+
+
+.login-form ::placeholder{
+  color: firebrick;
+}
+
+.login-form div input.valid{
+  border:green 2px solid;
+}
+
+.add-form div div input.invalid{
+  border: firebrick 2px solid;
+}
+
+.add-form div div textarea.invalid{
+  border:firebrick 2px solid;
+}
+
+
+.valid{
+  border:green 3px solid;
+}
+
+
