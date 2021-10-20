@@ -44,7 +44,7 @@ app.use(usersRouter);
 app.use('/api/products', apiProductsRouter);
 app.use('/api/users', apiUsersRouter);
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
 app.use((req, res, next) => {
     res.status(404).render('./errores/error404');
