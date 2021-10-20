@@ -33,7 +33,8 @@ const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
 
 //Aquí llamo a la ruta de las api de products
-const apiProductsRouter = require('./routes/api/productsAPI')
+const apiProductsRouter = require('./routes/api/productsAPI');
+const apiUsersRouter = require('./routes/api/usersAPI');
 
 app.use(mainRouter);
 app.use('/products', productsRouter);
@@ -41,6 +42,7 @@ app.use(usersRouter);
 
 //Usar la ruta de las api de products
 app.use('/api/products', apiProductsRouter);
+app.use('/api/users', apiUsersRouter);
 
 const PORT = process.env.PORT || 3000
 
