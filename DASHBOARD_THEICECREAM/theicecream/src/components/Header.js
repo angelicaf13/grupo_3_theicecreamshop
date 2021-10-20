@@ -32,13 +32,13 @@ function Header(){
       </div>
       <div className="nav-option" id="desktop-op"/>
       <div className="nav-option" id="desktop-op">
-        <a href="/userList">Listado</a>
+      <Link to="/userList" exact="true">Listado</Link>
       </div>
       <div className="nav-option" id="desktop-op">
-        <a href="/totalUser">Total</a>
+      <Link to="/totalUser" exact="true">Total</Link>
       </div>
       <div className="nav-option" id="desktop-op">
-        <a href="/theLastUser">Último agregado</a>
+      <Link to="/theLastUser" exact="true">Último agregado</Link>
       </div>
     </div>
   </nav>
