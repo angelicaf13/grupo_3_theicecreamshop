@@ -17,15 +17,18 @@ const productsAPIController = {
         })
         .then(products => {
 
+            let allBrands = [];
 
             Object.values(products).forEach(function (product) {
                 product.dataValues.detail = `api/products/${product.id_product}`;
+                !allBrands.includes(product.dataValues.brand.name) ? allBrands.push(product.dataValues.brand.name) : ""
               });
 
             let response = {
                 meta: {
                     status: 200,
                     count: Object.values(products).length,
+                    brands: allBrands,
                     url: 'api/products/'
                 },
                 data: products
@@ -59,7 +62,8 @@ const productsAPIController = {
         .catch(e => {
             console.log(e)
         })
-    }
+    },
+    
     
 }
 
