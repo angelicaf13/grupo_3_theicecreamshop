@@ -29,6 +29,7 @@ const productsAPIController = {
                     status: 200,
                     count: Object.values(products).length,
                     brands: allBrands,
+                    brandsCount: allBrands.length,
                     url: 'api/products/'
                 },
                 data: products
