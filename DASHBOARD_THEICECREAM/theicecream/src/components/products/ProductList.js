@@ -29,7 +29,7 @@ class ProductList extends Component{
             <div>
             <img src={product.productImage} />
             </div>
-            <h4> {product.brand.name} + {product.flavor.name} + Ice Cream </h4>
+            <h4> {product.brand.name}  {product.flavor.name} + Ice Cream</h4>
         </article>
 		</Link>
 		)

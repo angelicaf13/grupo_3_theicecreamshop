@@ -8,7 +8,7 @@ function Header(){
     <div className="top-nav">
         <div className="nav-option" id="desktop-op"/>
         <div className="nav-option" id="desktop-op">
-        <a href="/index#contactanos-link">PRODUCTOS</a>
+        <a>PRODUCTOS</a>
         </div>
         <div className="nav-option" id="desktop-op"/>
         <div class="nav-option" id="desktop-op">
@@ -16,7 +16,7 @@ function Header(){
         </div>
         <div className="nav-option" id="desktop-op"/>
         <div className="nav-option" id="desktop-op">
-        <a href="/index#contactanos-link">USUARIOS</a>
+        <a> USUARIOS</a>
         </div>
         <div className="nav-option" id="desktop-op"/>
     </div>
@@ -39,6 +39,27 @@ function Header(){
       </div>
       <div className="nav-option" id="desktop-op">
       <Link to="/theLastUser" exact="true">Último agregado</Link>
+      </div>
+    </div>
+    <div className="top-nav" style={{paddingTop:'10px'}}>
+      <div className="nav-option" id="desktop-op">
+      <Link to="/productStock" exact="true">Stock por producto</Link>
+      </div>
+      <div className="nav-option" id="desktop-op">
+      <Link to="/totalBrands" exact="true"> Total marcas</Link>
+      </div>
+      <div class="nav-option" id="desktop-op">
+      <Link to="" exact="true">NADA</Link>
+      </div>
+      <div className="nav-option" id="desktop-op"/>
+      <div className="nav-option" id="desktop-op">
+      <Link to="" exact="true">NADA</Link>
+      </div>
+      <div className="nav-option" id="desktop-op">
+      <Link to="" exact="true">NADA</Link>
+      </div>
+      <div className="nav-option" id="desktop-op">
+      <Link to="" exact="true">NADA</Link>
       </div>
     </div>
   </nav>
