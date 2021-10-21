@@ -12,11 +12,10 @@ const usersAPIController = {
     'list': (req, res) => {
 
         Users.findAll({
-            include: [{association: "category"}],
+            attributes: ['id_user', 'first_name', 'last_name', 'email']
         })
         .then(users => {
 
-            console.log(users);
             Object.values(users).forEach(function (user) {
                 user.dataValues.detail = `api/users/${user.id_user}`;
               });
@@ -39,9 +38,11 @@ const usersAPIController = {
     'detail': (req, res) => {
 
         db.User.findByPk(req.params.id, {
-            include: [{association: "category"}]
+            attributes: ['id_user', 'first_name', 'last_name', 'email', 'profileImage']
         })
         .then(user => {
+
+            user.dataValues.profileImage = `api/users/profileImage/${user.id_user}`;
 
             let response = {
                 meta: {
