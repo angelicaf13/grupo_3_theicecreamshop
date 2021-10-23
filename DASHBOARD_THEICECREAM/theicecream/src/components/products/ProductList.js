@@ -17,19 +17,19 @@ class ProductList extends Component{
             }
 	render(){
     return(
-		<main class="main-product-list">
+		<main className="main-product-list">
 			<div className="mySlides">
             <h2 style={{color: 'black', textAlign: 'center', paddingTop:'15px'}}>LISTA DE PRODUCTOS</h2>
             </div>
-			<div class="productos"style={{marginLeft:'85px', paddingBottom:'15px'}}>
+			<div className="productos"style={{marginLeft:'85px', paddingBottom:'15px'}}>
 			{this.state.productsList.map((product)=>{
 				return(
 		<Link to={`/detailProduct/${product.id_product}`} exact="true">
-        <article class="product-container">
+        <article className="product-container">
             <div>
             <img src={product.productImage} />
             </div>
-            <h4> {product.brand.name}  {product.flavor.name} + Ice Cream</h4>
+            <h4 style={{fontSize: '18px'}}> {product.brand.name}  {product.flavor.name}  Ice Cream</h4>
         </article>
 		</Link>
 		)

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 class UsersList extends Component{
     constructor(){
         super()
@@ -19,14 +20,14 @@ class UsersList extends Component{
         <div className="mySlides">
             <h2 style={{color: 'black', textAlign: 'center', paddingTop:'10px', paddingBottom: '15px'}}>LISTA DE USUARIOS</h2>
             </div>
-          <div class="container-main-users-list">
+          <div className="container-main-users-list">
             {this.state.usersList.map((user)=>{
 				return(
         <div>
-            <article class="user-container">
-                <img class="imagen-user" src={user.profileImage}/>
+            <article className="user-container" style={{maxWidth: '500px', width: '250px', minHeight:'50px', height: '100px'}}>
+                <img className="imagen-user" src={user.profileImage}/>
                 <h2> {user.first_name} {user.last_name} </h2>
-                <p style={{fontSize: '12px', textAlign: 'center'}}> {user.email} </p>
+                <p style={{fontSize: '14px', textAlign: 'center'}}> {user.email} </p>
             </article>
         </div>
 		) 

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 
 class ProductStock extends Component{
 	constructor(){
@@ -17,15 +16,15 @@ class ProductStock extends Component{
             }
 	render(){
     return(
-		<main class="main-product-list">
+		<main className="main-product-list">
 			<div className="mySlides">
             <h2 style={{color: 'black', textAlign: 'center', paddingTop:'15px'}}>CANTIDAD EN ALMACÉN POR PRODUCTO</h2>
             </div>
-			<div class="productos"style={{marginLeft:'85px', paddingBottom:'15px'}}>
+			<div className="productos"style={{marginLeft:'85px', paddingBottom:'15px'}}>
 			{this.state.productsList.map((product)=>{
 				return(
         <div>
-            <article class="user-container" style={{width: '150px'}}>
+            <article className="user-container" style={{width: '150px'}}>
             <h2 style={{fontSize: '18px', textAlign: 'justify'}}>Sabor:</h2>
             <p style={{fontSize: '15px', textAlign: 'center'}}>   {product.flavor.name}    </p>
             <h2 style={{fontSize: '18px', textAlign: 'justify'}}>Marca:</h2>

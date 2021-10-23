@@ -2136,4 +2136,22 @@ p.invalid{
   border:green 3px solid;
 }
 
+                    /* <<------------------------------MOUSE ------------------------------>> */
+.color{
+  background-color:aquamarine;
+  border-radius: 10px;
+}
 
+.color2{
+  background-color: #e4d4dd;
+}
+
+#desktop-op:hover{
+  background-color:aquamarine;
+  border-radius: 10px;
+}
+
+#inicio:hover{
+  background-color:cadetblue;
+  border-radius: 10px;
+}
