@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 
 class ProductList extends Component{
 	constructor(){
@@ -24,14 +23,9 @@ class ProductList extends Component{
 			<div className="productos"style={{marginLeft:'85px', paddingBottom:'15px'}}>
 			{this.state.productsList.map((product)=>{
 				return(
-		<Link to={`/detailProduct/${product.id_product}`} exact="true">
-        <article className="product-container">
-            <div>
-            <img src={product.productImage} />
-            </div>
+        <article className="product-container" style={{maxWidth: '500px', width: '250px', minHeight:'50px', height: '100px'}}>
             <h4 style={{fontSize: '18px'}}> {product.brand.name}  {product.flavor.name}  Ice Cream</h4>
         </article>
-		</Link>
 		)
 	})}
 	</div>
