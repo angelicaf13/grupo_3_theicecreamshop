@@ -730,6 +730,7 @@ input#tipo, input#rol{
 .main-product-list{
   background: linear-gradient(to right top, #b392ac, #e8c2ca);
   min-height: 90vh;
+  position: relative;
 }
 
 .ordenar-filtar-container{
@@ -766,6 +767,31 @@ input#tipo, input#rol{
 
 .filtros{
   display: none;
+}
+
+.search-filter-mobile{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.search-filter-mobile > div {
+  width: 75%;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(1.2rem);
+    border-radius: 0.2rem;
+    margin: 0 15px;
 }
 
 .container-main-product-list{
