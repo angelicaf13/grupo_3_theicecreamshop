@@ -136,3 +136,27 @@ Por ahorita no hemos tenido ningún inconveniente.
 __5. Dejar de hacer__
 
 Por ahorita no hemos tenido ningún inconveniente.
+
+
+## Sprint 7
+
+__1. Comenzar a hacer__
+
+Buscar errores en lasvistas y en la terminal.
+
+__2. Hacer más__
+
+Pedir retroalimentación objetiva a miembros externos al grupo y buscar mejoras. Corregir errores de sprints pasados.
+
+__3. Continuar haciendo__
+
+El trabajo en tiempo y forma, y dividir el trabajo equitativamente. Buscar continuamente mejoras que se le puedan hacer a la página.
+
+__4. Hacer menos__
+
+Por ahorita no hemos tenido ningún inconveniente.
+
+__5. Dejar de hacer__
+
+Por ahorita no hemos tenido ningún inconveniente.
+
