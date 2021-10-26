@@ -42,8 +42,6 @@ const usersAPIController = {
         })
         .then(user => {
 
-            user.dataValues.profileImage = `api/users/profileImage/${user.id_user}`;
-
             let response = {
                 meta: {
                     status: 200,
