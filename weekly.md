@@ -87,3 +87,6 @@ En esta semana se realizaron actividades correspondientes al desarrollo de las v
 
 ## Sprint 7 - Semana 3
 Para esta semana, se continuo con el desarrollo de las validaciones del backend para el registro y la modificacion de productos, y de igual forma se trabajaron las validaciones del frontend para la edicion de usuarios.
+
+## Sprint 8 - Semana 1
+En este ultimo sprint se desarrollo el dashboard de la aplicacion utilizando React. De primer momento se inicio con la implementacion de las APIs para usuarios y productos, y una vez terminadas se continuo con las actividades para el desarrollo del dashboard, donde se consume la informacion de las APIs y se muestra de una forma visual.
